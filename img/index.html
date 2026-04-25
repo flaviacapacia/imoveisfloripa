@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Imóveis em Floripa FC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+ <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo-area">
+      <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png/:/rs=w:170,h:170,mx" alt="Logo Flavia Imóveis" class="logo"/>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#negocie">Negocie</a></li>
+        <li><a href="#financie">Financie</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/flacapacciacorretora" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" class="icon"/>
+      </a>
+      <a href="https://www.linkedin.com/in/flaviacapacia" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn" class="icon"/>
+      </a>
+      <a href="https://www.facebook.com/flaviacapacia" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook" class="icon"/>
+      </a>
+      <a href="https://www.youtube.com/@flaviacapacia" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="icon"/>
+      </a>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <img src="imagens/hero.interior.jpg" alt="Interior moderno e luxuoso" />
+  </section>
+
+  <main id="lista-imoveis">
+    <h2 class="section-title">Imóveis Disponíveis</h2>
+    <div class="imoveis-grid">
+      <!-- Imóveis listados -->
+    </div>
+  </main>
+
+  <section id="sobre" class="sobre-section">
+   <div class="sobre-foto">
+  <img src="https://instagram.fnvt6-1.fna.fbcdn.net/v/t51.2885-19/515286921_18273731188277872_1663289844295293022_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fnvt6-1.fna.fbcdn.net&_nc_cat=104&_nc_oc=Q6cZ2QF6MUyTqexYG75MFzrwVgtDEzvxg5APgkVgDYxmMzcfOJZsRExEvyiSDUQ-F5emaQFKL84WpH9LmoYBjwfH9zp4&_nc_ohc=jyCIi6maissQ7kNvwGemoAv&_nc_gid=_qCiCdVBGWOSdNLbDR8R1A&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfXrn-02GP0vqksC23CHdkGqkORd98rDSRRSKEYehKSsSQ&oe=68A6F41F&_nc_sid=7a9f4b" alt="Flavia Capacia">
+</div>
+
+    <div class="texto-sobre">
+
+     <h2>Sobre  Flavia Capacia</h2>
+    <p>
+        Apaixonada pela corretagem de imóveis, Flavia Capacia é a profissional
+        por trás de grandes realizações na Grande Florianópolis. Com mais de
+        10 anos de experiência, destaca-se pela conduta ética, compromisso e
+        transparência, conquistando a confiança de clientes e parceiros.
+      </p>
+      <p>
+        Determinada a unir as necessidades de venda e a realização de compra,
+        Flavia busca sempre entregar o melhor, concretizando sonhos e fechando
+        negócios de sucesso.
+      </p>    
+  </div>    
+  </section>
+
+  <section id="negocie" class="negocie-section">
+    <h2 class="section-title">Negocie seu Imóvel</h2>
+    <form id="form-cadastro">
+      <label for="codigo">Código do Imóvel</label>
+      <input type="text" id="codigo" name="codigo" readonly />
+        <!-- Outros campos -->
+      <button type="submit">Cadastrar Imóvel</button>
+    </form>
+  </section>
+
+ <section id="financie" class="financie-section">
+  <h2 class="section-title">Financie</h2>
+  <p>Escolha seu banco preferido para simular o financiamento:</p>
+  <div class="bancos-financiamento">
+    <a href="https://www.caixa.gov.br/voce/habitacao/financiamento-imoveis/Paginas/default.aspx" target="_blank">Caixa</a>
+
+    <a href="https://www.itau.com.br/credito-imobiliario/simulador/" target="_blank">
+      <img src="imagens/logo-itau.png" alt="Itaú" width="100">
+    </a>
+    <a href="https://www.santander.com.br/credito-imobiliario/simulador" target="_blank">
+      <img src="imagens/logo-santander.png" alt="Santander" width="100">
+    </a>
+    <a href="https://banco.bradesco/html/classic/produtos/credito-imobiliario/simulador.shtm" target="_blank">
+      <img src="imagens/logo-bradesco.png" alt="Bradesco" width="100">
+    </a>
+  </div>
+  <p class="simule-texto">💰 Simule seu financiamento com segurança e praticidade.</p>
+</section>
+
+<section id="contato" class="contato-section">
+  <h2>Contato</h2>
+  <form action="mailto:flavia@email.com" method="post" enctype="text/plain">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+    <input type="submit" value="Enviar">
+  </form>
+
+  <div class="whatsapp-contato">
+    <a href="https://wa.me/5548999600601" target="_blank">
+      <img src="imagens/logo-whatsapp.png" alt="WhatsApp" width="50">
+      Fale comigo pelo WhatsApp
+    </a>
+  </div>
+
+  <div class="imagem-contato">
+    <img src="imagens/imovel-destaque.jpg" alt="Imagem de imóvel" width="300">
+  </div>
+</section>
+
+  <section class="cta-banner">
+    <h2>Seu imóvel a um clique de você</h2>
+  </section>
+
+  <footer class="site-footer" id="contato">
+  <div class="footer-logo">
+    <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png/:/rs=w:170,h:170,mx" alt="Logo Flavia"/>
+  </div>
+
+  <div class="footer-contact">
+    <h3 style="color: var(--dourado);">Contato</h3>
+    <p><a href="flaviacapacia@creci.gov">flavia.capacia@creci.gov</a></p>
+    <p><a href="tel:+5548999600601">(48) 99960-0601</a></p>
+  </div>
+
+  <div class="social-list">
+    <ul>
+      <li><a href="https://facebook.com">Facebook</a></li>
+      <li><a href="https://www.instagram.com/flacapacciacorretora">Instagram</a></li>
+      <li><a href="https://linkedin.com">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
