@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mercado Imobiliário em Florianópolis - Blog Flavia Capacia Corretora</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Análise do mercado imobiliário em Florianópolis: valorização da Beira-Mar Norte e oportunidades de investimento." />
+  <meta name="keywords" content="mercado imobiliário Florianópolis, imóveis Beira-Mar Norte, valorização, corretora Flavia Capacia" />
+  <meta name="author" content="Flavia Capacia Corretora" />
+
+  <style>
+    :root {
+      --bronze-medio: #b08d57;
+      --fundo-claro: #ffffff;
+      --cinza-borda: #e5e5e5;
+      --cinza-texto: #333333;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: var(--cinza-texto);
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      background-color: var(--fundo-claro);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border: 1px solid var(--cinza-borda);
+    }
+
+    /* Cabeçalho */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--bronze-medio);
+      margin-bottom: 20px;
+      position: relative;
+    }
+    header img { height: 54px; }
+
+    nav { position: relative; }
+    #menu-toggle {
+      background: none;
+      border: 1px solid var(--bronze-medio);
+      color: var(--bronze-medio);
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    #menu-toggle:hover { background-color: var(--bronze-medio); color: #fff; }
+
+    #menu {
+      list-style: none;
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 40px;
+      background-color: #fff;
+      border: 1px solid var(--cinza-borda);
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      min-width: 180px;
+      z-index: 100;
+    }
+    #menu.open { display: block; }
+    #menu li { margin: 6px 0; }
+    #menu li a {
+      text-decoration: none;
+      color: var(--cinza-texto);
+      font-weight: bold;
+      display: block;
+      padding: 6px 8px;
+      border-radius: 6px;
+    }
+    #menu li a:hover { color: var(--bronze-medio); background: #fafafa; }
+
+    /* Artigo */
+    .article {
+      margin-top: 20px;
+    }
+    .article img {
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: block;
+      transition: transform 0.3s ease;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    .article img:hover {
+      transform: scale(1.03);
+    }
+    }
+    .article h1 {
+      color: var(--bronze-medio);
+      margin-bottom: 15px;
+    }
+    .article p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: var(--cinza-texto);
+    }
+
+    /* Caixa de lead */
+    .lead-box {
+      margin-top: 20px;
+      background: #fafafa;
+      border: 1px solid var(--cinza-borda);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .lead-box p { margin: 0; font-weight: bold; color: var(--cinza-texto); }
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: #25D366;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn-whatsapp:hover { background-color: #128C7E; }
+
+    /* Imóveis em destaque */
+    .featured-properties {
+      margin: 28px 0;
+      padding: 20px;
+      border: 1px solid var(--cinza-borda);
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    .featured-properties h2 {
+      margin-bottom: 15px;
+      text-align: center;
+      color: var(--bronze-medio);
+    }
+    .links-imoveis a {
+      display: block;
+      margin: 6px 0;
+      color: var(--bronze-medio);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .links-imoveis a:hover { text-decoration: underline; }
+
+    /* Rodapé */
+    footer { margin-top: 24px; }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-top: 2px solid var(--bronze-medio);
+      background-color: #fff;
+      border-radius: 10px;
+    }
+    .footer-contact, .footer-logo, .footer-social {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+    }
+    .footer-logo img { width: 120px; }
+    .footer-contact a, .footer-social a {
+      color: var(--bronze-medio);
+      text-decoration: none;
+      font-weight: bold;
+    }
+   .footer-social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;   /* Permite quebrar em várias linhas */
+}
+
+    .footer-credit {
+      text-align: center;
+      padding: 10px;
+      border-top: 1px solid var(--cinza-borda);
+      background-color: #fff;
+      color: var(--bronze-medio);
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header>
+      <a href="index.html" aria-label="Página inicial">
+        <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" alt="Logo Flavia Imóveis" />
+      </a>
+      <nav>
+        <button id="menu-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Artigo -->
+    <main class="article">
+      <img src="img/imagens/floripa4.webp" alt="Vista da Beira-Mar Norte em Florianópolis" />
+      <h1>Mercado Imobiliário em Florianópolis</h1>
+     <h2> Um Panorama Atual</h2>
+
+<p>Florianópolis, conhecida como a “Ilha da Magia”, vive um dos momentos mais expressivos de valorização imobiliária de sua história recente.</p>
+
+<p>A cidade, que já se destacava pela qualidade de vida e pelas belezas naturais, agora consolida-se como um dos principais polos de investimento imobiliário do Brasil.</p>
+
+<p>Nos últimos anos, regiões nobres como a Beira-Mar Norte tornaram-se símbolos dessa valorização.</p>
+
+<p>A infraestrutura moderna, aliada à proximidade de serviços essenciais, transformou o bairro em um verdadeiro cartão-postal para quem busca morar bem.</p>
+
+<p>O Centro e a Agronômica também seguem a mesma tendência, registrando aumentos significativos no valor do metro quadrado.</p>
+
+<p>Esse movimento não acontece por acaso.</p>
+
+<p>Ele reflete diretamente o crescimento econômico da cidade, o fortalecimento do turismo e a chegada de novos empreendimentos comerciais e residenciais.</p>
+
+<p>Investidores de diferentes estados têm voltado seus olhos para Florianópolis, enxergando aqui uma oportunidade segura e rentável.</p>
+
+<p>A alta demanda por imóveis com vista privilegiada, especialmente próximos ao mar, impulsiona ainda mais os preços.</p>
+
+<p>Apartamentos com sacadas voltadas para a Beira-Mar Norte, por exemplo, tornaram-se verdadeiros objetos de desejo.</p>
+
+<p>Além disso, a cidade oferece uma rede completa de serviços, escolas, hospitais e opções de lazer, fatores que elevam a atratividade da região.</p>
+
+<p>Para quem deseja investir, o cenário é promissor.</p>
+
+<p>Imóveis bem localizados tendem a manter uma valorização constante, garantindo segurança patrimonial.</p>
+
+<p>Essa característica faz de Florianópolis um mercado sólido, capaz de resistir às oscilações econômicas nacionais.</p>
+
+<p>Outro ponto relevante é o perfil dos compradores.</p>
+
+<p>Muitos buscam imóveis não apenas para moradia, mas também como forma de investimento de longo prazo.</p>
+
+<p>A locação por temporada, impulsionada pelo turismo, é uma alternativa que aumenta a rentabilidade dos proprietários.</p>
+
+<p>A cidade também se destaca pela diversidade de opções.</p>
+
+<p>Há desde apartamentos compactos voltados para jovens profissionais até coberturas luxuosas para famílias que desejam exclusividade.</p>
+
+<p>Essa variedade amplia o público interessado e fortalece o dinamismo do mercado.</p>
+
+<p>Em resumo, Florianópolis vive um ciclo de valorização que combina qualidade de vida, infraestrutura moderna e alta demanda.</p>
+
+<p>O resultado é um mercado imobiliário aquecido, atraente e com grande potencial de crescimento futuro.</p>
+
+<p>Para investidores atentos, trata-se de uma oportunidade única de unir rentabilidade e segurança em uma das cidades mais encantadoras do país.</p>
+
+          <!-- Caixa de lead -->
+      <div class="lead-box">
+        <p>Quer uma avaliação do seu imóvel?</p>
+        <a href="https://wa.me/5548999600601?text=Olá%20Flavia,%20gostaria%20de%20uma%20avaliação%20do%20meu%20imóvel%20em%20Florianópolis." 
+           target="_blank" class="btn-whatsapp">📲 Solicitar avaliação</a>
+      </div>
+    </main>
+
+    <!-- Imóveis em destaque -->
+    <section class="featured-properties">
+      <h2>Imóveis em destaque</h2>
+      <div class="links-imoveis">
+        <a href="https://www.flaviacapaciacorretora.site/apartamento-venda-kobrasol-v440.html">Apartamento no Kobrasol</a>
+        <a href="https://www.flaviacapaciacorretora.site/apartamento-venda-floresta-v441.html">Apartamento Nossa Sra do Rosário</a>
+        <a href="https://www.flaviacapaciacorretora.site/apartamento-venda-agronomica-v439.html">Apartamento na Agronômica</a>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <div class="footer-logo">
+        <a href="index.html" aria-label="Voltar ao início">
+          <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" alt="Logo Flavia Imóveis" />
+        </a>
+      </div>
+
+      <div class="footer-container">
+        <div class="footer-contact">
+          <h3 style="color: var(--bronze-medio);">Contato</h3>
+          <p><a href="mailto:flavia.capacia@creci.gov.br">flavia.capacia@creci.gov.br</a></p>
+          <p><a href="tel:+5548999600601">(48) 99960-0601</a></p>
+          <p>Florianópolis</p>
+        </div>
+        <div class="footer-social">
+          <ul>
+            <li><a href="https://www.facebook.com/flaviacapaciacorretora" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/flaviacapaciacorretora/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/flaviacapaciacorretora" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@flaviacapaciacorretora" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-credit">
+        <p>&copy; 2025 Flavia Capacia Corretora - Todos os direitos reservados.</p>
+        Feito com 💛 por <strong>Capacia Group</strong> 💛
+      </div>
+    </footer>
+  </div>
+
+  <!-- Script do menu -->
+  <script>
+    (function () {
+      const btn = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+
+      function openMenu() {
+        menu.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      function closeMenu() {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      function toggleMenu() {
+        if (menu.classList.contains('open')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      }
+
+      // Clique no botão
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+      // Fechar ao clicar fora
+      document.addEventListener('click', function (e) {
+        const nav = btn.parentElement;
+        if (!nav.contains(e.target)) {
+          closeMenu();
+        }
+      });
+
+      // Fechar com Esc
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closeMenu();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
+
+
+

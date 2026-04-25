@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Imóveis de Alto Padrão em Florianópolis e região | Flavia Capacia Corretora</title>
+  <meta name="description" content="Imóveis de luxo e alto padrão em Florianópolis. Apartamentos, coberturas frente mar, casas na praia e studios para morar ou investir." />
+
+  <meta property="og:title" content="Imóveis de Alto Padrão e Luxo em Florianópolis | Flavia Capacia Corretora" />
+  <meta property="og:description" content="Apartamentos, coberturas, casas na praia e studios em Florianópolis. Oportunidades exclusivas para investidores com rentabilidade crescente." />
+  <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
+  <meta property="og:url" content="https://www.flaviacapaciacorretora.com/index.html" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Imóveis de Alto Padrãoem Florianópolis | Flavia Capacia Corretora" />
+  <meta name="twitter:description" content="Imóveis de luxo e alto padrão em Florianópolis. Oportunidades exclusivas para investidores e clientes exigentes." />
+  <meta name="twitter:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
+
+  <link rel="canonical" href="https://www.flaviacapaciacorretora.com/index.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --fundo-branco: #ffffff;
+      --texto-bronze: #4B3A2F;
+      --bronze-claro: #7A5C45;
+      --fonte-padrao: 'Playfair Display', serif;
+      --dourado: #b08d57;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--fundo-branco);
+      color: var(--texto-bronze);
+      font-family: var(--fonte-padrao);
+      line-height: 1.6;
+    }
+
+    .site-header {
+      background-color: var(--fundo-branco);
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-area img {
+      max-width: 170px;
+      height: auto;
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: var(--texto-bronze);
+      font-weight: bold;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .featured-properties {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #fff;
+    }
+
+    .featured-properties h2 {
+      color: var(--dourado);
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .grid-imoveis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .imovel {
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .imovel img {
+      width: 100%;
+      height: 220px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+      object-position: center; /* Centraliza a imagem */
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .lancamentos-section .imovel img {
+      height: 420px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .imovel:hover {
+      transform: translateY(-5px);
+    }
+
+    .imovel:hover img {
+      transform: scale(1.05);
+      filter: brightness(85%);
+    }
+
+    .imovel h3 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .imovel p {
+      font-size: 16px;
+      color: var(--bronze-claro);
+    }
+
+    .imovel a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .imovel a:hover h3 {
+      color: var(--dourado);
+    }
+
+    .links-imoveis {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .links-imoveis a {
+      color: #B8860B;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .links-imoveis a:hover {
+      background-color: var(--dourado);
+      color: #fff;
+    }
+
+    .whatsapp-btn-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+      z-index: 1000;
+    }
+
+    .whatsapp-btn-fixed:hover {
+      background: #128C7E;
+    }
+
+    /* Seção de imóveis vindos da API */
+    .imoveis-api {
+      padding: 40px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .imoveis-api h2 {
+      color: var(--dourado);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .imoveis-api .status {
+      margin: 10px auto 20px;
+      color: var(--bronze-claro);
+      max-width: 900px;
+    }
+
+    .imoveis-api .imovel-card {
+      text-align: left;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      overflow: hidden;
+    }
+
+    .imoveis-api .imovel-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .imoveis-api .imovel-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin: 10px 0;
+    }
+
+    .imoveis-api .imovel-card a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+
+    .imoveis-api .imovel-card a:hover h3 {
+      color: var(--dourado);
+    }
+
+    .blog-section {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .blog-section h2 {
+      color: var(--dourado);
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .blog-posts {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .blog-post {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 300px;
+      text-align: left;
+    }
+
+    .blog-post h3 {
+      color: var(--texto-bronze);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .blog-post h3 a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .blog-post h3 a:hover {
+      color: var(--dourado);
+    }
+
+    .blog-post p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .site-footer {
+      background: #ffffff;
+      color: #000000;
+      padding: 40px 20px;
+      font-family: var(--fonte-padrao);
+      border-top: 1px solid #ddd;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    .footer-contact,
+    .footer-logo,
+    .footer-social {
+      text-align: center;
+    }
+
+    .footer-logo img {
+      width: 180px;
+      transition: transform 0.7s ease;
+    }
+
+    .footer-logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .footer-contact h3,
+    .footer-social h3 {
+      color: var(--dourado);
+      margin-bottom: 10px;
+    }
+
+    .footer-contact a,
+    .footer-social a {
+      color: var(--dourado);
+      text-decoration: none;
+    }
+
+    .footer-contact a:hover,
+    .footer-social a:hover {
+      color: #333;
+    }
+
+    .footer-contact p {
+      color: var(--dourado);
+      font-size: 16px;
+      margin: 6px 0;
+    }
+
+    .footer-social ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-social li {
+      margin-bottom: 8px;
+    }
+
+    .footer-credit {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #000000;
+    }
+
+    @media (max-width: 768px) {
+      .links-imoveis {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .links-imoveis a {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        border: 1px solid #B8860B;
+        background-color: #fff;
+      }
+
+      .blog-posts {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .lancamentos-section .imovel img {
+        height: 360px;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-area">
+      <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png/:/rs=w:170,h:170,mx" alt="Logo Flavia Imóveis" class="logo" />
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="negocie.html">Negocie</a></li>
+        <li><a href="financie.html">Financie</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <img src="img/capasite.webp" alt="Interior moderno e luxuoso" />
+  </section>
+
+  <section class="featured-properties">
+    <h2 class="titulo-dourado-centralizado">Imóveis em Destaque</h2>
+    <div class="grid-imoveis">
+      <div class="imovel">
+        <a href="apartamento-venda-agronomica-v439.html">
+          <img src="img/sala1.webp" alt="Apartamento na Agronômica">
+          <h3>Apartamento na Agronômica</h3>
+          <p>2 quartos • 1 suíte • vaga de garagem</p>
+        </a>
+      </div>
+      <div class="imovel">
+        <a href="apartamento-venda-kobrasol-v440.html">
+          <img src="img/imagens/sacada-1.webp" alt="Apartamento no Kobrasol">
+          <h3>Apartamento no Kobrasol</h3>
+          <p>3 quartos • 1 suíte • vaga de garagem</p>
+        </a>
+      </div>
+      <div class="imovel">
+        <a href="apartamento-venda-floresta-v441.html">
+          <img src="img/imagens/v441-sala-1.webp" alt="Apartamento Nossa Sra do Rosário">
+          <h3>Apartamento Nossa Sra do Rosário</h3>
+          <p>3 quartos • 1 suíte • sacada com churrasqueira</p>
+        </a>
+      </div>
+      <div class="imovel">
+        <a href="apartamento-venda-centro-v447.html">
+          <img src="img/imagens/01sala_035.jpg" alt="Apartamento Centro">
+          <h3>Apartamento Centro</h3>
+          <p>3 dormitórios • suíte • 2 vagas</p>
+        </a>
+      </div>
+      <div class="imovel">
+        <a href="apartamento-venda-campinas-v457.html">
+          <img src="img/portaldosol1.jpeg" alt="Apartamento Campinas">
+          <h3>Apartamento Campinas</h3>
+          <p>2 dormitorios • vaga de garagem</p>
+        </a>
+      </div>
+      <div class="imovel">
+        <a href="apartamento-venda-ratones-v449.html">
+          <img src="https://img.olx.com.br/images/24/240529711589713.jpg" alt="Casa em Ratones">
+          <h3>Casa em Ratones</h3>
+          <p>4 quartos • suíte • 2 vagas</p>
+        </a>
+      </div>
+   </div>
+  </section>
+
+  <!-- Container para imóveis da API -->
+<section class="imoveis-api">
+  <h2 class="titulo-dourado-centralizado">Outros Imóveis Disponíveis</h2>
+  <p class="status" id="imoveis-status">Carregando imóveis…</p>
+  <div id="lista-imoveis" class="grid-imoveis"></div>
+</section>
+
+  <a href="https://wa.me/5548991813333" class="whatsapp-btn-fixed" target="_blank">WhatsApp</a>
+  <main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const grid = document.getElementById('imoveis-grid');
+      const statusEl = document.getElementById('api-status');
+      const API_URL = ''; // Deixe em branco para usar o mesmo domínio
+
+      try {
+        statusEl.textContent = 'Carregando imóveis...';
+        const response = await fetch(`${API_URL}/api/imoveis/publicos`);
+        
+        if (!response.ok) {
+          throw new Error(`Erro na rede: ${response.statusText}`);
+        }
+
+        const imoveis = await response.json();
+
+        if (!imoveis || imoveis.length === 0) {
+          statusEl.textContent = 'Nenhum imóvel disponível no momento.';
+          return;
+        }
+
+        grid.innerHTML = ''; // Limpa o grid antes de adicionar os novos cards
+
+        imoveis.forEach(imovel => {
+          if (!imovel.fotos || imovel.fotos.length === 0) return;
+
+          // Gera o slug a partir da urlPublicada e cria o link dinâmico
+          const slug = (imovel.urlPublicada || '').split('/').pop().replace('.html', '');
+          const linkUrl = slug ? `/imovel/${slug}` : '#';
+
+          const card = `
+            <div class="imovel">
+              <a href="${linkUrl}">
+                <img src="${imovel.fotos[0]}" alt="${imovel.titulo}" loading="lazy">
+                <h3>${imovel.titulo}</h3>
+                <p>${imovel.bairro || 'Localização não informada'}</p>
+                <p><strong>${imovel.valor || 'Consulte'}</strong></p>
+              </a>
+            </div>
+          `;
+          grid.innerHTML += card;
+        });
+
+        statusEl.style.display = 'none'; // Oculta o status se tudo correu bem
+
+      } catch (error) {
+        console.error('Falha ao carregar imóveis:', error);
+        statusEl.textContent = 'Não foi possível carregar os imóveis. Tente novamente mais tarde.';
+        statusEl.style.color = '#b42318';
+      }
+    });
+  </script>
+</main>
+
+  <section class="featured-properties">
+    <h2 class="titulo-destaque">Imóveis em destaque</h2>
+    <div class="links-imoveis">
+      <li><a href="apartamento-venda-agronomica-v439.html">Apartamento na Agronômica</a></li>
+      <li><a href="apartamento-venda-kobrasol-v440.html">Apartamento no Kobrasol</a></li>
+      <li><a href="apartamento-venda-floresta-v441.html">Apartamento na Floresta</a></li>
+      <li><a href="apartamento-venda-centro-v447.html">Apartamento no Centro</a></li>
+      <li><a href="apartamento-venda-campinas-v457.html">Apartamento em Campinas</a></li>
+      <li><a href="apartamento-venda-ratones-v449.html">Casa em Ratones</a></li>
+    </div>
+  </section>
+
+  <section class="blog-section">
+    <h2>Blog Imobiliário</h2>
+    <div class="blog-posts">
+      <article class="blog-post">
+        <h3><a href="artigo-airbnb.html">Como Lucrar com Airbnb em Florianópolis</a></h3>
+        <p>Descubra dicas para maximizar seus rendimentos alugando imóveis na ilha da magia.</p>
+      </article>
+      <article class="blog-post">
+        <h3><a href="artigo-cfl-campeche.html">CFL Lança Empreendimento no Campeche</a></h3>
+        <p>Conheça o novo projeto da CFL com vista para o mar e alto padrão.</p>
+      </article>
+      <article class="blog-post">
+        <h3><a href="artigo-floripa-mercado-imobiliario.html">Mercado Imobiliário de Florianópolis</a></h3>
+        <p>Análise completa do mercado imobiliário na capital catarinense.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="featured-properties lancamentos-section">
+    <h2 class="titulo-dourado-centralizado">Lançamentos</h2>
+    <div class="grid-imoveis">
+      <div class="imovel">
+        <a href="apartamento-um-milano-v450.html">
+          <img src="https://gralha2.inforcedata.com.br/api/image/76402473.jpg" alt="Um Milano">
+          <h3>Apartamento venda Um Milano</h3>
+          <p>Beira-Mar Norte • 231 a 452m² • 3 e 4 suítes</p>
+        </a>
+      </div>
+      <div class="imovel">
+        <a href="apartamento-connect-233-v451.html">
+          <img src="https://gralha2.inforcedata.com.br/api/image/76413761.jpg" alt="Connect 233">
+          <h3>Apartamento venda Connect 233</h3>
+          <p>Centro • 23 a 85m² • studios e apartamentos</p>
+        </a>
+      </div>
+      <div class="imovel">
+        <a href="apartamento-arkki-v452.html">
+          <img src="https://gralha2.inforcedata.com.br/api/image/76467398.jpg" alt="ARKKI">
+          <h3>Apartamento venda ARKKI</h3>
+          <p>Centro • 82 a 146m² • 2 e 3 suítes</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="contato">
+    <div class="footer-container">
+      <div class="footer-contact">
+        <h3>Contato</h3>
+        <p><a href="mailto:flavia.capacia@creci.gov">flavia.capacia@creci.gov</a></p>
+        <p><a href="tel:+5548999600601">(48) 99960-0601</a></p>
+        <p>Florianópolis • São José</p>
+        <p>Palhoça</p>
+      </div>
+
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" alt="Logo Flavia Imóveis"/>
+        </a>
+      </div>
+
+      <div class="footer-social">
+        <h3>Redes Sociais</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/flaviacapaciacorretora" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/flaviacapaciacorretora/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/flaviacapaciacorretora" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@flaviacapaciacorretora" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-credit">
+      <p>&copy; 2025 Flavia Capacia Corretora - Todos os direitos reservados.</p>
+      Feito com 💛 por <strong>Sistema de Inteligencia Imobiliaria</strong> 💛
+    </div>
+  </footer>
+
+<!-- Script: integração com API do CRM -->
+<script>
+  const API_URL = "https://crm-app-1028879773485.southamerica-east1.run.app";
+
+  function formatarPrecoBRL(valor) {
+    if (!valor) return "";
+    return String(valor); // já vem formatado da API
+  }
+
+  function escaparHtml(str) {
+    return String(str ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  async function carregarImoveis() {
+    const statusEl = document.querySelector('#imoveis-status');
+    const listaEl = document.querySelector('#lista-imoveis');
+
+    if (!statusEl || !listaEl) return;
+
+    try {
+      statusEl.textContent = "Carregando imóveis…";
+      listaEl.innerHTML = "";
+
+      const response = await fetch(`${API_URL}/api/imoveis/publicos`);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      const imoveis = await response.json();
+      if (!Array.isArray(imoveis) || imoveis.length === 0) {
+        statusEl.textContent = "Nenhum imóvel disponível no momento.";
+        return;
+      }
+
+      statusEl.textContent = `${imoveis.length} imóvel(is) encontrado(s).`;
+
+      imoveis.forEach(imovel => {
+        const titulo = escaparHtml(imovel?.titulo || imovel?.titulo_anuncio || "Imóvel");
+        const preco = formatarPrecoBRL(imovel?.valor || imovel?.valor_venda);
+        let imagem = "img/placeholder.jpg";
+        if (Array.isArray(imovel?.fotos) && imovel.fotos.length > 0) {
+          imagem = imovel.fotos[0].startsWith('/') ? API_URL + imovel.fotos[0] : imovel.fotos[0];
+        }
+
+        // Força o caminho relativo para evitar Erro 404 ao clicar no Cloud Run
+        let url = "#";
+        if (imovel?.arquivoPublicado) {
+          url = `/${imovel.arquivoPublicado}`;
+        } else if (imovel?.urlPublicada) {
+          try { url = new URL(imovel.urlPublicada).pathname; } 
+          catch(e) { url = imovel.urlPublicada.startsWith('/') ? imovel.urlPublicada : `/${imovel.urlPublicada}`; }
+        }
+
+        // Monta informações como "Bairro • Metragem • Suítes/Dormitórios"
+        const bairro = escaparHtml(imovel?.bairro || imovel?.local || "");
+        const metragem = imovel?.metragem || imovel?.area || "";
+        const suites = imovel?.suites || "";
+        const dormitoios = imovel?.dormitorios || imovel?.quartos || "";
+        const vagas = imovel?.vagas || "";
+        
+        let infoTexto = [];
+        if (bairro) infoTexto.push(bairro);
+        if (metragem) infoTexto.push(`${metragem}m²`);
+        
+        // Prioridade: suites > dormitórios > quartos
+        if (suites) {
+          infoTexto.push(`${suites} suíte${suites > 1 ? 's' : ''}`);
+        } else if (dormitoios) {
+          infoTexto.push(`${dormitoios} dormitório${dormitoios > 1 ? 's' : ''}`);
+        } else if (imovel?.quartos) {
+          infoTexto.push(`${imovel.quartos} quarto${imovel.quartos > 1 ? 's' : ''}`);
+        }
+        
+        if (vagas) infoTexto.push(`${vagas} vaga${vagas > 1 ? 's' : ''}`);
+        
+        const infos = infoTexto.length > 0 ? infoTexto.join(" • ") : "";
+
+        const card = `
+          <div class="imovel">
+            <a href="${url}">
+              <img src="${imagem}" alt="${titulo}">
+              <h3>${titulo}</h3>
+              <p>${infos}</p>
+            </a>
+          </div>
+        `;
+
+        listaEl.innerHTML += card;
+      });
+    } catch (erro) {
+      statusEl.textContent = "Erro ao carregar imóveis.";
+      console.error(erro);
+    }
+  }
+
+  carregarImoveis();
+</script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

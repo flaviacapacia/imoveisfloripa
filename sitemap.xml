@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página inicial -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/index.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Página Sobre -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/sobre.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Página Negocie -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/negocie.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Página Financie -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/financie.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Página Contato -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/contato.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Imóvel Kobrasol -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/apartamento-venda-kobrasol-v440.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Imóvel Agronômica -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/apartamento-venda-agronomica-v439.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Imóvel Centro -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/apartamento-venda-centro-v447.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Página Blog -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/blog.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigo Airbnb -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/artigo-airbnb.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Artigo CFL Campeche -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/artigo-cfl-campeche.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Artigo Mercado Imobiliário -->
+  <url>
+    <loc>https://www.flaviacapaciacorretora.com/artigo-floripa-mercado-imobiliario.html</loc>
+    <lastmod>2025-11-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
