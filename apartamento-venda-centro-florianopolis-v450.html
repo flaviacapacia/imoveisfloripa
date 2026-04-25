@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apartamento à venda com 1ou2,53m2,no Residencial Kuboo, Centro,proximo a beiramar em Florianópolis/SC</title>
+  <title>Apartamento à venda com 53m2, 1 ou 2 dormitorios no Residencial Kuboo, Centro, Florianópolis/SC</title>
   <meta name="description" content="1 suíte + lavabo (53m²) com 1 vaga de garagem. Possível implantação de segundo dormitório e garden (em aprovação pelo condomínio para viabilizar cobertura do passeio das garagens). Pronto, entregue em dez/25. Analisa permuta com torna: imóvel de até 40% do valor e saldo em dinheiro. Valor: R$928.000,00 com comissão de 6%." />
-  <meta property="og:title" content="Apartamento à venda no Edifício Residencial Kuboo, Centro, Florianópolis/SC" />
+  <meta property="og:title" content="Apartamento à venda com 53m2, 1 ou 2 dormitorios no Residencial Kuboo, Centro, Florianópolis/SC" />
   <meta property="og:description" content="1 suíte + lavabo (53m²) com 1 vaga de garagem. Possível implantação de segundo dormitório e garden (em aprovação pelo condomínio para viabilizar cobertura do passeio das garagens). Pronto, entregue em dez/25. Analisa permuta com torna: imóvel de até 40% do valor e saldo em dinheiro. Valor: R$928.000,00 com comissão de 6%." />
   <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Apartamento à venda no Edifício Residencial Kuboo, Centro, Florianópolis/SC" />
+  <meta name="twitter:title" content="Apartamento à venda com 53m2, 1 ou 2 dormitorios no Residencial Kuboo, Centro, Florianópolis/SC" />
   <meta name="twitter:description" content="1 suíte + lavabo (53m²) com 1 vaga de garagem. Possível implantação de segundo dormitório e garden (em aprovação pelo condomínio para viabilizar cobertura do passeio das garagens). Pronto, entregue em dez/25. Analisa permuta com torna: imóvel de até 40% do valor e saldo em dinheiro. Valor: R$928.000,00 com comissão de 6%." />
   <meta name="twitter:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
@@ -122,7 +122,7 @@
         Lounge e Espaço Happy Hour<br><br>
         
   
-      <h2>Localização</h2>
+      <h1>Localização</h1>
          Rua José Boiteux - Centro - Florianópolis<br>
         A menos de cinco minutos de distância de:<br>
         <ul>
@@ -143,7 +143,7 @@
     <section class="card">
       <h2>Galeria de fotos</h2>
       <div class="zoom-gallery">
-        <div class="zoom-container"><img src="/450/v450-1.jpg" alt="Imagem 1" onclick="openModal(0)"></div>
+        <div class="zoom-container"><img src="/V450/v450-1.jpg" alt="Imagem 1" onclick="openModal(0)"></div>
         <div class="zoom-container"><img src="/V450/v450-2.jpeg" alt="Imagem 2" onclick="openModal(1)"></div>
         <div class="zoom-container"><img src="/V450/v450-3.jpeg" alt="Imagem 3" onclick="openModal(2)"></div>
         <div class="zoom-container"><img src="/V450/v450-4.jpeg" alt="Imagem 4" onclick="openModal(3)"></div>
@@ -158,8 +158,20 @@
       </div>
     </section>
     <script>
-      // Gera o array de imagens dinamicamente a partir dos src da galeria
-      const images = Array.from(document.querySelectorAll('.zoom-gallery .zoom-container img')).map(img => img.getAttribute('src'));
+      const images = [
+        "/V450/v450-1.jpg",
+        "/V450/v450-2.jpeg",
+        "/V450/v450-3.jpeg",
+        "/V450/v450-4.jpeg",
+        "/V450/v450-5.jpeg",
+        "/V450/v450-6.jpeg",
+        "/V450/v450-7.jpeg",
+        "/V450/v450-8.jpeg",
+        "/V450/v450-9.jpg",
+        "/V450/v450-10.jpg",
+        "/V450/v450-11.jpg",
+        "/V450/v450-12.jpg"
+      ];
       let currentIndex = 0;
       function openModal(index) {
         currentIndex = index;
