@@ -447,7 +447,7 @@
       </div>
       <div class="imovel">
         <a href="apartamento-venda-centro -v447.html">
-          <img src="img/imagens/01sala_035.jpg" alt="Apartamento Centro">
+          <img src="img/01sala_035.jpg" alt="Apartamento Centro">
           <h3>Apartamento Centro</h3>
           <p>3 dormitórios • suíte • 2 vagas</p>
         </a>
@@ -469,68 +469,7 @@
    </div>
   </section>
 
-  <!-- Container para imóveis da API -->
-<section class="imoveis-api">
-  <h2 class="titulo-dourado-centralizado">Outros Imóveis Disponíveis</h2>
-  <p class="status" id="imoveis-status">Carregando imóveis…</p>
-  <div id="lista-imoveis" class="grid-imoveis"></div>
-</section>
-
-  <a href="https://wa.me/5548991813333" class="whatsapp-btn-fixed" target="_blank">WhatsApp</a>
-  <main>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      const grid = document.getElementById('imoveis-grid');
-      const statusEl = document.getElementById('api-status');
-      const API_URL = ''; // Deixe em branco para usar o mesmo domínio
-
-      try {
-        statusEl.textContent = 'Carregando imóveis...';
-        const response = await fetch(`${API_URL}/api/imoveis/publicos`);
-        
-        if (!response.ok) {
-          throw new Error(`Erro na rede: ${response.statusText}`);
-        }
-
-        const imoveis = await response.json();
-
-        if (!imoveis || imoveis.length === 0) {
-          statusEl.textContent = 'Nenhum imóvel disponível no momento.';
-          return;
-        }
-
-        grid.innerHTML = ''; // Limpa o grid antes de adicionar os novos cards
-
-        imoveis.forEach(imovel => {
-          if (!imovel.fotos || imovel.fotos.length === 0) return;
-
-          // Gera o slug a partir da urlPublicada e cria o link dinâmico
-          const slug = (imovel.urlPublicada || '').split('/').pop().replace('.html', '');
-          const linkUrl = slug ? `/imovel/${slug}` : '#';
-
-          const card = `
-            <div class="imovel">
-              <a href="${linkUrl}">
-                <img src="${imovel.fotos[0]}" alt="${imovel.titulo}" loading="lazy">
-                <h3>${imovel.titulo}</h3>
-                <p>${imovel.bairro || 'Localização não informada'}</p>
-                <p><strong>${imovel.valor || 'Consulte'}</strong></p>
-              </a>
-            </div>
-          `;
-          grid.innerHTML += card;
-        });
-
-        statusEl.style.display = 'none'; // Oculta o status se tudo correu bem
-
-      } catch (error) {
-        console.error('Falha ao carregar imóveis:', error);
-        statusEl.textContent = 'Não foi possível carregar os imóveis. Tente novamente mais tarde.';
-        statusEl.style.color = '#b42318';
-      }
-    });
-  </script>
+  
 </main>
 
   <section class="featured-properties">
