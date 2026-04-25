@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -40,12 +39,13 @@
     article ul { margin: 8px 0 12px 20px; }
     .zoom-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
     .zoom-container { position: relative; width: 100%; aspect-ratio: 1/1; min-width: 0; min-height: 0; overflow: hidden; border-radius: 14px; border: 2px solid var(--dourado); cursor: zoom-in; background: #fff; }
-    .zoom-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+    .zoom-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; cursor: zoom-in; }
     .zoom-container:hover img { transform: scale(1.5); z-index: 2; }
     .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; }
     .modal.active { display: flex; }
     .modal-content { position: relative; background: #fff; padding: 24px; border-radius: 18px; box-shadow: 0 0 24px #0005; display: flex; flex-direction: column; align-items: center; }
-    .modal-content img { width: 480px; height: 480px; object-fit: cover; border-radius: 14px; margin-bottom: 16px; }
+    .modal-content img { width: 480px; height: 480px; object-fit: cover; border-radius: 14px; margin-bottom: 16px; transition: transform 0.3s; cursor: zoom-in; }
+    .modal-content img.zoomed { transform: scale(2); cursor: zoom-out; z-index: 10; }
     .carousel-controls { display: flex; gap: 18px; justify-content: center; margin-top: 8px; }
     .carousel-btn { background: var(--dourado); color: #fff; border: none; padding: 10px 22px; border-radius: 10px; cursor: pointer; font-size: 18px; font-weight: bold; box-shadow: 0 2px 8px #b08d5733; transition: background 0.2s; }
     .carousel-btn:hover { background: #7A5C45; }
@@ -91,22 +91,39 @@
     </nav>
   </header>
   <main class="imovel-page">
-    <h1>Apartamento à venda no Edifício Residencial Kuboo, Centro, Florianópolis/SC</h1>
+    <h1>Apartamento à venda no Centro de Florianópolis</h1>
     <p class="preco">R$928.000,00</p>
     <p class="codigo">Código: V450</p>
     <section class="card">
       <h2>Descrição do imóvel</h2>
-      <article>
-        1 suíte + lavabo (53m²) com 1 vaga de garagem. Possível implantação de segundo dormitório e garden (em aprovação pelo condomínio para viabilizar cobertura do passeio das garagens). Pronto, entregue em dez/25. Analisa permuta com torna: imóvel de até 40% do valor e saldo em dinheiro. Valor: R$928.000,00 com comissão de 6%.
-        <br><br>
-        <strong>Apartamento à Venda – Kuboo Centro Florianópolis</strong><br>
-        Apartamento novo, entregue em 2025, com 53 m²<br><br>
+        <strong>Apartamento à Venda no Centro de Florianópolis</strong><br>
+        Apartamento novo e moderno <br><br>
+        53 m²<br><br>
         1 suíte + lavabo<br><br>
         1 vaga de garagem<br><br>
         Possibilidade de implantação de segundo dormitório e garden (em aprovação pelo condomínio)<br><br>
         Analisa permuta de imóvel de até 40% do valor e saldo em dinheiro<br><br>
-        <strong>Localização</strong><br>
-        Av. Mauro Ramos / Rua José Boiteux – Centro de Florianópolis<br>
+
+        <strong>Diferenciais do Kuboo</strong><br>
+          Projeto arquitetônico contemporâneo e inovador<br><br>
+          Acabamentos de alta qualidade e design sofisticado<br><br>
+          Sustentabilidade e eficiência energética<br><br>
+        
+          <strong>Sustentabilidade</strong><br>
+        Reaproveitamento de água da chuva<br><br>
+        Arquitetura de exteriores e paisagismo integrados ao projeto<br><br>
+        Áreas de lazer favorecendo iluminação natural<br><br>
+       
+        <strong>Lazer e Conforto</strong><br>
+        Rooftop Grill e Forno de Pizza<br><br>
+        Espaço Relax, Spa e Sauna<br><br>
+        Solarium e Espaço Confraria<br><br>
+        Pet Place e Espaço Gourmet<br><br>
+        Lounge e Espaço Happy Hour<br><br>
+        
+  
+      <h1>Localização</h1>
+         Rua José Boiteux - Centro - Florianópolis<br>
         A menos de cinco minutos de distância de:<br>
         <ul>
           <li>Beiramar Shopping</li>
@@ -117,34 +134,16 @@
           <li>Supermercados Imperatriz, Hippo e Angeloni</li>
           <li>Farmácias, conveniências e padarias</li>
           <li>Escolas, clínicas e hospitais</li>
+          <br>
+       <strong>Para mais informações</strong><br>
+        Fale com o corretor e saiba mais sobre essa oportunidade <br><br>
         </ul>
-        <strong>Diferenciais do Kuboo</strong><br>
-        Moderno, bem localizado e com design único<br><br>
-        Projetos desenvolvidos em BIM e rigorosamente licenciados<br><br>
-        Gestão contábil e contratual de todo o ciclo do empreendimento<br><br>
-        Condução jurídica equilibrada<br><br>
-        <strong>Sustentabilidade</strong><br>
-        Reaproveitamento de água da chuva<br><br>
-        Arquitetura de exteriores e paisagismo integrados ao projeto<br><br>
-        Áreas de lazer favorecendo iluminação natural<br><br>
-        <strong>Rentabilidade</strong><br>
-        Controle de orçamento em todas as fases<br><br>
-        Equilíbrio entre estética e custo, maximizando a performance do investimento<br><br>
-        Possibilidade de transformar o investimento em receita recorrente<br><br>
-        Produto adequado ao que o mercado espera<br><br>
-        Transparência na gestão<br><br>
-        <strong>Lazer e Conforto</strong><br>
-        Rooftop Grill e Forno de Pizza<br><br>
-        Espaço Relax, Spa e Sauna<br><br>
-        Solarium e Espaço Confraria<br><br>
-        Pet Place e Espaço Gourmet<br><br>
-        Lounge e Espaço Happy Hour
       </article>
     </section>
     <section class="card">
       <h2>Galeria de fotos</h2>
       <div class="zoom-gallery">
-        <div class="zoom-container"><img src="/img/V450/v450-1.jpeg" alt="Imagem 1" onclick="openModal(0)"></div>
+        <div class="zoom-container"><img src="/img/V450/v450-1.jpg" alt="Imagem 1" onclick="openModal(0)"></div>
         <div class="zoom-container"><img src="/img/V450/v450-2.jpeg" alt="Imagem 2" onclick="openModal(1)"></div>
         <div class="zoom-container"><img src="/img/V450/v450-3.jpeg" alt="Imagem 3" onclick="openModal(2)"></div>
         <div class="zoom-container"><img src="/img/V450/v450-4.jpeg" alt="Imagem 4" onclick="openModal(3)"></div>
@@ -152,27 +151,15 @@
         <div class="zoom-container"><img src="/img/V450/v450-6.jpeg" alt="Imagem 6" onclick="openModal(5)"></div>
         <div class="zoom-container"><img src="/img/V450/v450-7.jpeg" alt="Imagem 7" onclick="openModal(6)"></div>
         <div class="zoom-container"><img src="/img/V450/v450-8.jpeg" alt="Imagem 8" onclick="openModal(7)"></div>
-        <div class="zoom-container"><img src="/img/V450/v450-9.jpeg" alt="Imagem 9" onclick="openModal(8)"></div>
-        <div class="zoom-container"><img src="/img/V450/v450-10.jpeg" alt="Imagem 10" onclick="openModal(9)"></div>
-        <div class="zoom-container"><img src="/img/V450/v450-11.jpeg" alt="Imagem 11" onclick="openModal(10)"></div>
-        <div class="zoom-container"><img src="/img/V450/v450-12.jpeg" alt="Imagem 12" onclick="openModal(11)"></div>
+        <div class="zoom-container"><img src="/img/V450/v450-9.jpg" alt="Imagem 9" onclick="openModal(8)"></div>
+        <div class="zoom-container"><img src="/img/V450/v450-10.jpg" alt="Imagem 10" onclick="openModal(9)"></div>
+        <div class="zoom-container"><img src="/img/V450/v450-11.jpg" alt="Imagem 11" onclick="openModal(10)"></div>
+        <div class="zoom-container"><img src="/img/V450/v450-12.jpg" alt="Imagem 12" onclick="openModal(11)"></div>
       </div>
     </section>
     <script>
-      const images = [
-        "/img/V450/v450-1.jpeg",
-        "/img/V450/v450-2.jpeg",
-        "/img/V450/v450-3.jpeg",
-        "/img/V450/v450-4.jpeg",
-        "/img/V450/v450-5.jpeg",
-        "/img/V450/v450-6.jpeg",
-        "/img/V450/v450-7.jpeg",
-        "/img/V450/v450-8.jpeg",
-        "/img/V450/v450-9.jpeg",
-        "/img/V450/v450-10.jpeg",
-        "/img/V450/v450-11.jpeg",
-        "/img/V450/v450-12.jpeg"
-      ];
+      // Gera o array de imagens dinamicamente a partir dos src da galeria
+      const images = Array.from(document.querySelectorAll('.zoom-gallery .zoom-container img')).map(img => img.getAttribute('src'));
       let currentIndex = 0;
       function openModal(index) {
         currentIndex = index;
