@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flavia Capacia Corretora | Imóveis em Florianópolis e Região</title>
+  <meta name="description" content="Imóveis de alto padrão em Florianópolis, São José e Palhoça. Apartamentos, casas e coberturas com a experiência de Flavia Capacia." />
+  <meta property="og:title" content="Flavia Capacia Corretora | Imóveis em Florianópolis" />
+  <meta property="og:description" content="Encontre seu imóvel dos sonhos na Grande Florianópolis" />
+  <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
+  <meta property="og:url" content="https://www.flaviacapaciacorretora.com" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.flaviacapaciacorretora.com/index.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bronze: #b08d57;
+      --bronze-claro: #d6bfa5;
+      --dourado: #e8c066;
+      --preto: #222;
+      --branco: #fff;
+      --fonte-principal: 'Playfair Display', serif;
+      --fonte-secundaria: 'Roboto', sans-serif;
+    }
+    * { margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family: var(--fonte-principal);
+      color: var(--preto);
+      line-height: 1.6;
+      background-color: var(--bronze-claro);
+    }
+    .top-bar {
+      background: var(--preto);
+      color: var(--branco);
+      padding: 8px 0;
+      font-size: 13px;
+    }
+    .top-bar-content {
+      max-width: 1200px; margin:0 auto; padding:0 20px;
+      display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
+    }
+    .top-bar-contact { display:flex; gap:25px; align-items:center;}
+    .top-bar-contact a { color:var(--branco); text-decoration:none; transition:opacity 0.3s;}
+    .top-bar-contact a:hover { opacity:.8;}
+    .main-header {
+      background: var(--branco);
+      box-shadow: 0 2px 10px rgba(34,34,34,0.10);
+      position: sticky; top:0; z-index:999;
+    }
+    .header-container { max-width:1200px; margin:0 auto; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; gap:20px;}
+    .logo-section { display:flex; align-items:center; gap:12px;}
+    .logo-img { max-width:160px; height:auto;}
+    .nav-menu ul { display:flex; list-style:none; gap:8px; align-items:center;}
+    .nav-menu a {
+      text-decoration:none; color:var(--preto); font-weight:600; font-size:14px;
+      padding: 10px 16px; border-radius:5px; text-transform:uppercase; letter-spacing:.3px; transition:.3s;
+    }
+    .nav-menu a:hover { background: var(--bronze); color: var(--branco);}
+    .hero-image-section {
+      position:relative; height:500px;
+      background: url('img/capasite.webp') center/cover no-repeat;
+      display: flex; align-items: center; justify-content: center; color:var(--branco); text-align:center;
+    }
+    .hero-image-content { max-width:1200px; padding:0 20px; width:100%;}
+    .hero-image-content h1 { font-size:3rem; font-weight:700; margin-bottom:30px; text-shadow:2px 2px 8px rgba(0,0,0,.3);}
+    .hero-tabs { display:flex; justify-content:center; gap:15px; margin-bottom:25px;}
+    .hero-tab {
+      background-color: var(--bronze-claro); border:2px solid var(--bronze); color: var(--preto);
+      padding:12px 35px; border-radius:8px; font-weight:600; font-size:15px; cursor:pointer; transition:.3s; text-transform:uppercase;
+    }
+    .hero-tab.active,
+    .hero-tab:hover {
+      background-color: var(--bronze);
+      color: var(--branco);
+      border-color: var(--bronze);
+    }
+    .hero-search-advanced {
+      background: var(--branco);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(34,34,34,.18);
+      max-width:900px; margin:0 auto;
+    }
+    .search-input-main {
+      width:100%; padding:16px 20px; border:2px solid #DDD; border-radius:8px; font-size:15px; margin-bottom:18px;
+    }
+    .search-filters {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-bottom:18px;}
+    .search-filters select, .search-filters input {padding:12px 16px; border:1px solid #DDD; border-radius:6px; font-size:14px;}
+    .search-btn-main {
+      width:100%; padding:16px; background:var(--bronze); color:var(--branco);
+      border:none; border-radius:8px; font-weight:700; font-size:16px; cursor:pointer; text-transform:uppercase;
+      transition:background 0.3s;
+    }
+    .search-btn-main:hover {background:var(--preto);}
+    .breadcrumb-bar { background:var(--branco); padding:12px 0; border-bottom:1px solid #E0E0E0;}
+    .breadcrumb-content { max-width:1200px; margin: 0 auto; padding:0 20px; font-size:13px; color:var(--bronze);}
+    .breadcrumb-content a { color:var(--bronze); text-decoration: none;}
+    .breadcrumb-content a:hover { text-decoration: underline;}
+    .main-content { max-width:1200px; margin:45px auto; padding:0 20px; background: var(--bronze-claro);}
+    .section-header { margin-bottom:35px;}
+    .section-title { font-size:32px; font-weight:700; color:var(--bronze); margin-bottom:8px;}
+    .section-subtitle {font-size:16px; color:var(--bronze);}
+    .filter-section {background:var(--branco); padding:25px; border-radius:10px; box-shadow:0 3px 12px rgba(176,141,87,.09); margin-bottom:35px;}
+    .filter-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:18px; align-items:end;}
+    .filter-item label {display:block; font-size:12px; font-weight:600; color:var(--bronze); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;}
+    .filter-item select, .filter-item input {width:100%; padding:11px 14px; border:1px solid #BBB; border-radius:6px; font-size:14px;}
+    .filter-btn { padding:11px 30px; background:var(--bronze); color:var(--branco); border:none; border-radius:6px; font-weight:700; cursor:pointer; text-transform:uppercase; transition: background 0.3s;}
+    .filter-btn:hover {background:var(--preto);}
+    .properties-grid {display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:28px; margin-bottom:50px;}
+    .property-card { background:var(--branco); border-radius:10px; overflow:hidden; box-shadow:0 3px 12px rgba(176,141,87,.14); transition:.3s; position:relative;}
+    .property-card:hover { transform:translateY(-8px); box-shadow:0 10px 25px rgba(176,141,87,.17);}
+    .property-tag {
+      position:absolute; top:15px; right:15px;
+      background:var(--bronze); color:var(--branco); padding:6px 14px; border-radius:25px; font-size:11px;
+      font-weight:700; text-transform:uppercase; z-index:10; box-shadow:0 3px 10px rgba(176,141,87,.13);
+    }
+    .property-image { width:100%; height:230px; object-fit:cover; transition:transform 0.3s;}
+    .property-card:hover .property-image { transform:scale(1.06);}
+    .property-details { padding:22px;}
+    .property-type { font-size:12px; color:var(--bronze); font-weight:700; text-transform:uppercase; letter-spacing:.5px; margin-bottom:6px;}
+    .property-title { font-size:19px; font-weight:700; color:var(--preto); margin-bottom:10px; line-height:1.3; min-height:50px;}
+    .property-location { font-size:13px; color:var(--bronze); margin-bottom:16px; display:flex; align-items:center; gap:6px;}
+    .property-features { display:flex; gap:18px; padding:16px 0; border-top:1px solid #E0E0E0; border-bottom:1px solid #E0E0E0; margin-bottom:16px; flex-wrap:wrap;}
+    .feature-item { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--bronze);}
+    .feature-item strong { color:var(--preto); font-weight:600;}
+    .property-price { font-size:26px; font-weight:700; color:var(--dourado); margin-bottom:18px;}
+    .property-actions { display:flex; gap:10px;}
+    .btn-details {
+      flex:1; padding:13px; background:var(--preto); color:var(--branco);
+      text-align:center; text-decoration:none; border-radius:6px; font-weight:700; font-size:14px; text-transform:uppercase; transition:background 0.3s;
+    }
+    .btn-details:hover { background:var(--bronze);}
+    .btn-whats {
+      padding:13px 22px;
+      background: var(--bronze);
+      color: var(--branco);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0;
+    }
+    .btn-whats svg {
+      width: 34px !important;
+      height: 34px !important;
+      min-width: 34px;
+      min-height: 34px;
+      max-width: 38px;
+      max-height: 38px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .btn-whats:hover {
+      background: #25D366;
+    }
+    .lancamentos-section { background:var(--bronze-claro); padding:60px 20px; margin-top:60px;}
+    .lancamentos-content { max-width:1200px; margin:0 auto;}
+    .lancamentos-header { text-align:center; margin-bottom:45px;}
+    .lancamentos-header h2 { font-size:36px; font-weight:700; color:var(--bronze); margin-bottom:12px;}
+    .lancamentos-header p { font-size:17px; color:var(--preto);}
+    .lancamentos-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:35px;}
+    .lancamento-card { background:var(--branco); border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(176,141,87,.11); transition:.3s;}
+    .lancamento-card:hover { transform:translateY(-10px); box-shadow:0 12px 30px rgba(176,141,87,.18);}
+    .lancamento-image { width:100%; height:420px; object-fit:cover; object-position:center;}
+    .lancamento-info { padding:28px;}
+    .lancamento-badge { display:inline-block; background:var(--dourado); color:var(--preto); padding:6px 16px; border-radius:20px; font-size:11px; font-weight:700; text-transform:uppercase; margin-bottom:12px;}
+    .lancamento-title { font-size:24px; font-weight:700; color:var(--preto); margin-bottom:12px;}
+    .lancamento-location { font-size:14px; color:var(--bronze); margin-bottom:18px; display:flex; align-items:center; gap:6px;}
+    .lancamento-description { font-size:14px; color:var(--bronze); line-height:1.7; margin-bottom:20px;}
+    .lancamento-btn {
+      display:block; width:100%; padding:15px;
+      background:var(--bronze); color:var(--branco); text-align:center; text-decoration:none; border-radius:8px;
+      font-weight:700; font-size:15px; text-transform:uppercase; transition:.3s;
+    }
+    .lancamento-btn:hover { background:var(--preto);}
+
+    /* BLOG - mesmo visual dos lançamentos */
+.blog-section {
+  background: var(--bronze-claro);
+  padding: 60px 20px;
+  margin-top: 60px;
+}
+    /* Lançamentos seta */
+    .lancamentos-content {
+      position: relative;
+    }
+    .lancamentos-arrow {
+      position: absolute;
+      right: -28px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      border: none;
+      box-shadow: 0 2px 8px rgba(34,34,34,0.10);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .lancamentos-content { min-height: 100px; }
+    .lancamentos-content { position: relative; }
+    .lancamentos-grid { position: relative; }
+    @media (max-width: 900px) {
+      .lancamentos-arrow {
+        right: 0;
+        top: auto;
+        bottom: -60px;
+        transform: none;
+      }
+    }
+.blog-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--bronze);
+  margin-bottom: 32px;
+  text-align: center;
+}
+.blog-posts {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 35px;
+}
+.blog-post {
+  background: var(--branco);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(176,141,87,.11);
+  padding: 32px 28px;
+  transition: .3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+}
+.blog-post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(176,141,87,.18);
+}
+.blog-post h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--preto);
+  margin-bottom: 12px;
+}
+.blog-post h3 a {
+  color: var(--bronze);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.blog-post h3 a:hover {
+  color: var(--dourado);
+  text-decoration: underline;
+}
+.blog-post p {
+  font-size: 15px;
+  color: var(--bronze);
+  line-height: 1.7;
+}
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: transparent;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 998;
+      text-decoration: none;
+      transition: all 0.3s;
+      padding: 0;
+      border: none;
+      box-shadow: 0 5px 18px rgba(34,34,34,0.10);
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      background: transparent;
+      box-shadow: 0 8px 24px rgba(34,34,34,0.13);
+    }
+    /* === FOOTER: Branco com letras escuras === */
+    .main-footer { background:var(--branco); color:var(--preto); padding:55px 20px 25px; margin-top:70px;}
+    .footer-grid {
+      max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:45px; margin-bottom:35px;
+    }
+    .footer-column h3 {font-size:19px;font-weight:700; margin-bottom:22px; color:var(--bronze);}
+    .footer-logo {max-width:180px;margin-bottom:4px;display:block;}
+    .footer-column p {line-height:1.9; opacity:0.92; font-size:14px;margin-bottom:10px; color:var(--preto);}
+    .footer-column a {color:var(--bronze); text-decoration:none; display:block; margin-bottom:12px; transition:color 0.3s; font-size:14px;}
+    .footer-column a:hover {color:var(--dourado);}
+    .footer-contact-row {display:flex; align-items:center; gap:12px; margin-bottom:14px;}
+    .social-icons {display:flex; gap:16px; margin-top:18px;}
+    .social-icons a {width:42px; height:42px; background:var(--bronze-claro); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:.3s; font-size:18px; color:var(--preto);}
+    .social-icons a:hover {background:var(--bronze); color:var(--branco); transform:translateY(-4px);}
+    .footer-bottom {text-align:center; padding-top:32px; border-top:1px solid #e0e0e0; font-size:13px; opacity:0.85; background:var(--branco); color:var(--bronze);}
+    @media (max-width: 900px) {.footer-grid{grid-template-columns:1fr;gap:32px;}}
+    @media (max-width:768px){
+      .header-container{flex-direction:column;text-align:center;}
+      .nav-menu ul{flex-wrap:wrap;justify-content:center;}
+      .hero-image-content h1{font-size:2rem;}
+      .hero-tabs{flex-direction:column;}
+      .search-filters{grid-template-columns:1fr;}
+      .main-content, .properties-grid, .lancamentos-grid{grid-template-columns:1fr;}
+      .filter-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== BARRA TOPO ========== -->
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <div class="top-bar-contact">
+        <a href="mailto: flavia.capacia@creci.gov" class="icon-link" aria-label="E-mail">
+          <span class="icon-bg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#8B8B97"/><path d="M4 7.5V16a1.5 1.5 0 001.5 1.5h13A1.5 1.5 0 0020 16V7.5l-8 5.5-8-5.5z" fill="#fff"/><path d="M20 6a1.5 1.5 0 00-1.5-1.5h-13A1.5 1.5 0 004 6l8 5.5L20 6z" fill="#fff"/></svg>
+          </span>
+          flavia.capacia@creci.gov
+        </a>
+        <a href="tel:+5548999600601" class="icon-link" aria-label="Telefone">
+          <span class="icon-bg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#8B8B97"/><path d="M17.472 14.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/></svg>
+          </span>
+          (48) 99960-0601
+        </a>
+      </div>
+      <div class="icon-link" aria-label="Localização">
+        <span class="icon-bg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#8B8B97"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" fill="#fff"/></svg>
+        </span>
+        Florianópolis • São José • Palhoça
+      </div>
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-section">
+        <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" alt="Flavia Capacia Corretora" class="logo-img">
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#comprar">Comprar</a></li>
+          <li><a href="#alugar">Alugar</a></li>
+          <li><a href="#lancamentos">Lançamentos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ========== HERO ========== -->
+  <section class="hero-image-section">
+    <div class="hero-image-content">
+      <h1>Encontre o seu imóvel na Grande Florianópolis</h1>
+      <div class="hero-tabs">
+        <button class="hero-tab active">Venda</button>
+        <button class="hero-tab">Lançamentos</button>
+        <button class="hero-tab">Aluguel</button>
+      </div>
+      <div class="hero-search-advanced">
+        <input type="text" class="search-input-main" placeholder="Digite a cidade, bairro ou condomínio...">
+        <div class="search-filters">
+          <select>
+            <option> Tipo de Imóvel</option>
+            <option>Apartamento</option>
+            <option>Casa</option>
+            <option>Cobertura</option>
+            <option>Studio</option>
+            <option>Terreno</option>
+          </select>
+          <select>
+            <option> Dormitórios(s)</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4+</option>
+          </select>
+          <input type="text" placeholder="Digite o código...">
+        </div>
+        <button class="search-btn-main">🔍 Buscar</button>
+      </div>
+    </div>
+  </section>
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-content">
+      <a href="index.html">Início</a> > <span>Imóveis à venda</span>
+    </div>
+  </div>
+  <main class="main-content">
+    <div class="section-header">
+      <h2 class="section-title">Imóveis em Destaque</h2>
+      <p class="section-subtitle">Confira nossa seleção especial de imóveis de alto padrão</p>
+    </div>
+    <div class="filter-section">
+      <div class="filter-grid">
+        <div class="filter-item">
+          <label>Cidade</label>
+          <select>
+            <option>Todas</option>
+            <option>Florianópolis</option>
+            <option>São José</option>
+            <option>Palhoça</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label>Bairro</label>
+          <select>
+            <option>Todos</option>
+            <option>Agronômica</option>
+            <option>Centro</option>
+            <option>Kobrasol</option>
+            <option>Trindade</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label>Quartos</label>
+          <select>
+            <option>Todos</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4+</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label>Valor Mínimo</label>
+          <input type="text" placeholder="R$ 0">
+        </div>
+        <div class="filter-item">
+          <label>Valor Máximo</label>
+          <input type="text" placeholder="R$ 0">
+        </div>
+        <div class="filter-item">
+          <button class="filter-btn">Filtrar</button>
+        </div>
+      </div>
+    </div>
+    <!-- OS IMÓVEIS EM DESTAQUE AQUI -->
+    <div class="properties-grid">
+      <article class="property-card">
+        <span class="property-tag">Destaque</span>
+        <img src="img/sala1.webp" class="property-image" alt="Apartamento Agronômica">
+        <div class="property-details">
+          <div class="property-type">Apartamento</div>
+          <h3 class="property-title">Apartamento na Agronômica</h3>
+          <div class="property-location">
+            Agronômica - Florianópolis/SC
+          </div>
+          <div class="property-features">
+            <div class="feature-item"> <strong>2</strong> Quartos</div>
+            <div class="feature-item"> <strong>1</strong> Suíte</div>
+            <div class="feature-item"> <strong>1</strong> Vaga</div>
+          </div>
+          <div class="property-price">R$ 780.000</div>
+          <div class="property-actions">
+            <a href="apartamento-venda-agronomica-v439.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <!-- Os cards antigos permanecem acima. Inserir os 3 novos imóveis ao final da grid -->
+      <article class="property-card">
+        <span class="property-tag">Praia</span>
+        <img src="img/palmas1.jpeg" class="property-image" alt="Apartamento Palmas Celso Ramos">
+        <div class="property-details">
+          <div class="property-type">Apartamento</div>
+          <h3 class="property-title">Apartamento Palmas - Celso Ramos</h3>
+          <div class="property-location">Palmas - Gov. Celso Ramos/SC</div>
+          <div class="property-features">
+            <div class="feature-item"><strong>3</strong> Quartos</div>
+            <div class="feature-item"><strong>1</strong> Suíte</div>
+            <div class="feature-item"><strong>1</strong> Vaga</div>
+          </div>
+          <div class="property-price">R$ 1.270.000</div>
+          <div class="property-actions">
+            <a href="v456-apartamento-venda-palmas-sacada-praia-celso-ramos+3dormitorios+suite.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20em%20Palmas%20Celso%20Ramos" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card">
+        <span class="property-tag">Duplex</span>
+        <img src="V450/v450-5.jpg" class="property-image" alt="Duplex Cobertura Estreito">
+        <div class="property-details">
+          <div class="property-type">Apartamento</div>
+          <h3 class="property-title">Duplex Cobertura Estreito</h3>
+          <div class="property-location">Balneário do Estreito - Florianópolis/SC</div>
+          <div class="property-features">
+            <div class="feature-item"><strong>3</strong> Quartos</div>
+            <div class="feature-item"><strong>1</strong> Suíte</div>
+            <div class="feature-item"><strong>2</strong> Vagas</div>
+          </div>
+          <div class="property-price">R$ 1.950.000</div>
+          <div class="property-actions">
+            <a href="v448-apartamento-duplex-cobertura-220m2-3dormitorios-sacada+churrasqueira+vista+academia.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20duplex%20cobertura%20no%20Estreito" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card">
+        <span class="property-tag">Beira Mar</span>
+        <img src="V450/v450-2.jpg" class="property-image" alt="Beira Mar Norte Marina">
+        <div class="property-details">
+          <div class="property-type">Apartamento</div>
+          <h3 class="property-title">Beira Mar Norte + Marina</h3>
+          <div class="property-location">Beira Mar Norte - Florianópolis/SC</div>
+          <div class="property-features">
+            <div class="feature-item"><strong>3</strong> Quartos</div>
+            <div class="feature-item"><strong>2</strong> Banheiros</div>
+            <div class="feature-item"><strong>1</strong> Vaga</div>
+          </div>
+          <div class="property-price">Consultar valor</div>
+          <div class="property-actions">
+            <a href="v449-apartamento-venda-3dormitorios-beira-mar-norte+marina+110m2+vaga+floianopolis.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Beira%20Mar%20Norte%20Marina" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+     
+
+        <article class="property-card">
+          <span class="property-tag">Centro</span>
+          <img src="V450/v450-1.jpg" class="property-image" alt="Apartamento Centro Kuboo">
+          <div class="property-details">
+            <div class="property-type">Apartamento</div>
+            <h3 class="property-title">Apartamento Centro Kuboo</h3>
+            <div class="property-location">Centro - Florianópolis/SC</div>
+            <div class="property-features">
+              <div class="feature-item"><strong>1-2</strong> Quartos</div>
+              <div class="feature-item"><strong>1</strong> Suíte</div>
+              <div class="feature-item"><strong>1</strong> Vaga</div>
+            </div>
+            <div class="property-price">R$ 928.000</div>
+            <div class="property-actions">
+              <a href="../apartamento-venda-centro-florianopolis-v450.html" class="btn-details">Ver Detalhes</a>
+              <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Centro%20Kuboo" class="btn-whats" target="_blank" aria-label="WhatsApp">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="16" fill="none"/>
+                  <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      <article class="property-card">
+        <span class="property-tag">Lançamento</span>
+        <img src="img/sacada-1.webp" class="property-image" alt="Apartamento Kobrasol">
+        <div class="property-details">
+          <div class="property-type">Apartamento</div>
+          <h3 class="property-title">Apartamento no Kobrasol</h3>
+          <div class="property-location">
+            Kobrasol - São José/SC
+          </div>
+          <div class="property-features">
+            <div class="feature-item"> <strong>3</strong> Quartos</div>
+            <div class="feature-item"> <strong>1</strong> Suíte</div>
+            <div class="feature-item"> <strong>1</strong> Vaga</div>
+          </div>
+          <div class="property-price">R$ 940.000</div>
+          <div class="property-actions">
+            <a href="apartamento-venda-kobrasol-v440.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Kobrasol" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+     <article class="property-card">
+        <img src="img/imagens/01sala_035.jpg" class="property-image" alt="Apartamento Centro">
+        <div class="property-details">
+          <div class="property-type">Apartamento</div>
+          <h3 class="property-title">Apartamento Centro</h3>
+          <div class="property-location">
+             Centro - Florianópolis/SC
+          </div>
+          <div class="property-features">
+            <div class="feature-item"> <strong>3</strong> Quartos</div>
+            <div class="feature-item"><strong>1</strong> Suíte</div>
+            <div class="feature-item"> <strong>2</strong> Vagas</div>
+          </div>
+          <div class="property-price">R$ 2.250.000</div>
+          <div class="property-actions">
+            <a href="apartamento-venda-centro-v447.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Centro" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="property-card">
+        <span class="property-tag">Oportunidade</span>
+        <img src="img/portaldosol1.jpeg" class="property-image" alt="Apartamento Campinas">
+        <div class="property-details">
+          <div class="property-type">Apartamento</div>
+          <h3 class="property-title">Apartamento Campinas</h3>
+          <div class="property-location">
+             Campinas - Florianópolis/SC
+          </div>
+          <div class="property-features">
+            <div class="feature-item"> <strong>1</strong> Quarto</div>
+            <div class="feature-item"><strong>1</strong> Suíte</div>
+            <div class="feature-item"> <strong>1</strong> Vaga</div>
+          </div>
+          <div class="property-price"> Consultar valor</div>
+          <div class="property-actions">
+            <a href="apartamento-venda-campinas-v457.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20em%20Campinas" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="property-card">
+        <img src="https://img.olx.com.br/images/24/240529711589713.jpg" class="property-image" alt="Casa Ratones">
+        <div class="property-details">
+          <div class="property-type">Casa</div>
+          <h3 class="property-title">Casa em Ratones</h3>
+          <div class="property-location">
+             Ratones - Florianópolis/SC
+          </div>
+          <div class="property-features">
+            <div class="feature-item"> <strong>4</strong> Quartos</div>
+            <div class="feature-item"> <strong>2</strong> Suítes</div>
+            <div class="feature-item"> <strong>2</strong> Vagas</div>
+          </div>
+          <div class="property-price">R$ 950.000</div>
+          <div class="property-actions">
+            <a href="apartamento-venda-ratones-v449.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20em%20Ratones" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="property-card">
+        <span class="property-tag">Exclusivo</span>
+        <img src="img/sala-1.webp" class="property-image" alt="Apartamento Nossa Sra do Rosário">
+        <div class="property-details">
+          <div class="property-type">Apartamento</div>
+          <h3 class="property-title">Apartamento Nossa Sra do Rosário</h3>
+          <div class="property-location">
+             Floresta - São José/SC
+          </div>
+          <div class="property-features">
+            <div class="feature-item"> <strong>3</strong> Quartos</div>
+            <div class="feature-item"> <strong>1</strong> Suíte</div>
+            <div class="feature-item"> Churrasqueira</div>
+          </div>
+          <div class="property-price">R$ 480.000</div>
+          <div class="property-actions">
+            <a href="apartamento-venda-floresta-v441.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Olá! Tenho interesse no apartamento Nossa Sra do Rosário" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <section class="lancamentos-section" id="lancamentos">
+    <div class="lancamentos-content">
+      <div class="lancamentos-header">
+        <h2>Lançamentos Exclusivos</h2>
+        <p>Conheça os empreendimentos mais aguardados de Florianópolis</p>
+      </div>
+      <div class="lancamentos-grid">
+        <article class="lancamento-card">
+          <img src="https://gralha2.inforcedata.com.br/api/image/76402473.jpg" alt="Um Milano" class="lancamento-image">
+          <div class="lancamento-info">
+            <span class="lancamento-badge">Pré-Lançamento</span>
+            <h3 class="lancamento-title">Um Milano</h3>
+            <div class="lancamento-location"> Beira-Mar Norte - Florianópolis/SC</div>
+            <p class="lancamento-description">
+              Apartamentos de 231 a 452m² com 3 e 4 suítes. Alto padrão à beira-mar com vista privilegiada.
+            </p>
+            <a href="apartamento-um-milano-v450.html" class="lancamento-btn">Saiba Mais</a>
+          </div>
+        </article>
+        <article class="lancamento-card">
+          <img src="https://gralha2.inforcedata.com.br/api/image/76413761.jpg" alt="Connect 233" class="lancamento-image">
+          <div class="lancamento-info">
+            <span class="lancamento-badge">Lançamento</span>
+            <h3 class="lancamento-title">Connect 233</h3>
+            <div class="lancamento-location"> Centro - Florianópolis/SC</div>
+            <p class="lancamento-description">
+              Studios e apartamentos de 23 a 85m². Perfeito para investimento e moradia no coração da cidade.
+            </p>
+            <a href="apartamento-connect-233-v451.html" class="lancamento-btn">Saiba Mais</a>
+          </div>
+        </article>
+        <article class="lancamento-card">
+          <img src="https://gralha2.inforcedata.com.br/api/image/76467398.jpg" alt="ARKKI" class="lancamento-image">
+          <div class="lancamento-info">
+            <span class="lancamento-badge">Em Obras</span>
+            <h3 class="lancamento-title">ARKKI</h3>
+            <div class="lancamento-location"> Centro - Florianópolis/SC</div>
+            <p class="lancamento-description">
+              Apartamentos de 82 a 146m² com 2 e 3 suítes. Arquitetura moderna e localização privilegiada.
+            </p>
+            <a href="apartamento-arkki-v452.html" class="lancamento-btn">Saiba Mais</a>
+          </div>
+        </article>
+      </div>
+      <button class="lancamentos-arrow lancamentos-arrow-right" aria-label="Próximos lançamentos" style="position:absolute;right:-28px;top:50%;transform:translateY(-50%);background:#fff;border:none;box-shadow:0 2px 8px rgba(34,34,34,0.10);border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="14" fill="#fff"/>
+          <path d="M11 9l5 5-5 5" stroke="#8B8B97" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  <script>
+    // Carrossel de 3 em 3 lançamentos
+    (function(){
+      const lancs = Array.from(document.querySelectorAll('.lancamentos-grid .lancamento-card'));
+      const arrow = document.querySelector('.lancamentos-arrow-right');
+      let idx = 0;
+      function showLanc(idx) {
+        lancs.forEach((el,i)=>{
+          el.style.display = (i >= idx && i < idx+3) ? 'block' : 'none';
+        });
+      }
+      // A seta sempre aparece, igual ao blog
+      if(lancs.length > 0 && arrow) {
+        showLanc(0);
+        arrow.addEventListener('click',()=>{
+          idx += 3;
+          if(idx >= lancs.length) idx = 0;
+          showLanc(idx);
+        });
+      }
+    })();
+  </script>
+  </section>
+  <a href="https://wa.me/5548999600601?text=Olá! Vim pelo site e gostaria de mais informações sobre os imóveis" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <span style="position:relative;display:flex;align-items:center;justify-content:center;width:82px;height:82px;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(34,34,34,0.10);">
+      <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" alt="Flavia Capacia" style="width:72px;height:72px;object-fit:contain;display:block;">
+      <span style="position:absolute;bottom:8px;right:8px;width:18px;height:18px;background:#25D366;border:2.5px solid #fff;border-radius:50%;box-shadow:0 1px 4px rgba(34,34,34,0.10);"></span>
+    </span>
+  </a>
+   <section class="blog-section">
+    <h2>Blog Imobiliário</h2>
+    <div class="blog-posts blog-slider" style="position:relative;">
+      <article class="blog-post">
+        <h3><a href="artigo-marina-infra.html">Marina Beira-Mar Norte: Infraestrutura e Mobilidade</a></h3>
+        <p>Como a nova marina e obras de mobilidade vão transformar Florianópolis e valorizar imóveis.</p>
+      </article>
+      <article class="blog-post">
+        <h3><a href="artigo-marina-mercadoimobiliario.html">Marina e o Mercado Imobiliário</a></h3>
+        <p>O impacto da Marina Beira-Mar Norte no mercado imobiliário de alto padrão.</p>
+      </article>
+      <article class="blog-post">
+        <h3><a href="artigo-airbnb.html">Como Lucrar com Airbnb em Florianópolis</a></h3>
+        <p>Descubra dicas para maximizar seus rendimentos alugando imóveis na ilha da magia.</p>
+      </article>
+      <article class="blog-post">
+        <h3><a href="artigo-cfl-campeche.html">CFL Lança Empreendimento no Campeche</a></h3>
+        <p>Conheça o novo projeto da CFL com vista para o mar e alto padrão.</p>
+      </article>
+      <article class="blog-post">
+        <h3><a href="artigo-floripa-mercado-imobiliario.html">Mercado Imobiliário de Florianópolis</a></h3>
+        <p>Análise completa do mercado imobiliário na capital catarinense.</p>
+      </article>
+      <button class="blog-arrow blog-arrow-right" aria-label="Próximos artigos" style="position:absolute;right:-28px;top:50%;transform:translateY(-50%);background:#fff;border:none;box-shadow:0 2px 8px rgba(34,34,34,0.10);border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="14" fill="#fff"/>
+          <path d="M11 9l5 5-5 5" stroke="#8B8B97" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <script>
+      // Carrossel de 3 em 3 artigos
+      (function(){
+        const posts = Array.from(document.querySelectorAll('.blog-posts .blog-post'));
+        const arrow = document.querySelector('.blog-arrow-right');
+        let idx = 0;
+        function show(idx) {
+          posts.forEach((el,i)=>{
+            el.style.display = (i >= idx && i < idx+3) ? 'flex' : 'none';
+          });
+        }
+        function updateArrow() {
+          if (arrow) arrow.style.display = (posts.length > 3) ? 'flex' : 'none';
+        }
+        if(posts.length > 0 && arrow) {
+          show(posts.length-3 < 0 ? 0 : posts.length-3);
+          updateArrow();
+          arrow.addEventListener('click',()=>{
+            idx += 3;
+            if(idx >= posts.length) idx = 0;
+            show(idx);
+          });
+        }
+      })();
+    </script>
+  </section>
+  
+  <footer class="main-footer">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" alt="Flavia Capacia" class="footer-logo" style="margin-bottom:-8px;margin-top:-14px;">
+        <p>Imóveis de alto padrão em Florianópolis e Grande Florianópolis. Mais de 10 anos de experiência no mercado imobiliário.</p>
+        <!-- Social icons removidos desta coluna -->
+      </div>
+      <div class="footer-column">
+        <h3>Navegação</h3>
+        <a href="index.html">Início</a>
+        <a href="#comprar">Comprar Imóvel</a>
+        <a href="#alugar">Alugar Imóvel</a>
+        <a href="#lancamentos">Lançamentos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div class="footer-column">
+        <h3>Contato</h3>
+        <div class="footer-contact-row">
+          <span class="icon-bg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><path d="M4 7.5V16a1.5 1.5 0 001.5 1.5h13A1.5 1.5 0 0020 16V7.5l-8 5.5-8-5.5z" fill="#fff" stroke="#b08d57" stroke-width="1.2"/><path d="M20 6a1.5 1.5 0 00-1.5-1.5h-13A1.5 1.5 0 004 6l8 5.5L20 6z" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
+          </span>
+          <a href="mailto:flavia.capacia@creci.gov">flavia.capacia@creci.gov</a>
+        </div>
+        <div class="footer-contact-row">
+          <span class="icon-bg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><path d="M17.472 14.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
+          </span>
+          <a href="tel:+5548999600601">(48) 99960-0601</a>
+        </div>
+        <div class="footer-contact-row">
+          <span class="icon-bg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
+          </span>
+          <span>Florianópolis • São José • Palhoça</span>
+        </div>
+        <div class="social-icons" style="margin-top:10px;">
+          <a href="https://www.facebook.com/flaviacapaciacorretora" target="_blank" aria-label="Facebook">
+            <span class="icon-bg">
+              <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><path d="M20.5 16h-3v8h-3v-8h-2v-3h2v-2c0-2.1 1.2-3.5 3.7-3.5l2.3.01V13h-1.7c-.5 0-.8.3-.8.8V13h2.5l-.3 3z" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
+            </span>
+          </a>
+          <a href="https://www.instagram.com/flaviacapaciacorretora/" target="_blank" aria-label="Instagram">
+            <span class="icon-bg">
+              <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><rect x="10" y="10" width="12" height="12" rx="4" fill="#fff" stroke="#b08d57" stroke-width="1.2"/><circle cx="16" cy="16" r="3" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.2"/><circle cx="21" cy="11" r="1" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/in/flaviacapaciacorretora" target="_blank" aria-label="LinkedIn">
+            <span class="icon-bg">
+              <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><rect x="10" y="13" width="2.5" height="7" fill="#fff" stroke="#b08d57" stroke-width="1.2"/><rect x="19.5" y="16" width="2.5" height="4" fill="#fff" stroke="#b08d57" stroke-width="1.2"/><rect x="10" y="10" width="2.5" height="2.5" fill="#fff" stroke="#b08d57" stroke-width="1.2"/><rect x="14" y="16" width="2.5" height="4" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
+            </span>
+          </a>
+          <a href="https://www.youtube.com/@flaviacapaciacorretora" target="_blank" aria-label="YouTube">
+            <span class="icon-bg">
+              <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><polygon points="13,12 22,16 13,20" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Horário de Atendimento</h3>
+        <p>Segunda a Sexta: 9h às 18h</p>
+        <p>Sábado: 9h às 14h</p>
+        <p>Domingo: Fechado</p>
+        <p style="margin-top: 18px;"><strong>Atendimento via WhatsApp 24h</strong></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Flavia Capacia Corretora - Todos os direitos reservados • CRECI</p>
+      <p>Desenvolvido com 💛 por Capacia Group</p>
+    </div>
+  </footer>
+</body>
+</html>
