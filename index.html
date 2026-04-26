@@ -222,6 +222,62 @@
       border: none;
       box-shadow: 0 5px 18px rgba(34,34,34,0.10);
     }
+
+    /* BLOG - mesmo visual dos lançamentos */
+.blog-section {
+  background: var(--bronze-claro);
+  padding: 60px 20px;
+  margin-top: 60px;
+}
+.blog-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--bronze);
+  margin-bottom: 32px;
+  text-align: center;
+}
+.blog-posts {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 35px;
+}
+.blog-post {
+  background: var(--branco);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(176,141,87,.11);
+  padding: 32px 28px;
+  transition: .3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+}
+.blog-post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(176,141,87,.18);
+}
+.blog-post h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--preto);
+  margin-bottom: 12px;
+}
+.blog-post h3 a {
+  color: var(--bronze);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.blog-post h3 a:hover {
+  color: var(--dourado);
+  text-decoration: underline;
+}
+.blog-post p {
+  font-size: 15px;
+  color: var(--bronze);
+  line-height: 1.7;
+}
     .whatsapp-float:hover {
       transform: scale(1.08);
       background: transparent;
@@ -583,15 +639,24 @@
       </div>
     </div>
   </section>
-  <a href="https://wa.me/5548999600601?text=Olá! Vim pelo site e gostaria de mais informações sobre os imóveis" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+ <a href="https://wa.me/5548999600601?text=Olá! Vim pelo site e gostaria de mais informações sobre os imóveis" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     <span style="position:relative;display:flex;align-items:center;justify-content:center;width:82px;height:82px;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(34,34,34,0.10);">
       <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" alt="Flavia Capacia" style="width:72px;height:72px;object-fit:contain;display:block;">
       <span style="position:absolute;bottom:8px;right:8px;width:18px;height:18px;background:#25D366;border:2.5px solid #fff;border-radius:50%;box-shadow:0 1px 4px rgba(34,34,34,0.10);"></span>
     </span>
   </a>
+  
    <section class="blog-section">
     <h2>Blog Imobiliário</h2>
-    <div class="blog-posts">
+    <div class="blog-posts blog-slider" style="position:relative;">
+      <article class="blog-post">
+        <h3><a href="artigo-marina-infra.html">Marina Beira-Mar Norte: Infraestrutura e Mobilidade</a></h3>
+        <p>Como a nova marina e obras de mobilidade vão transformar Florianópolis e valorizar imóveis.</p>
+      </article>
+      <article class="blog-post">
+        <h3><a href="artigo-marina-mercadoimobiliario.html">Marina e o Mercado Imobiliário</a></h3>
+        <p>O impacto da Marina Beira-Mar Norte no mercado imobiliário de alto padrão.</p>
+      </article>
       <article class="blog-post">
         <h3><a href="artigo-airbnb.html">Como Lucrar com Airbnb em Florianópolis</a></h3>
         <p>Descubra dicas para maximizar seus rendimentos alugando imóveis na ilha da magia.</p>
@@ -604,10 +669,41 @@
         <h3><a href="artigo-floripa-mercado-imobiliario.html">Mercado Imobiliário de Florianópolis</a></h3>
         <p>Análise completa do mercado imobiliário na capital catarinense.</p>
       </article>
+      <button class="blog-arrow blog-arrow-right" aria-label="Próximos artigos" style="position:absolute;right:-28px;top:50%;transform:translateY(-50%);background:#fff;border:none;box-shadow:0 2px 8px rgba(34,34,34,0.10);border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="14" fill="#fff"/>
+          <path d="M11 9l5 5-5 5" stroke="#8B8B97" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
+    <script>
+      // Carrossel de 3 em 3 artigos
+      (function(){
+        const posts = Array.from(document.querySelectorAll('.blog-posts .blog-post'));
+        const arrow = document.querySelector('.blog-arrow-right');
+        let idx = 0;
+        function show(idx) {
+          posts.forEach((el,i)=>{
+            el.style.display = (i >= idx && i < idx+3) ? 'flex' : 'none';
+          });
+        }
+        function updateArrow() {
+          if (arrow) arrow.style.display = (posts.length > 3) ? 'flex' : 'none';
+        }
+        if(posts.length > 0 && arrow) {
+          show(posts.length-3 < 0 ? 0 : posts.length-3);
+          updateArrow();
+          arrow.addEventListener('click',()=>{
+            idx += 3;
+            if(idx >= posts.length) idx = 0;
+            show(idx);
+          });
+        }
+      })();
+    </script>
   </section>
   
-  <footer class="main-footer">
+    <footer class="main-footer">
     <div class="footer-grid">
       <div class="footer-column">
         <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" alt="Flavia Capacia" class="footer-logo" style="margin-bottom:-8px;margin-top:-14px;">
