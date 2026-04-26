@@ -177,6 +177,62 @@
       font-weight:700; font-size:15px; text-transform:uppercase; transition:.3s;
     }
     .lancamento-btn:hover { background:var(--preto);}
+
+    /* BLOG - mesmo visual dos lançamentos */
+    .blog-section {
+      background: var(--bronze-claro);
+      padding: 60px 20px;
+      margin-top: 60px;
+    }
+    .blog-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--bronze);
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .blog-posts {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 35px;
+    }
+    .blog-post {
+      background: var(--branco);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(176,141,87,.11);
+      padding: 32px 28px;
+      transition: .3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 220px;
+    }
+    .blog-post:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(176,141,87,.18);
+    }
+    .blog-post h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--preto);
+      margin-bottom: 12px;
+    }
+    .blog-post h3 a {
+      color: var(--bronze);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .blog-post h3 a:hover {
+      color: var(--dourado);
+      text-decoration: underline;
+    }
+    .blog-post p {
+      font-size: 15px;
+      color: var(--bronze);
+      line-height: 1.7;
+    }
     .whatsapp-float {
       position: fixed;
       bottom: 28px;
@@ -376,13 +432,119 @@
           <div class="property-price">R$ 780.000</div>
           <div class="property-actions">
             <a href="apartamento-venda-agronomica-v439.html" class="btn-details">Ver Detalhes</a>
-            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica" class="btn-whats" target="_blank" aria-label="WhatsApp"></a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
           </div>
         </div>
       </article>
+
+      <!-- Os cards antigos permanecem acima. Inserir os 3 novos imóveis ao final da grid -->
+      <article class="property-card">
+        <span class="property-tag">Praia</span>
+        <img src="img/palmas1.jpeg" class="property-image" alt="Apartamento Palmas Celso Ramos">
+        <div class="property-details">
+          <div class="property-type">Apartamento</div>
+          <h3 class="property-title">Apartamento Palmas - Celso Ramos</h3>
+          <div class="property-location">Palmas - Gov. Celso Ramos/SC</div>
+          <div class="property-features">
+            <div class="feature-item"><strong>3</strong> Quartos</div>
+            <div class="feature-item"><strong>1</strong> Suíte</div>
+            <div class="feature-item"><strong>1</strong> Vaga</div>
+          </div>
+          <div class="property-price">R$ 1.270.000</div>
+          <div class="property-actions">
+            <a href="v456-apartamento-venda-palmas-sacada-praia-celso-ramos+3dormitorios+suite.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20em%20Palmas%20Celso%20Ramos" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card">
+        <span class="property-tag">Duplex</span>
+        <img src="img/12.0 sacada mesanino.jpg" class="property-image" alt="Duplex Cobertura Estreito">
+        <div class="property-details">
+          <div class="property-type">Apartamento</div>
+          <h3 class="property-title">Duplex Cobertura Estreito</h3>
+          <div class="property-location">Balneário do Estreito - Florianópolis/SC</div>
+          <div class="property-features">
+            <div class="feature-item"><strong>3</strong> Quartos</div>
+            <div class="feature-item"><strong>1</strong> Suíte</div>
+            <div class="feature-item"><strong>2</strong> Vagas</div>
+          </div>
+          <div class="property-price">R$ 1.950.000</div>
+          <div class="property-actions">
+            <a href="v448-apartamento-duplex-cobertura-220m2-3dormitorios-sacada+churrasqueira+vista+academia.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20duplex%20cobertura%20no%20Estreito" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card">
+        <span class="property-tag">Beira Mar</span>
+        <img src="img/12.0 sacada mesanino.jpg" class="property-image" alt="Beira Mar Norte Marina">
+        <div class="property-details">
+          <div class="property-type">Apartamento</div>
+          <h3 class="property-title">Beira Mar Norte + Marina</h3>
+          <div class="property-location">Beira Mar Norte - Florianópolis/SC</div>
+          <div class="property-features">
+            <div class="feature-item"><strong>3</strong> Quartos</div>
+            <div class="feature-item"><strong>2</strong> Banheiros</div>
+            <div class="feature-item"><strong>1</strong> Vaga</div>
+          </div>
+          <div class="property-price">Consultar valor</div>
+          <div class="property-actions">
+            <a href="v449-apartamento-venda-3dormitorios-beira-mar-norte+marina+110m2+vaga+floianopolis.html" class="btn-details">Ver Detalhes</a>
+            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Beira%20Mar%20Norte%20Marina" class="btn-whats" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+        <article class="property-card">
+          <span class="property-tag">Centro</span>
+          <img src="V450/v450-1.jpg" class="property-image" alt="Apartamento Centro Kuboo">
+          <div class="property-details">
+            <div class="property-type">Apartamento</div>
+            <h3 class="property-title">Apartamento Centro Kuboo</h3>
+            <div class="property-location">Centro - Florianópolis/SC</div>
+            <div class="property-features">
+              <div class="feature-item"><strong>1-2</strong> Quartos</div>
+              <div class="feature-item"><strong>1</strong> Suíte</div>
+              <div class="feature-item"><strong>1</strong> Vaga</div>
+            </div>
+            <div class="property-price">R$ 928.000</div>
+            <div class="property-actions">
+              <a href="../apartamento-venda-centro-florianopolis-v450.html" class="btn-details">Ver Detalhes</a>
+              <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Centro%20Kuboo" class="btn-whats" target="_blank" aria-label="WhatsApp">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="16" fill="none"/>
+                  <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
       <article class="property-card">
         <span class="property-tag">Lançamento</span>
-        <img src="img/imagens/sacada-1.webp" class="property-image" alt="Apartamento Kobrasol">
+        <img src="img/sacada-1.webp" class="property-image" alt="Apartamento Kobrasol">
         <div class="property-details">
           <div class="property-type">Apartamento</div>
           <h3 class="property-title">Apartamento no Kobrasol</h3>
@@ -398,13 +560,16 @@
           <div class="property-actions">
             <a href="apartamento-venda-kobrasol-v440.html" class="btn-details">Ver Detalhes</a>
             <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Kobrasol" class="btn-whats" target="_blank" aria-label="WhatsApp">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#8B8B97"/><path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/></svg>
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
             </a>
           </div>
         </div>
       </article>
       <article class="property-card">
-        <img src="img/imagens/01sala_035.jpg" class="property-image" alt="Apartamento Centro">
+        <img src="img/01sala_035.jpg" class="property-image" alt="Apartamento Centro">
         <div class="property-details">
           <div class="property-type">Apartamento</div>
           <h3 class="property-title">Apartamento Centro</h3>
@@ -420,7 +585,10 @@
           <div class="property-actions">
             <a href="apartamento-venda-centro-v447.html" class="btn-details">Ver Detalhes</a>
             <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Centro" class="btn-whats" target="_blank" aria-label="WhatsApp">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#8B8B97"/><path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/></svg>
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
             </a>
           </div>
         </div>
@@ -443,7 +611,10 @@
           <div class="property-actions">
             <a href="apartamento-venda-campinas-v457.html" class="btn-details">Ver Detalhes</a>
             <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20em%20Campinas" class="btn-whats" target="_blank" aria-label="WhatsApp">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#8B8B97"/><path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/></svg>
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
             </a>
           </div>
         </div>
@@ -465,14 +636,17 @@
           <div class="property-actions">
             <a href="apartamento-venda-ratones-v449.html" class="btn-details">Ver Detalhes</a>
             <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20em%20Ratones" class="btn-whats" target="_blank" aria-label="WhatsApp">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#8B8B97"/><path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/></svg>
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="none"/>
+                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+              </svg>
             </a>
           </div>
         </div>
       </article>
       <article class="property-card">
         <span class="property-tag">Exclusivo</span>
-        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=300&fit=crop" class="property-image" alt="Apartamento Nossa Sra do Rosário">
+        <img src="img/sala-1.webp" class="property-image" alt="Apartamento Nossa Sra do Rosário">
         <div class="property-details">
           <div class="property-type">Apartamento</div>
           <h3 class="property-title">Apartamento Nossa Sra do Rosário</h3>
@@ -550,6 +724,24 @@
       <span style="position:absolute;bottom:8px;right:8px;width:18px;height:18px;background:#25D366;border:2.5px solid #fff;border-radius:50%;box-shadow:0 1px 4px rgba(34,34,34,0.10);"></span>
     </span>
   </a>
+   <section class="blog-section">
+    <h2>Blog Imobiliário</h2>
+    <div class="blog-posts">
+      <article class="blog-post">
+        <h3><a href="artigo-airbnb.html">Como Lucrar com Airbnb em Florianópolis</a></h3>
+        <p>Descubra dicas para maximizar seus rendimentos alugando imóveis na ilha da magia.</p>
+      </article>
+      <article class="blog-post">
+        <h3><a href="artigo-cfl-campeche.html">CFL Lança Empreendimento no Campeche</a></h3>
+        <p>Conheça o novo projeto da CFL com vista para o mar e alto padrão.</p>
+      </article>
+      <article class="blog-post">
+        <h3><a href="artigo-floripa-mercado-imobiliario.html">Mercado Imobiliário de Florianópolis</a></h3>
+        <p>Análise completa do mercado imobiliário na capital catarinense.</p>
+      </article>
+    </div>
+  </section>
+  
   <footer class="main-footer">
     <div class="footer-grid">
       <div class="footer-column">
