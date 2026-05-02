@@ -83,7 +83,7 @@
   </header>
   <main class="imovel-page">
     <h1>Apartamento exclusivo no Centro de Florianópolis SC</h1>
-    <p class="preco">R$ 2.650.000,00</p>
+    <p class="preco">R$ 2.250.000,00</p>
     <p class="codigo">Código: V447</p>
     <section class="card">
       <h2>Resumo do imóvel</h2>
@@ -118,28 +118,11 @@
         </ul>
       </article>
     </section>
-    <section class="card">
+  <section class="card">
       <h2>Galeria de fotos</h2>
+      
       <div class="zoom-gallery">
-        <div class="zoom-container" onclick="openModal(0)">
-          <img src="img/v447/01sala_001.jpg" alt="Sala ampla V447" />
-        </div>
-        <div class="zoom-container" onclick="openModal(1)">
-          <img src="img/v447/01sala_003.jpg" alt="Sala confortavel V447" />
-        </div>
-        <div class="zoom-container" onclick="openModal(2)">
-          <img src="img/v447/01sala_004.jpg" alt="Sala em 2 ambientes V447" />
-        </div>
-        <div class="zoom-container" onclick="openModal(3)">
-          <img src="img/v447/01sala_008.jpg" alt="Sala sofisticada V447" />
-        </div>
-        <div class="zoom-container" onclick="openModal(4)">
-          <img src="img/v447/01sala_009.jpg" alt="Sala ampla V447" />
-        </div>
-        <div class="zoom-container" onclick="openModal(5)">
-          <img src="img/v447/01sala__020.jpg" alt="Vista da sacada V447" />
-        </div>
-        
+        <div class="zoom-container" onclick="openModal(0)"><img src="img/v447/01sala_001.avif" alt="Foto do imóvel 1" /></div><div class="zoom-container" onclick="openModal(1)"><img src="img/v447/01sala_001.jpg" alt="Foto do imóvel 2" /></div><div class="zoom-container" onclick="openModal(2)"><img src="img/v447/01sala_002.avif" alt="Foto do imóvel 3" /></div><div class="zoom-container" onclick="openModal(3)"><img src="img/v447/01sala_003.jpg" alt="Foto do imóvel 4" /></div><div class="zoom-container" onclick="openModal(4)"><img src="img/v447/01sala_004.jpg" alt="Foto do imóvel 5" /></div><div class="zoom-container" onclick="openModal(5)"><img src="img/v447/01sala_005.webp" alt="Foto do imóvel 6" /></div><div class="zoom-container" onclick="openModal(6)"><img src="img/v447/01sala_006.jpg" alt="Foto do imóvel 7" /></div><div class="zoom-container" onclick="openModal(7)"><img src="img/v447/01sala_008.jpg" alt="Foto do imóvel 8" /></div><div class="zoom-container" onclick="openModal(8)"><img src="img/v447/01sala_009.jpg" alt="Foto do imóvel 9" /></div><div class="zoom-container" onclick="openModal(9)"><img src="img/v447/01sala_017.webp" alt="Foto do imóvel 10" /></div><div class="zoom-container" onclick="openModal(10)"><img src="img/v447/01sala_020.jpg" alt="Foto do imóvel 11" /></div><div class="zoom-container" onclick="openModal(11)"><img src="img/v447/01sala_035.jpg" alt="Foto do imóvel 12" /></div>
       </div>
       <div id="imageModal" class="modal">
         <div class="modal-content">
@@ -153,31 +136,41 @@
       </div>
       <script>
         const images = [
-          "img/v447/01sala_001.jpg",
-          "img/v447/01sala_003.jpg",
-          "img/v447/01sala_004.jpg",
-          "img/v447/01sala_008.jpg",
-          "img/v447/01sala_009.jpg",
-          "img/v447/01sala_020.jpg",
-          
-        ];
-        let currentIndex = 0;
+  "img/v447/01sala_001.avif",
+  "img/v447/01sala_001.jpg",
+  "img/v447/01sala_002.avif",
+  "img/v447/01sala_003.jpg",
+  "img/v447/01sala_004.jpg",
+  "img/v447/01sala_005.webp",
+  "img/v447/01sala_006.jpg",
+  "img/v447/01sala_008.jpg",
+  "img/v447/01sala_009.jpg",
+  "img/v447/01sala_017.webp",
+  "img/v447/01sala_020.jpg",
+  "img/v447/01sala_035.jpg"
+];
+       let currentIndex = 0;
+
         function openModal(index) {
           currentIndex = index;
           document.getElementById('modalImage').src = images[currentIndex];
           document.getElementById('imageModal').classList.add('active');
         }
+
         function closeModal() {
           document.getElementById('imageModal').classList.remove('active');
         }
+
         function prevImage() {
           currentIndex = (currentIndex - 1 + images.length) % images.length;
           document.getElementById('modalImage').src = images[currentIndex];
         }
+
         function nextImage() {
           currentIndex = (currentIndex + 1) % images.length;
           document.getElementById('modalImage').src = images[currentIndex];
         }
+  
       </script>
       <div style="text-align:center; margin-top:18px;">
         <a class="btn-whatsapp" href="https://wa.me/5548999600601?text=Ol%C3%A1%20Fl%C3%A1via%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20im%C3%B3vel%20V447." target="_blank" rel="noopener noreferrer">📲 Falar no WhatsApp</a>
