@@ -155,106 +155,7 @@
     }
     .btn-whatsapp:hover { background-color: #128C7E; }
 
-    /* Imóveis em destaque */
-    .featured-properties {
-      margin: 28px 0;
-      padding: 20px;
-      border: 1px solid var(--cinza-borda);
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-    }
-    .featured-properties h2 {
-      margin-bottom: 15px;
-      text-align: center;
-      color: var(--bronze-medio);
-    }
-    .links-imoveis {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    .links-imoveis a {
-      display: block;
-      margin: 0;
-      padding: 10px;
-      color: var(--bronze-medio);
-      text-decoration: none;
-      font-weight: bold;
-      text-align: center;
-      border: 1px solid var(--cinza-borda);
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-    .links-imoveis a:hover { 
-      background-color: var(--bronze-medio);
-      color: #fff;
-      text-decoration: none;
-    }
-    
-    /* Responsividade para celular */
-    @media (max-width: 768px) {
-      body {
-        padding: 10px;
-      }
-      .container {
-        padding: 15px;
-        border-radius: 8px;
-      }
-      /* Cabeçalho */
-      header {
-        padding-bottom: 10px;
-        margin-bottom: 15px;
-      }
-      header img {
-        height: 45px;
-      }
-      #menu-toggle {
-        padding: 6px 10px;
-        font-size: 0.9em;
-      }
-      /* Artigo */
-      .article-header {
-        flex-direction: column;
-        gap: 15px;
-        margin-bottom: 15px;
-      }
-      .article img {
-        width: 100%;
-        max-width: 100%;
-        flex: 1 1 auto;
-        max-height: 300px;
-      }
-      .article h1 {
-        font-size: 1.2em;
-        margin-bottom: 12px;
-      }
-      .article h2 {
-        font-size: 1.05em;
-        margin: 15px 0 8px;
-      }
-      .article p {
-        margin-bottom: 12px;
-        font-size: 0.95em;
-        line-height: 1.5;
-      }
-      /* Lead Box */
-      .lead-box {
-        padding: 12px;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-      }
-      .lead-box p {
-        width: 100%;
-        text-align: center;
-      }
-      .btn-whatsapp {
-        width: 100%;
-        padding: 12px 10px;
-        text-align: center;
-        box-sizing: border-box;
-      }
+   
     /* Imóveis em destaque */
     .featured-properties {
       margin: 28px 0;
@@ -328,6 +229,71 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Responsividade para celular */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      .container {
+        padding: 15px;
+        border-radius: 8px;
+      }
+      /* Cabeçalho */
+      header {
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+      }
+      header img {
+        height: 45px;
+      }
+      #menu-toggle {
+        padding: 6px 10px;
+        font-size: 0.9em;
+      }
+      /* Artigo */
+      .article-header {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+      .article img {
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 auto;
+        max-height: 300px;
+      }
+      .article h1 {
+        font-size: 1.2em;
+        margin-bottom: 12px;
+      }
+      .article h2 {
+        font-size: 1.05em;
+        margin: 15px 0 8px;
+      }
+      .article p {
+        margin-bottom: 12px;
+        font-size: 0.95em;
+        line-height: 1.5;
+      }
+      /* Lead Box */
+      .lead-box {
+        padding: 12px;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .lead-box p {
+        width: 100%;
+        text-align: center;
+      }
+      .btn-whatsapp {
+        width: 100%;
+        padding: 12px 10px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+   
 
       /* Footer */
       .footer-container {
