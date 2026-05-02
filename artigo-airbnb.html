@@ -1,18 +1,17 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Investimento em Airbnb em Florianópolis-- Blog Flavia Capacia Corretora</title>
+  <title>--------------------------------------- - Blog Flavia Capacia Corretora</title>
 
   <!-- SEO -->
-  <meta name="description" content="Florianópolis vive um momento de transformação com projetos de mobilidade e infraestrutura que impactam o mercado imobiliário." />
+  <meta name="description" content="trocar aqui -------Florianópolis vive um momento de transformação com projetos de mobilidade e infraestrutura que impactam o mercado imobiliário." />
   <meta name="keywords" content="infraestrutura Florianópolis, mobilidade urbana, mercado imobiliário, investimento, Marina Beira-Mar Norte" />
-  <meta name="author" content="Flavia Capacia Corretora" />
- <style>
+  <meta name="author" content="Flavia Capacia Corretora" /><style>
     :root {
       --bronze-medio: #b08d57;
-      --preto-suave: #1a1a1a;
       --fundo-claro: #ffffff;
       --cinza-borda: #e5e5e5;
       --cinza-texto: #333333;
@@ -47,11 +46,12 @@
       padding-bottom: 12px;
       border-bottom: 2px solid var(--bronze-medio);
       margin-bottom: 20px;
+      position: relative;
     }
     header img { height: 54px; }
 
     nav { position: relative; }
-    nav button {
+    #menu-toggle {
       background: none;
       border: 1px solid var(--bronze-medio);
       color: var(--bronze-medio);
@@ -60,12 +60,9 @@
       border-radius: 6px;
       font-weight: bold;
     }
-    nav button:hover {
-      background-color: var(--bronze-medio);
-      color: #fff;
-    }
+    #menu-toggle:hover { background-color: var(--bronze-medio); color: #fff; }
 
-    nav ul {
+    #menu {
       list-style: none;
       display: none;
       position: absolute;
@@ -76,109 +73,20 @@
       border-radius: 8px;
       padding: 10px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      min-width: 160px;
-      z-index: 10;
+      min-width: 180px;
+      z-index: 100;
     }
-    nav ul li { margin: 6px 0; }
-    nav ul li a {
+    #menu.open { display: block; }
+    #menu li { margin: 6px 0; }
+    #menu li a {
       text-decoration: none;
       color: var(--cinza-texto);
       font-weight: bold;
+      display: block;
+      padding: 6px 8px;
+      border-radius: 6px;
     }
-    nav ul li a:hover { color: var(--bronze-medio); }
-.blog-section {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-
-.blog-container {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.blog-foto img {
-  width: 280px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  display: block;
-  transition: transform 0.3s ease;
-  object-fit: cover;
-}
-
-.blog-foto img:hover {
-  transform: scale(1.03);
-}
-
-.blog-texto h3 {
-  color: #d4af37; /* dourado */
-  font-size: 1.6rem;
-  margin-bottom: 15px;
-}
-
-.blog-texto h3 a {
-  text-decoration: none;
-  color: #d4af37;
-}
-
-.blog-texto h3 a:hover {
-  text-decoration: underline;
-}
-
-.blog-texto p {
-  padding: 12px;
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  border-left: 3px solid #d4af37;
-  color: var(--cinza-texto);
-}
-
-/* Caixa de ação (WhatsApp, CTA) */
-.lead-box {
-  margin-top: 15px;
-  padding: 12px;
-  background: #f9f9f9;
-  border-left: 3px solid #cd7f32; /* bronze */
-  border-radius: 8px;
-}
-
-.btn-whatsapp {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 10px 16px;
-  background: #25d366; /* verde WhatsApp */
-  color: #fff;
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.btn-whatsapp:hover {
-  background: #1ebe5d;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .blog-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .blog-texto p {
-    text-align: left;
-    font-size: 1rem;
-  }
-  .blog-foto img {
-    width: 200px;
-    margin-bottom: 20px;
-  }
-}
-
+    #menu li a:hover { color: var(--bronze-medio); background: #fafafa; }
 
     /* Artigo */
     .article {
@@ -246,6 +154,43 @@
     }
     .btn-whatsapp:hover { background-color: #128C7E; }
 
+    /* Imóveis em destaque */
+    .featured-properties {
+      margin: 28px 0;
+      padding: 20px;
+      border: 1px solid var(--cinza-borda);
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    .featured-properties h2 {
+      margin-bottom: 15px;
+      text-align: center;
+      color: var(--bronze-medio);
+    }
+    .links-imoveis {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .links-imoveis a {
+      display: block;
+      margin: 0;
+      padding: 10px;
+      color: var(--bronze-medio);
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      border: 1px solid var(--cinza-borda);
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    .links-imoveis a:hover { 
+      background-color: var(--bronze-medio);
+      color: #fff;
+      text-decoration: none;
+    }
+    
     /* Responsividade para celular */
     @media (max-width: 768px) {
       body {
@@ -309,78 +254,62 @@
         text-align: center;
         box-sizing: border-box;
       }
-     
-    /* Imóveis em destaque */
-    .featured-properties {
-      margin: 28px 0;
-      padding: 20px;
-      border: 1px solid var(--cinza-borda);
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-    }
-    .featured-properties h2 {
-      margin-bottom: 15px;
-      text-align: center;
-      color: var(--bronze-medio);
-    }
-    .links-imoveis a {
-      display: block;
-      margin: 6px 0;
-      color: var(--bronze-medio);
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .links-imoveis a:hover { text-decoration: underline; }
-
-    /* Outros imóveis */
-    .outros-imoveis {
-      padding: 30px 18px;
-      margin-top: 20px;
-      background: #fff;
-    }
-    .outros-imoveis h2 {
-      margin: 0 0 24px;
-      text-align: center;
-      color: #d4af37;
-      font-size: 2rem;
-    }
-    .outros-imoveis ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(200px, 1fr));
-      gap: 16px 26px;
-      justify-items: center;
-    }
-    .outros-imoveis li {
-      margin: 0;
-      text-align: center;
-    }
-    .outros-imoveis a {
-      color: #d4af37;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 18px;
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 5px;
-      transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
-    }
-    .outros-imoveis a:hover {
-      background-color: #d4af37;
-      color: #fff;
-      text-decoration: underline;
-    }
-    @media (max-width: 900px) {
-      .outros-imoveis ul {
-        grid-template-columns: repeat(2, minmax(180px, 1fr));
+      /* Imóveis em destaque */
+      .featured-properties {
+        padding: 15px;
+        margin: 15px 0;
+      }
+      .links-imoveis {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .links-imoveis a {
+        padding: 12px 10px;
+        font-size: 0.95em;
+      }
+      /* Footer */
+      .footer-container {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+      }
+      .footer-contact,
+      .footer-logo,
+      .footer-social {
+        flex: 1 1 100%;
+        padding: 8px 0;
+      }
+      .footer-logo img {
+        width: 80px;
+      }
+      .footer-social ul {
+        gap: 10px;
+      }
+      footer {
+        margin-top: 15px;
       }
     }
-    @media (max-width: 560px) {
-      .outros-imoveis ul {
-        grid-template-columns: 1fr;
+    
+    /* Extra pequeno (até 480px) */
+    @media (max-width: 480px) {
+      body {
+        padding: 8px;
+      }
+      .container {
+        padding: 10px;
+      }
+      header img {
+        height: 40px;
+      }
+      #menu-toggle {
+        padding: 5px 8px;
+        font-size: 0.85em;
+      }
+      .article h1 {
+        font-size: 1.1em;
+      }
+      .article h2 {
+        font-size: 1em;
       }
     }
 
@@ -406,17 +335,14 @@
       text-decoration: none;
       font-weight: bold;
     }
-
-   .footer-social ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;   /* Permite quebrar em várias linhas */
-}
-
-
+    .footer-social ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
     .footer-credit {
       text-align: center;
       padding: 10px;
@@ -425,13 +351,6 @@
       color: var(--bronze-medio);
       margin-top: 10px;
       border-radius: 10px;
-    }
-
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .post-item { flex-direction: column; }
-      .post-img img { width: 100%; }
-      nav ul { right: 0; left: auto; }
     }
   </style>
 </head>
@@ -451,88 +370,31 @@
         </ul>
       </nav>
     </header>
-
-    <!-- Artigo -->
-    <main class="article">
-      <img src="img/imagens/imagem2.jpg" alt="Investimento em Airbnb em São José e Florianópolis" />
-      <h1>Investimento em Airbnb em Florianópolis</h1>
-    
-<p>O mercado imobiliário da Grande Florianópolis tem se transformado com a chegada de novas formas de investimento.</p>
-<p>Entre elas, o modelo de locação por temporada através do Airbnb vem ganhando destaque e atraindo investidores.</p>
-<p>Essa modalidade une rentabilidade, flexibilidade e valorização patrimonial em uma região turística em constante crescimento.</p>
-
-<p>São José e Florianópolis oferecem características únicas que tornam o investimento em Airbnb altamente atrativo.</p>
-<p>Enquanto Florianópolis é reconhecida nacionalmente como destino turístico, São José desponta como polo urbano estratégico.</p>
-<p>Essa combinação cria um cenário favorável para quem busca diversificar sua renda com imóveis bem localizados.</p>
-
-<p>O crescimento do turismo é um dos principais motores desse movimento.</p>
-<p>A cada temporada de verão, milhares de visitantes chegam à região em busca de hospedagens alternativas.</p>
-<p>O Airbnb surge como solução moderna, oferecendo praticidade e experiências personalizadas aos viajantes.</p>
-
-<p>Investir em imóveis para locação por temporada significa aproveitar essa demanda crescente.</p>
-<p>A taxa de ocupação tende a ser elevada em períodos de alta, como férias escolares e feriados prolongados.</p>
-<p>Isso garante ao proprietário uma rentabilidade superior em comparação à locação tradicional.</p>
-
-<p>Além da rentabilidade imediata, há o fator da valorização patrimonial.</p>
-<p>Imóveis em bairros como Centro de Florianópolis e Kobrasol em São José têm registrado valorização constante.</p>
-<p>Essa valorização assegura que o investimento seja sólido e seguro a longo prazo.</p>
-
-<p>Outro ponto relevante é a flexibilidade que o Airbnb proporciona.</p>
-<p>O proprietário pode ajustar preços conforme a demanda e escolher períodos de disponibilidade.</p>
-<p>Essa autonomia permite maior controle sobre a estratégia de rentabilidade e uso do imóvel.</p>
-
-<p>A escolha do imóvel é determinante para o sucesso do investimento.</p>
-<p>Localizações próximas a pontos turísticos, praias e centros comerciais são as mais valorizadas.</p>
-<p>Além disso, imóveis com boa infraestrutura e fácil acesso aumentam a atratividade para hóspedes.</p>
-
-<p>São José, por exemplo, destaca-se pela proximidade com Florianópolis e pelo custo-benefício dos imóveis.</p>
-<p>O bairro Kobrasol é referência em comércio, serviços e mobilidade, atraindo tanto turistas quanto profissionais.</p>
-<p>Essa característica amplia as possibilidades de ocupação e rentabilidade ao longo do ano.</p>
-
-<p>Florianópolis, por sua vez, é um ícone do turismo nacional e internacional.</p>
-<p>Bairros como Centro, Beira-Mar Norte e Lagoa da Conceição são altamente procurados por visitantes.</p>
-<p>Investir nessas regiões significa garantir alta demanda e valorização contínua.</p>
-
-<p>O perfil dos hóspedes também influencia na estratégia de investimento.</p>
-<p>Há desde turistas que buscam estadias curtas até profissionais em viagens de negócios.</p>
-<p>Essa diversidade amplia o público-alvo e fortalece o dinamismo da locação por temporada.</p>
-
-<p>Outro diferencial do Airbnb é a possibilidade de oferecer experiências personalizadas.</p>
-<p>Proprietários que investem em decoração, conforto e serviços extras conseguem se destacar.</p>
-<p>Isso resulta em melhores avaliações e maior taxa de ocupação ao longo do ano.</p>
-
-<p>O investimento em Airbnb também contribui para a economia local.</p>
-<p>Turistas hospedados em imóveis de temporada consomem em restaurantes, lojas e serviços da região.</p>
-<p>Esse movimento gera impacto positivo e fortalece o comércio das cidades.</p>
-
-<p>Para investidores atentos, o cenário é promissor e cheio de oportunidades.</p>
-<p>Com planejamento adequado, é possível unir rentabilidade rápida e valorização patrimonial.</p>
-<p>São José e Florianópolis consolidam-se como destinos estratégicos para esse tipo de investimento.</p>
-
-<p>Em resumo, o Airbnb representa uma nova forma de explorar o mercado imobiliário.</p>
-<p>Ele combina inovação, flexibilidade e alta demanda em regiões turísticas de destaque.</p>
-<p>Investir nesse modelo é apostar em um futuro sólido e lucrativo na Grande Florianópolis.</p>
-
-
-          <!-- Caixa de lead -->
+    <!-- artigo aqui  -->
+ <main class="article">
+      <div class="article-header">
+        <img src="img/imagens/marina1.2.jpeg" alt="Construção da Marina na Beira-Mar Norte em Florianópolis" style="max-height: 300px; object-fit: contain;" />
+        <div class="article-text">
+             <!-- artigo aqui  -->
+              <!-- Caixa de lead -->
       <div class="lead-box">
-        <p>Quer simular um investimento em Airbnb?</p>
+        <p>Quer uma avaliação do seu imóvel?</p>
         <a href="https://wa.me/5548999600601?text=Olá%20Flavia,%20gostaria%20de%20uma%20avaliação%20do%20meu%20imóvel%20em%20Florianópolis." 
-           target="_blank" class="btn-whatsapp">📲 Solicitar Analise de Dados</a>
+           target="_blank" class="btn-whatsapp">📲 Solicitar avaliação</a>
       </div>
     </main>
 
-  <section class="outros-imoveis">
+     <section class="featured-properties">
       <h2>Imóveis em destaque</h2>
-      <ul>
-           <li><a href="v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html">Apartamento no Saco dos Limões</a></li>
-        <li><a href="apartamento-venda-centro-v447.html">Apartamento na Vitor Konder</a></li>
-        <li><a href="v448-apartamento-duplex-cobertura-220m2-3dormitorios-sacada+churrasqueira+vista+academia.html">Duplex no Estreito</a></li>
-        <li><a href="apartamento-venda-centro-v450.html">Apartamento Novo no Centro</a></li>
-        <li><a href="v460-apartamento-venda-3dormitorios-beira-mar-norte+marina+110m2+vaga+florianopolis.html">Beira Mar e Marina </a></li>
-        <li><a href="v456-apartamento-venda-palmas-sacada-praia-celso-ramos+3dormitorios+suite.html">Apartamento em Palmas</a></li>
-      </ul>
-    </section>
+      <div class="links-imoveis">
+        
+        <a href="v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html">Apartamento no Saco dos Limões</a>
+        <a href="apartamento-venda-centro-v447.html">Apartamento na Vitor Konder</a>
+        <a href="v448-apartamento-duplex-cobertura-220m2-3dormitorios-sacada+churrasqueira+vista+academia.html">Duplex no Estreito</a>
+        <a href="apartamento-venda-centro-v450.html">Apartamento Novo no Centro</a>
+        <a href="v460-apartamento-venda-3dormitorios-beira-mar-norte+marina+110m2+vaga+florianopolis.html">Beira Mar e Marina </a>
+        <a href="v456-apartamento-venda-palmas-sacada-praia-celso-ramos+3dormitorios+suite.html">Apartamento em Palmas</a>
+      </div>
 
     <!-- Rodapé -->
     <footer>
@@ -588,13 +450,11 @@
         }
       }
 
-      // Clique no botão
       btn.addEventListener('click', function (e) {
         e.stopPropagation();
         toggleMenu();
       });
 
-      // Fechar ao clicar fora
       document.addEventListener('click', function (e) {
         const nav = btn.parentElement;
         if (!nav.contains(e.target)) {
@@ -602,7 +462,6 @@
         }
       });
 
-      // Fechar com Esc
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
           closeMenu();
@@ -612,6 +471,3 @@
   </script>
 </body>
 </html>
-
-
-
