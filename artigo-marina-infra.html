@@ -255,19 +255,80 @@
         text-align: center;
         box-sizing: border-box;
       }
-      /* Imóveis em destaque */
-      .featured-properties {
-        padding: 15px;
-        margin: 15px 0;
+    /* Imóveis em destaque */
+    .featured-properties {
+      margin: 28px 0;
+      padding: 20px;
+      border: 1px solid var(--cinza-borda);
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    .featured-properties h2 {
+      margin-bottom: 15px;
+      text-align: center;
+      color: var(--bronze-medio);
+    }
+    .links-imoveis a {
+      display: block;
+      margin: 6px 0;
+      color: var(--bronze-medio);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .links-imoveis a:hover { text-decoration: underline; }
+
+    /* Outros imóveis */
+    .outros-imoveis {
+      padding: 30px 18px;
+      margin-top: 20px;
+      background: #fff;
+    }
+    .outros-imoveis h2 {
+      margin: 0 0 24px;
+      text-align: center;
+      color: #d4af37;
+      font-size: 2rem;
+    }
+    .outros-imoveis ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(200px, 1fr));
+      gap: 16px 26px;
+      justify-items: center;
+    }
+    .outros-imoveis li {
+      margin: 0;
+      text-align: center;
+    }
+    .outros-imoveis a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
+    }
+    .outros-imoveis a:hover {
+      background-color: #d4af37;
+      color: #fff;
+      text-decoration: underline;
+    }
+    @media (max-width: 900px) {
+      .outros-imoveis ul {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
       }
-      .links-imoveis {
+    }
+    @media (max-width: 560px) {
+      .outros-imoveis ul {
         grid-template-columns: 1fr;
-        gap: 12px;
       }
-      .links-imoveis a {
-        padding: 12px 10px;
-        font-size: 0.95em;
-      }
+    }
+
       /* Footer */
       .footer-container {
         flex-direction: column;
