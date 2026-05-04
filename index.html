@@ -442,8 +442,8 @@
           <select>
             <option>Todos</option>
             <option>1</option>
-            <option>2+</option>
-            <option>3+</option>
+            <option>2</option>
+            <option>3</option>
             <option>4+</option>
           </select>
         </div>
@@ -464,7 +464,7 @@
     <div class="properties-grid">
       <article class="property-card">
         <span class="property-tag">Destaque</span>
-        <img src="img/v439/sala1.webp" class="property-image" alt="Apartamento Agronômica">
+        <img src="img/sala1.webp" class="property-image" alt="Apartamento Agronômica">
         <div class="property-details">
           <div class="property-type">Apartamento</div>
           <h3 class="property-title">Apartamento na Agronômica</h3>
@@ -491,7 +491,7 @@
       <!-- Os cards antigos permanecem acima. Inserir os 3 novos imóveis ao final da grid -->
     <article class="property-card">
           <span class="property-tag">Praia</span>
-        <img src="img/v456/palmas1.jpeg" class="property-image" alt="Apartamento Palmas Celso Ramos">
+        <img src="img/palmas1.jpeg" class="property-image" alt="Apartamento Palmas Celso Ramos">
         <div class="property-details">
           <div class="property-type">Apartamento</div>
           <h3 class="property-title">Apartamento Palmas - Celso Ramos</h3>
@@ -592,7 +592,7 @@
 
           <article class="property-card">
           <span class="property-tag">Centro</span>
-          <img src="img/v450/v450-capa.jpeg" class="property-image" alt="Apartamento Centro Kuboo">
+          <img src="v450/v450-1.jpeg" class="property-image" alt="Apartamento Centro Kuboo">
           <div class="property-details">
             <div class="property-type">Apartamento</div>
             <h3 class="property-title">Apartamento Centro Kuboo</h3>
@@ -616,7 +616,7 @@
         </article>
       <article class="property-card">
         <span class="property-tag">Kobrasol</span>
-        <img src="img/440/sacada-1.webp" class="property-image" alt="Apartamento Kobrasol">
+        <img src="img/sacada-1.webp" class="property-image" alt="Apartamento Kobrasol">
         <div class="property-details">
           <div class="property-type">Apartamento</div>
           <h3 class="property-title">Apartamento no Kobrasol</h3>
@@ -669,7 +669,7 @@
       </article>   
       
      <article class="property-card">
-        <img src="img/v447/01sala_035.jpg" class="property-image" alt="Apartamento Centro">
+        <img src="img/01sala_035.jpg" class="property-image" alt="Apartamento Centro">
         <div class="property-details">
           <div class="property-type">Vitor Konder</div>
           <h3 class="property-title">Apartamento Centro</h3>
@@ -696,7 +696,7 @@
       
       <article class="property-card">
         <span class="property-tag">Oportunidade</span>
-        <img src="img/v457/portaldosol1.jpeg" class="property-image" alt="Apartamento Campinas">
+        <img src="img/portaldosol1.jpeg" class="property-image" alt="Apartamento Campinas">
         <div class="property-details">
           <div class="property-type">Apartamento</div>
           <h3 class="property-title">Apartamento Campinas</h3>
@@ -990,29 +990,6 @@
         }
       })();
     </script>
-     <script>
-document.querySelector('.filter-btn').addEventListener('click', () => {
-  const cidade = document.querySelector('select:nth-of-type(1)').value;
-  const bairro = document.querySelector('select:nth-of-type(2)').value;
-  const quartos = document.querySelector('select:nth-of-type(3)').value;
-  const min = parseInt(document.querySelector('input[placeholder="R$ 0"]').value) || 0;
-  const max = parseInt(document.querySelectorAll('input[placeholder="R$ 0"]')[1].value) || Infinity;
-
-  document.querySelectorAll('.property-card').forEach(card => {
-    const cardCidade = card.querySelector('.property-location').textContent;
-    const cardQuartos = parseInt(card.querySelector('.feature-item strong').textContent);
-    const cardPreco = parseInt(card.querySelector('.property-price').textContent.replace(/\D/g,''));
-
-    let mostrar = true;
-    if (cidade !== "Todas" && !cardCidade.includes(cidade)) mostrar = false;
-    if (quartos !== "Todos" && cardQuartos != quartos) mostrar = false;
-    if (cardPreco < min || cardPreco > max) mostrar = false;
-
-    card.style.display = mostrar ? 'block' : 'none';
-  });
-});
-</script>
-
   </section>
   
   <footer class="main-footer">
