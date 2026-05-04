@@ -315,3 +315,36 @@
       .filter-grid{grid-template-columns:1fr;}
     }
 
+    /* ===== Conteúdo das Abas de locacao ===== */
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      border: 1px solid var(--dourado);
+      border-top: none;
+      animation: fadeEffect 0.5s;
+      background-color: #fff;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tabcontent h3 {
+      color: var(--dourado);
+      margin-bottom: 10px;
+    }
+
+    .tabcontent ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tabcontent ul li {
+      padding: 6px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* ===== Animação suave ===== */
+    @keyframes fadeEffect {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
