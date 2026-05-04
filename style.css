@@ -1,4 +1,4 @@
- <style>
+
     :root {
       --bronze: #b08d57;
       --bronze-claro: #d6bfa5;
@@ -314,4 +314,4 @@
       .main-content, .properties-grid, .lancamentos-grid{grid-template-columns:1fr;}
       .filter-grid{grid-template-columns:1fr;}
     }
-  </style>
+
