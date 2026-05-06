@@ -51,7 +51,7 @@
           <li><a href="index.html">Comprar</a></li>
           <!-- ==========  <li><a href="#alugar">Alugar</a></li>========== -->
           <li><a href="#lancamentos">Lançamentos</a></li>
-          <li><a href="sobre.html">Blog</a></li>
+
          
         </ul>
       </nav>
@@ -538,6 +538,13 @@
         </div>
       </article>
     </div>
+             
+  <!-- Container para imóveis da API -->
+<section class="imoveis-api">
+  <h2 class="titulo-dourado-centralizado">Outros Imóveis Disponíveis</h2>
+  <p class="status" id="imoveis-status">Carregando imóveis…</p>
+  <div id="lista-imoveis" class="grid-imoveis"></div>
+</section>
   </main>
   <section class="lancamentos-section" id="lancamentos">
     <div class="lancamentos-content">
@@ -679,18 +686,18 @@
   <footer class="main-footer">
     <div class="footer-grid">
       <div class="footer-column">
-        <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" alt="Flavia Capacia" class="footer-logo" style="margin-bottom:-8px;margin-top:-14px;">
+        <img src="img/imagens/logo-Imóveis-em-Floripa.png" alt="Imoveis em Floripa FC" class="footer-logo" style="margin-bottom:-8px;margin-top:-14px;">
         <p>Imóveis de alto padrão em Florianópolis e Grande Florianópolis. Mais de 10 anos de experiência no mercado imobiliário.</p>
         <!-- Social icons removidos desta coluna -->
       </div>
       <div class="footer-column">
         <h3>Navegação</h3>
         <a href="index.html">Início</a>
-        <a href="#comprar">Comprar Imóvel</a>
+        <a href="index.html">Comprar Imóvel</a>
         <a href="#alugar">Alugar Imóvel</a>
         <a href="#lancamentos">Lançamentos</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="contato.html">Contato</a>
+ 
+      
       </div>
       <div class="footer-column">
         <h3>Contato</h3>
@@ -748,5 +755,284 @@
       <p>Desenvolvido com 💛 por Capacia Group</p>
     </div>
   </footer>
+            
+// rota para captar imóveis de sites externos
+<!-- Script: integração com API do CRM -->
+<script>
+  const API_URL = "";
+
+  function formatarPrecoBRL(valor) {
+    if (!valor) return "";
+    return String(valor); // já vem formatado da API
+  }
+
+  function escaparHtml(str) {
+    return String(str ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  async function carregarImoveis() {
+    const statusEl = document.querySelector('#imoveis-status');
+    const listaEl = document.querySelector('#lista-imoveis');
+    const lancamentosEl = document.querySelector('#lista-lancamentos');
+
+    if (!statusEl || !listaEl) return;
+
+    const isLancamento = (imovel) => {
+      const texto = [
+        imovel?.titulo,
+        imovel?.titulo_anuncio,
+        imovel?.categoria,
+        imovel?.tipo,
+        imovel?.situacao,
+        imovel?.descricao
+      ].filter(Boolean).join(' ').toLowerCase();
+
+      return texto.includes('lançamento')
+        || texto.includes('lancamento')
+        || texto.includes('na planta')
+        || texto.includes('em construção')
+        || texto.includes('em construcao');
+    };
+
+    const buildInfos = (imovel) => {
+      const bairro = escaparHtml(imovel?.bairro || imovel?.local || "");
+      const metragem = imovel?.metragem || imovel?.area || "";
+      const suites = imovel?.suites || "";
+      const dormitorios = imovel?.dormitorios || imovel?.quartos || "";
+      const vagas = imovel?.vagas || "";
+
+      const infoTexto = [];
+      if (bairro) infoTexto.push(bairro);
+      if (metragem) infoTexto.push(`${metragem}m²`);
+
+      if (suites) {
+        infoTexto.push(`${suites} suíte${suites > 1 ? 's' : ''}`);
+      } else if (dormitorios) {
+        infoTexto.push(`${dormitorios} dormitório${dormitorios > 1 ? 's' : ''}`);
+      }
+
+      if (vagas) infoTexto.push(`${vagas} vaga${vagas > 1 ? 's' : ''}`);
+      return infoTexto.join(" • ");
+    };
+
+    const buildPublicUrl = (imovel) => {
+      let url = "#";
+      if (imovel?.urlPublicada) {
+        try { url = new URL(imovel.urlPublicada).pathname; }
+        catch (e) { url = imovel.urlPublicada.startsWith('/') ? imovel.urlPublicada : `/${imovel.urlPublicada}`; }
+      } else if (imovel?.arquivoPublicado) {
+        url = `/${imovel.arquivoPublicado}`;
+      }
+
+      if (url.startsWith('/static-site/public/')) {
+        url = `/${url.replace('/static-site/public/', '')}`;
+      }
+      return url;
+    };
+
+    const normalizePath = (url = '') => {
+      try {
+        return new URL(url, window.location.origin).pathname;
+      } catch {
+        return String(url || '').trim();
+      }
+    };
+
+    const getCardImageUrl = (imovel) => {
+      const fotos = Array.isArray(imovel?.fotos)
+        ? imovel.fotos
+        : String(imovel?.fotos || '')
+            .split(/[\n,;]+/)
+            .map((item) => item.trim())
+            .filter(Boolean);
+
+      const primeiraFoto = fotos.find((foto) => typeof foto === 'string' && foto.trim());
+      if (!primeiraFoto) {
+        return '';
+      }
+
+      if (/^https?:\/\//i.test(primeiraFoto)) {
+        return primeiraFoto;
+      }
+
+      if (primeiraFoto.startsWith('/')) {
+        return `${API_URL}${primeiraFoto}`;
+      }
+
+      return `/${primeiraFoto.replace(/^\.\//, '')}`;
+    };
+
+    const normalizeBusinessLabel = (negocio = 'Venda') => {
+      return /loca[cç][aã]o/i.test(String(negocio || 'Venda').trim())
+        ? 'para locação'
+        : 'à venda';
+    };
+
+    const normalizePropertyTypeLabel = (value = '') => {
+      const normalized = String(value || '').trim();
+      const lower = normalized.toLowerCase();
+
+      if (!normalized) return 'Imóvel';
+      if (/lan[cç]amento/.test(lower)) return 'Lançamento';
+      if (/\bstudios\b/.test(lower)) return 'Studios';
+      if (/\b(studio|st[uú]dio|loft|kitnet)\b/.test(lower)) return 'Studio';
+      if (/\b(cobertura)\b/.test(lower)) return 'Cobertura';
+      if (/\b(duplex)\b/.test(lower)) return 'Duplex';
+      if (/\b(casa)\b/.test(lower)) return 'Casa';
+      if (/\b(terreno|lote)\b/.test(lower)) return 'Terreno';
+      if (/\b(apartamento|apto)\b/.test(lower)) return 'Apartamento';
+
+      return normalized;
+    };
+
+    const buildPublicCardTitle = (imovel) => {
+      const rawTitle = String(imovel?.titulo || imovel?.titulo_anuncio || '').trim();
+      const tipo = normalizePropertyTypeLabel(imovel?.tipo || imovel?.categoria || rawTitle);
+      const negocio = normalizeBusinessLabel(imovel?.negocio || 'Venda');
+      const fallbackTitle = tipo === 'Lançamento' ? 'Lançamento' : `${tipo} ${negocio}`;
+
+      if (!rawTitle) {
+        return fallbackTitle;
+      }
+
+      const cleanedTitle = rawTitle.replace(/\s+/g, ' ').trim();
+      const normalizedTitle = cleanedTitle.toLowerCase();
+      const malformedGeneric = [
+        /^im[oó]vel$/i,
+        /^lan[cç]amento$/i,
+        /^(apartamento|casa|cobertura|terreno|studio|studios|duplex)(\s+(a|à|para))?\s+(venda|loca[cç][aã]o)\b/i,
+        /^(apartamento|casa|cobertura|terreno|studio|studios|duplex)\b$/i,
+      ].some((pattern) => pattern.test(cleanedTitle));
+
+      if (malformedGeneric) {
+        return fallbackTitle;
+      }
+
+      if (tipo === 'Lançamento' && /lan[cç]amento/i.test(normalizedTitle)) {
+        return 'Lançamento';
+      }
+
+      return cleanedTitle;
+    };
+
+    try {
+      statusEl.textContent = "Carregando imóveis…";
+      listaEl.innerHTML = "";
+
+      const response = await fetch(`${API_URL}/api/imoveis/publicos`);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      const imoveis = await response.json();
+      if (!Array.isArray(imoveis) || imoveis.length === 0) {
+        statusEl.textContent = "Nenhum imóvel disponível no momento.";
+        return;
+      }
+
+      const uniqueByUrl = new Map();
+      imoveis.forEach((imovel) => {
+        const key = normalizePath(buildPublicUrl(imovel));
+        if (key && key !== '/' && key !== '#') {
+          if (!uniqueByUrl.has(key)) uniqueByUrl.set(key, imovel);
+          return;
+        }
+        const fallbackKey = `id:${imovel?.id || ''}|arquivo:${imovel?.arquivoPublicado || ''}`;
+        if (!uniqueByUrl.has(fallbackKey)) uniqueByUrl.set(fallbackKey, imovel);
+      });
+
+      const deduped = Array.from(uniqueByUrl.values());
+      const lancamentos = deduped.filter(isLancamento);
+      const imoveisComuns = deduped.filter((imovel) => !isLancamento(imovel));
+      const lancamentoUrls = new Set(
+        Array.from(lancamentosEl?.querySelectorAll('a') || []).map((a) => normalizePath(a.getAttribute('href') || ''))
+      );
+
+      statusEl.textContent = `${imoveisComuns.length} imóvel(is) disponível(is) em Outros Imóveis.`;
+
+      if (lancamentosEl) {
+        if (lancamentos.length > 0) {
+          lancamentos.forEach(imovel => {
+            const titulo = escaparHtml(buildPublicCardTitle(imovel));
+            const imagem = getCardImageUrl(imovel);
+
+            const url = buildPublicUrl(imovel);
+            const infos = buildInfos(imovel);
+
+            const cardLancamento = `
+              <div class="imovel">
+                <a href="${url}">
+                  ${imagem ? `<img src="${imagem}" alt="${titulo}">` : ''}
+                  <h3>${titulo}</h3>
+                  <p>${infos}</p>
+                </a>
+              </div>
+            `;
+
+            const jaExiste = Array.from(lancamentosEl.querySelectorAll('a')).some((a) => {
+              const href = a.getAttribute('href') || '';
+              return href === url;
+            });
+
+            if (!jaExiste) {
+              lancamentosEl.insertAdjacentHTML('beforeend', cardLancamento);
+              lancamentoUrls.add(normalizePath(url));
+            }
+          });
+        }
+      }
+
+      imoveisComuns.forEach(imovel => {
+        const titulo = escaparHtml(buildPublicCardTitle(imovel));
+        const preco = formatarPrecoBRL(imovel?.valor || imovel?.valor_venda);
+        const imagem = getCardImageUrl(imovel);
+
+        // Prioriza a URL publicada pelo CRM antes do fallback local.
+        let url = "#";
+        if (imovel?.urlPublicada) {
+          try { url = new URL(imovel.urlPublicada).pathname; } 
+          catch(e) { url = imovel.urlPublicada.startsWith('/') ? imovel.urlPublicada : `/${imovel.urlPublicada}`; }
+        } else if (imovel?.arquivoPublicado) {
+          url = `/${imovel.arquivoPublicado}`;
+        }
+        if (url.startsWith('/static-site/public/')) {
+          url = `/${url.replace('/static-site/public/', '')}`;
+        }
+        if (lancamentoUrls.has(normalizePath(url))) {
+          return;
+        }
+
+        // Monta informações como "Bairro • Metragem • Suítes/Dormitórios"
+        const infos = buildInfos(imovel);
+
+        const card = `
+          <div class="imovel imovel-card">
+            <a href="${url}">
+              ${imagem ? `<img src="${imagem}" alt="${titulo}">` : ''}
+              <h3>${titulo}</h3>
+              <p>${infos}</p>
+            </a>
+          </div>
+        `;
+
+        listaEl.innerHTML += card;
+      });
+    } catch (erro) {
+      statusEl.textContent = "Erro ao carregar imóveis.";
+      console.error(erro);
+    }
+  }
+
+  carregarImoveis();
+ 
+</script>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
+
+
