@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apartamento à venda no bairro Bela Vista – São José</title>
+  <meta name="description" content="Apresentamos esse excelente apartamento com 90m² de área privativa, localizado na Avenida das Torres, em São José. O imóvel dispõe de 90m2de área privativa com " />
+  <meta property="og:title" content="Apartamento à venda no bairro Bela Vista – São José" />
+  <meta property="og:description" content="Apresentamos esse excelente apartamento com 90m² de área privativa, localizado na Avenida das Torres, em São José. O imóvel dispõe de 90m2de área privativa com " />
+  <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Apartamento à venda no bairro Bela Vista – São José" />
+  <meta name="twitter:description" content="Apresentamos esse excelente apartamento com 90m² de área privativa, localizado na Avenida das Torres, em São José. O imóvel dispõe de 90m2de área privativa com " />
+  <meta name="twitter:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --fundo-branco: #ffffff;
+      --texto-bronze: #4B3A2F;
+      --bronze-claro: #7A5C45;
+      --dourado: #b08d57;
+      --borda: #e8dfd6;
+      --fonte-padrao: 'Inter', 'Playfair Display', Arial, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: var(--cinza-texto);
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      background-color: var(--fundo-claro);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border: 1px solid var(--cinza-borda);
+    }
+
+    /* Cabeçalho */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--bronze-medio);
+      margin-bottom: 20px;
+      position: relative;
+    }
+    header img { height: 54px; }
+
+    nav { position: relative; }
+    #menu-toggle {
+      background: none;
+      border: 1px solid var(--bronze-medio);
+      color: var(--bronze-medio);
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    #menu-toggle:hover { background-color: var(--bronze-medio); color: #fff; }
+
+    #menu {
+      list-style: none;
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 40px;
+      background-color: #fff;
+      border: 1px solid var(--cinza-borda);
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      min-width: 180px;
+      z-index: 100;
+    }
+    #menu.open { display: block; }
+    #menu li { margin: 6px 0; }
+    #menu li a {
+      text-decoration: none;
+      color: var(--cinza-texto);
+      font-weight: bold;
+      display: block;
+      padding: 6px 8px;
+      border-radius: 6px;
+    }
+    #menu li a:hover { color: var(--bronze-medio); background: #fafafa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--fundo-branco); color: var(--texto-bronze); font-family: var(--fonte-padrao); line-height: 1.6; font-variant-numeric: tabular-nums; }
+    .site-header { background: #fff; border-bottom: 1px solid #ddd; padding: 18px 20px; text-align: center; }
+    .logo-area img { max-width: 170px; height: auto; }
+    
+    .imovel-page { max-width: 1050px; margin: 0 auto; padding: 30px 18px; }
+    h1 { text-align: center; color: var(--dourado); margin: 0; font-size: 2rem; }
+    .preco { margin: 8px 0 2px; text-align: center; font-size: 1.55rem; color: var(--bronze-claro); font-weight: 700; }
+    .codigo { text-align: center; margin: 0 0 28px; color: #6d635b; font-size: 0.95rem; }
+    .card { background: #fff; border: 1px solid var(--borda); border-radius: 12px; padding: 18px; margin-bottom: 18px; }
+    .card h2 { margin: 0 0 12px; color: var(--texto-bronze); font-size: 1.3rem; }
+    .condominio-info { background: #f9f5f0; border-left: 4px solid var(--dourado); padding: 18px; margin: 18px 0; border-radius: 8px; }
+    .condominio-info h3 { margin: 0 0 10px; color: var(--dourado); font-size: 1.2rem; }
+    .condominio-info p { margin: 0; color: var(--texto-bronze); line-height: 1.6; }
+    .detalhes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 12px; }
+    .detalhes li { border-bottom: 1px solid #f3ede7; padding: 6px 0; }
+    article { line-height: 1.8; color: #555; }
+    article p { margin-bottom: 12px; }
+    article ul { margin: 8px 0 12px 20px; }
+    .zoom-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .zoom-container { position: relative; width: 100%; aspect-ratio: 1/1; min-width: 0; min-height: 0; overflow: hidden; border-radius: 14px; border: 2px solid var(--dourado); cursor: zoom-in; background: #fff; }
+    .zoom-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+    .zoom-container:hover img { transform: scale(1.5); z-index: 2; }
+    .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; }
+    .modal.active { display: flex; }
+    .modal-content { position: relative; background: #fff; padding: 24px; border-radius: 18px; box-shadow: 0 0 24px #0005; display: flex; flex-direction: column; align-items: center; }
+    .modal-content img { width: 480px; height: 480px; object-fit: cover; border-radius: 14px; margin-bottom: 16px; }
+    .carousel-controls { display: flex; gap: 18px; justify-content: center; margin-top: 8px; }
+    .carousel-btn { background: var(--dourado); color: #fff; border: none; padding: 10px 22px; border-radius: 10px; cursor: pointer; font-size: 18px; font-weight: bold; box-shadow: 0 2px 8px #b08d5733; transition: background 0.2s; }
+    .carousel-btn:hover { background: #7A5C45; }
+    .close-btn { position: absolute; top: 8px; right: 8px; background: var(--dourado); color: #fff; border: none; border-radius: 50%; width: 38px; height: 38px; font-size: 22px; cursor: pointer; font-weight: bold; box-shadow: 0 2px 8px #b08d5733; transition: background 0.2s; }
+    .close-btn:hover { background: #7A5C45; }
+    .btn-whatsapp { display: inline-block; margin-top: 10px; text-decoration: none; background: var(--dourado); color: #fff; font-weight: 700; padding: 12px 18px; border-radius: 8px; }
+    .btn-whatsapp:hover { background: #7A5C45; }
+    .outros-imoveis { padding: 30px 18px; margin-top: 20px; background: #fff; }
+    .outros-imoveis h2 { margin: 0 0 24px; text-align: center; color: var(--dourado); font-size: 2rem; }
+    .outros-imoveis ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)); gap: 16px 26px; justify-items: center; }
+    .outros-imoveis li { margin: 0; text-align: center; }
+    .outros-imoveis a { color: var(--dourado); text-decoration: none; font-weight: 600; font-size: 18px; display: inline-block; padding: 10px 16px; border-radius: 5px; transition: background-color 0.3s, color 0.3s, text-decoration 0.3s; }
+    .outros-imoveis a:hover { background-color: var(--dourado); color: #fff; text-decoration: underline; }
+   
+    /* Rodapé */
+    footer { margin-top: 24px; }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-top: 2px solid var(--bronze-medio);
+      background-color: #fff;
+      border-radius: 10px;
+    }
+    .footer-contact, .footer-logo, .footer-social {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+    }
+    .footer-logo img { width: 120px; }
+    .footer-contact a, .footer-social a {
+      color: var(--bronze-medio);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .footer-social ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .footer-credit {
+      text-align: center;
+      padding: 10px;
+      border-top: 1px solid var(--cinza-borda);
+      background-color: #fff;
+      color: var(--bronze-medio);
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+    /* Extra pequeno (até 480px) */
+    @media (max-width: 480px) {
+      body {
+        padding: 8px;
+      }
+      .container {
+        padding: 10px;
+      }
+      header img {
+        height: 40px;
+      }
+      #menu-toggle {
+        padding: 5px 8px;
+        font-size: 0.85em;
+      }
+     
+ 
+    @media (max-width: 900px) { .footer-container { grid-template-columns: 1fr; gap: 20px; } .outros-imoveis ul { grid-template-columns: repeat(2, minmax(180px, 1fr)); } .zoom-gallery { grid-template-columns: repeat(2, 1fr); } .modal-content img { width: 320px; height: 320px; } }
+    @media (max-width: 560px) { .footer-container { grid-template-columns: 1fr; gap: 20px; } .outros-imoveis ul { grid-template-columns: 1fr; } .zoom-gallery { grid-template-columns: 1fr; } .modal-content img { width: 98vw; height: 60vw; } }
+  </style>
+</head>
+ <body>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header>
+      <a href="index.html" aria-label="Página inicial">
+        <img src="img/imagens/logo-Imóveis-em-Floripa.png" alt="Logo Imoveis em Floripa FC" />
+      </a>
+      <nav>
+        <button id="menu-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+<!-- Página imóvel -->
+  <main class="imovel-page">
+    <h1>Apartamento à venda no bairro Bela Vista – São José</h1>
+    <p class="preco">715.000,00</p>
+    <p class="codigo">Bela Vista &nbsp;|&nbsp; Código: v471</p>
+
+  <section class="card">
+   <h2>Sobre o Imóvel</h2>
+  <br>
+  Apresentamos este excelente apartamento com 90m² de área privativa, localizado na Avenida das Torres, em São José. O imóvel dispõe de três dormitórios, sendo uma suíte com sacada, além de três vagas de garagem (uma dupla e uma individual). Entre as características do imóvel estão: três dormitórios incluindo uma suíte com sacada, sacada gourmet integrada à sala, cozinha e área de serviço planejadas em conceito aberto, piso laminado nos dormitórios e porcelanato nas demais áreas, localizado no último andar e acabamento em gesso nos banheiros e sacadas.
+    </section>
+
+    <section class="card">
+   <h2>Detalhes do Imóvel</h2>
+  <br>
+
+  Área privativa: 90m²<br>
+  Dormitórios: 3<br>
+  Vagas de garagem: 3<br>
+  Sacadas:2<br>
+  Andar: Último<br>
+  </section>
+
+
+ <section class="card">
+  <h2>Infraestrutura do condomínio</h2>
+
+  <p>Dois espaços gourmet</p>
+  <p>Salão de festas</p>
+  <p>Quiosques com churrasqueira</p>
+  <p>Playground</p>
+  <p>Quadra de esportes</p>
+  <p>Mercadinho 24 horas</p>
+  <p>Monitoramento por câmeras de segurança 24 horas</p><br>
+
+  <p>A localização é privilegiada, com fácil acesso a comércio, academias, farmácias, supermercados e demais conveniências a poucos minutos de caminhada.</p>
+</section>
+
+</main>
+
+   
+    <section class="card">
+      <h2>Galeria de fotos</h2>
+      
+      <div class="zoom-gallery">
+        <div class="zoom-container" onclick="openModal(0)"><img src="img/v471/v4711.jpeg" alt="Foto do imóvel 1" /></div><div class="zoom-container" onclick="openModal(1)"><img src="img/v471/v47110.jpeg" alt="Foto do imóvel 2" /></div><div class="zoom-container" onclick="openModal(2)"><img src="img/v471/v47111.jpeg" alt="Foto do imóvel 3" /></div><div class="zoom-container" onclick="openModal(3)"><img src="img/v471/v47112.jpeg" alt="Foto do imóvel 4" /></div><div class="zoom-container" onclick="openModal(4)"><img src="img/v471/v47113.jpeg" alt="Foto do imóvel 5" /></div><div class="zoom-container" onclick="openModal(5)"><img src="img/v471/v47114.jpeg" alt="Foto do imóvel 6" /></div><div class="zoom-container" onclick="openModal(6)"><img src="img/v471/v47115.jpeg" alt="Foto do imóvel 7" /></div><div class="zoom-container" onclick="openModal(7)"><img src="img/v471/v47116.jpeg" alt="Foto do imóvel 8" /></div><div class="zoom-container" onclick="openModal(8)"><img src="img/v471/v47117.jpeg" alt="Foto do imóvel 9" /></div><div class="zoom-container" onclick="openModal(9)"><img src="img/v471/v47118.jpeg" alt="Foto do imóvel 10" /></div><div class="zoom-container" onclick="openModal(10)"><img src="img/v471/v47119.jpeg" alt="Foto do imóvel 11" /></div><div class="zoom-container" onclick="openModal(11)"><img src="img/v471/v4712.jpeg" alt="Foto do imóvel 12" /></div><div class="zoom-container" onclick="openModal(12)"><img src="img/v471/v47120.jpeg" alt="Foto do imóvel 13" /></div><div class="zoom-container" onclick="openModal(13)"><img src="img/v471/v47121.jpeg" alt="Foto do imóvel 14" /></div><div class="zoom-container" onclick="openModal(14)"><img src="img/v471/v47122.jpeg" alt="Foto do imóvel 15" /></div><div class="zoom-container" onclick="openModal(15)"><img src="img/v471/v47123.jpeg" alt="Foto do imóvel 16" /></div><div class="zoom-container" onclick="openModal(16)"><img src="img/v471/v47124.jpeg" alt="Foto do imóvel 17" /></div><div class="zoom-container" onclick="openModal(17)"><img src="img/v471/v47125.jpeg" alt="Foto do imóvel 18" /></div><div class="zoom-container" onclick="openModal(18)"><img src="img/v471/v47126.jpeg" alt="Foto do imóvel 19" /></div><div class="zoom-container" onclick="openModal(19)"><img src="img/v471/v47127.jpeg" alt="Foto do imóvel 20" /></div><div class="zoom-container" onclick="openModal(20)"><img src="img/v471/v47128.jpeg" alt="Foto do imóvel 21" /></div><div class="zoom-container" onclick="openModal(21)"><img src="img/v471/v47129.jpeg" alt="Foto do imóvel 22" /></div><div class="zoom-container" onclick="openModal(22)"><img src="img/v471/v4713.jpeg" alt="Foto do imóvel 23" /></div><div class="zoom-container" onclick="openModal(23)"><img src="img/v471/v47130.jpeg" alt="Foto do imóvel 24" /></div><div class="zoom-container" onclick="openModal(24)"><img src="img/v471/v47131.jpeg" alt="Foto do imóvel 25" /></div><div class="zoom-container" onclick="openModal(25)"><img src="img/v471/v47132.jpeg" alt="Foto do imóvel 26" /></div><div class="zoom-container" onclick="openModal(26)"><img src="img/v471/v4714.jpeg" alt="Foto do imóvel 27" /></div><div class="zoom-container" onclick="openModal(27)"><img src="img/v471/v4715.jpeg" alt="Foto do imóvel 28" /></div><div class="zoom-container" onclick="openModal(28)"><img src="img/v471/v4716.jpeg" alt="Foto do imóvel 29" /></div><div class="zoom-container" onclick="openModal(29)"><img src="img/v471/v4717.jpeg" alt="Foto do imóvel 30" /></div><div class="zoom-container" onclick="openModal(30)"><img src="img/v471/v4718.jpeg" alt="Foto do imóvel 31" /></div><div class="zoom-container" onclick="openModal(31)"><img src="img/v471/v4719.jpeg" alt="Foto do imóvel 32" /></div>
+      </div>
+      <div id="imageModal" class="modal">
+        <div class="modal-content">
+          <button class="close-btn" onclick="closeModal()">&times;</button>
+          <img id="modalImage" src="" alt="Imagem ampliada" />
+          <div class="carousel-controls">
+            <button class="carousel-btn" onclick="prevImage()">Anterior</button>
+            <button class="carousel-btn" onclick="nextImage()">Próxima</button>
+          </div>
+        </div>
+      </div>
+     
+      <div style="text-align:center; margin-top:18px;">
+        <a class="btn-whatsapp" href="https://wa.me/5548999600601?text=Ol%C3%A1%20Flavia%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20im%C3%B3vel%20v471" target="_blank" rel="noopener noreferrer">Fale Conosco</a>
+      </div>
+    </section>
+  </main>
+
+  <section class="outros-imoveis">
+    <h2>Imóveis em destaque</h2>
+
+   <div class="links-imoveis">
+        
+        <a href="v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html">Apartamento no Saco dos Limões</a>
+        <a href="apartamento-venda-centro-v447.html">Apartamento na Vitor Konder</a>
+        <a href="v448-apartamento-duplex-cobertura-220m2-3dormitorios-sacada+churrasqueira+vista+academia.html">Duplex no Estreito</a>
+        <a href="apartamento-venda-centro-v450.html">Apartamento Novo no Centro</a>
+        <a href="v460-apartamento-venda-3dormitorios-beira-mar-norte+marina+110m2+vaga+florianopolis.html">Beira Mar e Marina </a>
+        
+      </div>
+
+  </section>
+
+   
+
+<!-- Rodapé -->
+    <footer>
+      <div class="footer-logo">
+        <a href="index.html" aria-label="Voltar ao início">
+          <img src="img/imagens/logo-Imóveis-em-Floripa.png" alt="Logo Imoveis em Floripa FC" />
+      </div>
+
+      <div class="footer-container">
+        <div class="footer-contact">
+          <h3 style="color: var(--bronze-medio);">Contato</h3>
+          <p><a href="mailto:imoveisemfloripa.fc@gmail.com">imoveisemfloripa.fc@gmail.com</a></p>
+          <p><a href="tel:+5548999600601">(48) 99960-0601</a></p>
+          <p>Florianópolis</p>
+        </div>
+        <div class="footer-social">
+          <ul>
+            <li><a href="https://www.facebook.com/imoveisemfloripa.fc" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/imoveisemfloripa.fc/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/imoveisemfloripa.fc" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@imoveisemfloripa.fc" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-credit">
+        <p>&copy; 2025 Imoveis em Floripa FC- Todos os direitos reservados.</p>
+        Feito com 💛 por <strong>Capacia Group</strong> 💛
+      </div>
+    </footer>
+     </div>
+    
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    function openMenu() {
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMenu() {
+      if (menu.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+
+    // Clique no botão abre/fecha
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Clique fora fecha
+    document.addEventListener('click', function (e) {
+      const nav = btn.parentElement;
+      if (!nav.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Tecla ESC fecha
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeMenu();
+      }
+    });
+  });
+</script>
+</body>
+</html>
