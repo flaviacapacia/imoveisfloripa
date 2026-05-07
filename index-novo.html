@@ -1027,6 +1027,39 @@
       console.error(erro);
     }
   }
+// Filtro de imóveis
+document.getElementById('filtro-imoveis').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const cidade = document.getElementById('cidade').value;
+  const tipo = document.getElementById('tipo').value;
+
+  document.querySelectorAll('.property-card').forEach(card => {
+    const matchCidade = !cidade || card.dataset.cidade === cidade;
+    const matchTipo = !tipo || card.dataset.tipo === tipo;
+    card.style.display = (matchCidade && matchTipo) ? 'block' : 'none';
+  });
+
+  // Adicione um feedback ao usuário
+  document.title = `Imóveis em ${cidade} (${tipo})`;
+  alert(`Filtragem aplicada com sucesso!`);
+});
+
+// Compartilhar imóvel
+document.querySelectorAll('.btn-compartilhar').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const card = this.closest('.property-card');
+    const link = card.querySelector('a').href;
+
+    if (navigator.share) {
+      navigator.share({
+        title: card.querySelector('.property-title').innerText,
+        url: link
+      }).catch(console.error);
+    } else {
+      alert("Copie este link: " + link);
+    }
+  });
+});
 
   carregarImoveis();
  
