@@ -63,3 +63,18 @@ footer .social img {
   margin: 0 5px;
   border-radius: 50%;
 }
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
