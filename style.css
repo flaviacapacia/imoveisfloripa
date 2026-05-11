@@ -271,30 +271,38 @@
   height: 72px;
   object-fit: cover;      /* garante que preencha sem distorcer */
 }
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: transparent;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;       /* mantém o círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+  text-decoration: none;
+  transition: all 0.3s;
+  padding: 0;
+  border: none;
+  box-shadow: 0 5px 18px rgba(34,34,34,0.10);
+}
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      background: transparent;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 998;
-      text-decoration: none;
-      transition: all 0.3s;
-      padding: 0;
-      border: none;
-      box-shadow: 0 5px 18px rgba(34,34,34,0.10);
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.08);
-      background: transparent;
-      box-shadow: 0 8px 24px rgba(34,34,34,0.13);
-    }
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  background: transparent;
+  box-shadow: 0 8px 24px rgba(34,34,34,0.13);
+}
+
+.whatsapp-float img {
+  border-radius: 50%;       /* deixa a logo redonda */
+  width: 72px;
+  height: 72px;
+  object-fit: cover;        /* garante que preencha sem distorcer */
+}
+
     /* === FOOTER: Branco com letras escuras === */
     .main-footer { background:var(--branco); color:var(--preto); padding:55px 20px 25px; margin-top:70px;}
     .footer-grid {
