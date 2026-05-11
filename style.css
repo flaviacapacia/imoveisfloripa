@@ -265,7 +265,13 @@
   font-size: 15px;
   color: var(--bronze);
   line-height: 1.7;
+}.whatsapp-float img {
+  border-radius: 50%;     /* deixa a logo redonda */
+  width: 72px;
+  height: 72px;
+  object-fit: cover;      /* garante que preencha sem distorcer */
 }
+
     .whatsapp-float {
       position: fixed;
       bottom: 28px;
