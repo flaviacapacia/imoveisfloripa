@@ -100,51 +100,90 @@
     <div class="section-header">
       <h2 class="section-title">Imóveis em Destaque</h2>
       <p class="section-subtitle">Confira nossa seleção especial de imóveis de alto padrão</p>
+    </div><div class="filter-section">
+  <div class="filter-grid">
+    <div class="filter-item">
+      <label>Cidade</label>
+      <select id="filtro-cidade">
+        <option value="">Todas</option>
+        <option value="Florianópolis">Florianópolis</option>
+        <option value="São José">São José</option>
+        <option value="Palhoça">Palhoça</option>
+      </select>
     </div>
-    <div class="filter-section">
-      <div class="filter-grid">
-        <div class="filter-item">
-          <label>Cidade</label>
-          <select>
-            <option>Todas</option>
-            <option>Florianópolis</option>
-            <option>São José</option>
-            <option>Palhoça</option>
-          </select>
-        </div>
-        <div class="filter-item">
-          <label>Bairro</label>
-          <select>
-            <option>Todos</option>
-            <option>Agronômica</option>
-            <option>Centro</option>
-            <option>Kobrasol</option>
-            <option>Trindade</option>
-          </select>
-        </div>
-        <div class="filter-item">
-          <label>Quartos</label>
-          <select>
-            <option>Todos</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4+</option>
-          </select>
-        </div>
-        <div class="filter-item">
-          <label>Valor Mínimo</label>
-          <input type="text" placeholder="R$ 0">
-        </div>
-        <div class="filter-item">
-          <label>Valor Máximo</label>
-          <input type="text" placeholder="R$ 0">
-        </div>
-        <div class="filter-item">
-          <button class="filter-btn">Filtrar</button>
-        </div>
-      </div>
+    <div class="filter-item">
+      <label>Bairro</label>
+      <select id="filtro-bairro">
+        <option value="">Todos</option>
+        <option value="Agronômica">Agronômica</option>
+        <option value="Centro">Centro</option>
+        <option value="Kobrasol">Kobrasol</option>
+        <option value="Trindade">Trindade</option>
+      </select>
     </div>
+    <div class="filter-item">
+      <label>Quartos</label>
+      <select id="filtro-quartos">
+        <option value="">Todos</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4+</option>
+      </select>
+    </div>
+    <div class="filter-item">
+      <label>Valor Mínimo</label>
+      <input type="number" id="filtro-min" placeholder="R$ 0">
+    </div>
+    <div class="filter-item">
+      <label>Valor Máximo</label>
+      <input type="number" id="filtro-max" placeholder="R$ 0">
+    </div>
+    <div class="filter-item">
+      <button class="filter-btn" onclick="aplicarFiltros()">Filtrar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function aplicarFiltros() {
+  const cidade = document.getElementById('filtro-cidade').value;
+  const bairro = document.getElementById('filtro-bairro').value;
+  const quartos = document.getElementById('filtro-quartos').value;
+  const min = parseInt(document.getElementById('filtro-min').value) || 0;
+  const max = parseInt(document.getElementById('filtro-max').value) || Infinity;
+
+  const cards = document.querySelectorAll('.property-card');
+
+  cards.forEach(card => {
+    const cidadeCard = card.getAttribute('data-cidade');
+    const bairroCard = card.getAttribute('data-bairro');
+    const quartosCard = parseInt(card.getAttribute('data-quartos'));
+    const precoCard = parseInt(card.getAttribute('data-preco'));
+
+    let visivel = true;
+
+    if (cidade && cidadeCard !== cidade) visivel = false;
+    if (bairro && bairroCard !== bairro) visivel = false;
+    if (quartos && (quartosCard != quartos && !(quartos === "4" && quartosCard >= 4))) visivel = false;
+    if (precoCard < min || precoCard > max) visivel = false;
+
+    card.style.display = visivel ? 'block' : 'none';
+  });
+}
+
+// Favoritar
+function toggleFavorito(btn) {
+  btn.classList.toggle("favorito");
+}
+
+// Compartilhar
+function compartilhar(link) {
+  navigator.clipboard.writeText(link);
+  alert("Link copiado para compartilhar!");
+}
+</script>
+
    </div>  <!-- OS IMÓVEIS EM DESTAQUE AQUI -->
     <div class="properties-grid">
       <article class="property-card">
@@ -199,31 +238,41 @@
         </div>
       </article>
       
-   <article class="property-card">
-        <span class="property-tag">Novo</span>
-        <img src="img/v465/sala.jpeg" class="property-image" alt="Apartamento Saco dos Limões">
-        <div class="property-details">
-          <div class="property-type">Apartamento</div>
-          <h3 class="property-title">Apartamento no Saco dos Limões</h3>
-          <div class="property-location">
-           Sul da Ilha - Florianóplis/SC
-          </div>
-          <div class="property-features">
-            <div class="feature-item"> <strong>2</strong> Quartos</div>
-            <div class="feature-item"> <strong>2</strong> Suíte</div>
-            <div class="feature-item"> <strong>1</strong> Vaga</div>
-          </div>
-          <div class="property-price">R$ 1.690.000</div>
-          <div class="property-actions">
-            <a href="v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html" class="btn-details">Ver Detalhes</a>
-            <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Kobrasol" class="btn-whats" target="_blank" aria-label="WhatsApp">
-              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="16" r="16" fill="none"/>
-                <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
-              </svg>
-            </a>
-          </div>
-        </div>
+  <article class="property-card" 
+         data-cidade="Florianópolis" 
+         data-bairro="Saco dos Limões" 
+         data-quartos="2" 
+         data-preco="1690000">
+  <span class="property-tag">Novo</span>
+  <img src="img/v465/sala.jpeg" class="property-image" alt="Apartamento Saco dos Limões">
+  <div class="property-details">
+    <div class="property-type">Apartamento</div>
+    <h3 class="property-title">Apartamento no Saco dos Limões</h3>
+    <div class="property-location">
+      Sul da Ilha - Florianópolis/SC
+    </div>
+    <div class="property-features">
+      <div class="feature-item"> <strong>2</strong> Quartos</div>
+      <div class="feature-item"> <strong>2</strong> Suíte</div>
+      <div class="feature-item"> <strong>1</strong> Vaga</div>
+    </div>
+    <div class="property-price">R$ 1.690.000</div>
+    <div class="property-actions">
+      <a href="v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html" class="btn-details">Ver Detalhes</a>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Kobrasol" class="btn-whats" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="16" fill="none"/>
+          <path d="M23.472 19.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/>
+        </svg>
+      </a>
+      <!-- Botão Favoritar -->
+      <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
+      <!-- Botão Compartilhar -->
+      <button class="btn-compartilhar" onclick="compartilhar('v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html')" aria-label="Compartilhar">🔗</button>
+    </div>
+  </div>
+</article>
+
       </article>
       <article class="property-card">
         <span class="property-tag">Duplex</span>
@@ -484,7 +533,6 @@
           </div>
         </div>
       </article>
-
 <!-- v468 - Casa Unifamiliar em Forquilhas -->
 <article class="property-card">
   <span class="property-tag">Casa</span>
@@ -538,7 +586,7 @@
           </div>
         </div>
       </article>
-    </div>
+
              
   <!-- Container para imóveis da API -->
 <section class="imoveis-api">
