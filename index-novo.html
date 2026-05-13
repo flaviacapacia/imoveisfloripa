@@ -68,29 +68,32 @@
         <button class="hero-tab">Lançamentos</button>
         <button class="hero-tab">Aluguel</button>
       </div>
-      <div class="hero-search-advanced">
-        <input type="text" class="search-input-main" placeholder="Digite a cidade, bairro ou condomínio...">
-        <div class="search-filters">
-          <select>
-            <option> Tipo de Imóvel</option>
-            <option>Apartamento</option>
-            <option>Casa</option>
-            <option>Cobertura</option>
-            <option>Studio</option>
-            <option>Terreno</option>
-          </select>
-          <select>
-            <option> Dormitórios(s)</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4+</option>
-          </select>
-          <input type="text" placeholder="Digite o código...">
-        </div>
-        <button class="search-btn-main">🔍 Buscar</button>
-      </div>
-    </div>
+   <div class="hero-search-advanced">
+  <input type="text" id="filtro-cidade-busca" class="search-input-main" placeholder="Digite a cidade, bairro ou condomínio...">
+  <div class="search-filters">
+    <select id="filtro-tipo">
+      <option value="">Tipo de Imóvel</option>
+      <option value="Apartamento">Apartamento</option>
+      <option value="Casa">Casa</option>
+      <option value="Cobertura">Cobertura</option>
+      <option value="Studio">Studio</option>
+      <option value="Terreno">Terreno</option>
+    </select>
+    <select id="filtro-quartos">
+      <option value="">Dormitórios(s)</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4+</option>
+    </select>
+    <input type="text" id="filtro-codigo" placeholder="Digite o código...">
+  </div>
+  <div class="search-actions">
+    <button class="search-btn-main" onclick="aplicarFiltros()">🔍 Buscar</button>
+    <button class="filter-btn" onclick="limparFiltros()">❌ Limpar</button>
+  </div>
+</div>
+
   </section>
   <div class="breadcrumb-bar">
     <div class="breadcrumb-content">
@@ -152,34 +155,53 @@
 </div>
 <script>
 function aplicarFiltros() {
-  const cidade = document.getElementById('filtro-cidade').value;
-  const bairro = document.getElementById('filtro-bairro').value;
-  const quartos = document.getElementById('filtro-quartos').value;
-  const min = parseInt(document.getElementById('filtro-min').value) || 0;
-  const max = parseInt(document.getElementById('filtro-max').value) || Infinity;
-  const codigo = document.getElementById('filtro-codigo').value.trim();
+  const cidade = document.getElementById('filtro-cidade')?.value || "";
+  const bairro = document.getElementById('filtro-bairro')?.value || "";
+  const quartos = document.getElementById('filtro-quartos')?.value || "";
+  const min = parseInt(document.getElementById('filtro-min')?.value) || 0;
+  const max = parseInt(document.getElementById('filtro-max')?.value) || Infinity;
+  const codigo = document.getElementById('filtro-codigo')?.value.trim() || "";
+  const busca = document.getElementById('filtro-cidade-busca')?.value.toLowerCase() || "";
 
   const cards = document.querySelectorAll('.property-card');
 
   cards.forEach(card => {
-    const cidadeCard = card.getAttribute('data-cidade');
-    const bairroCard = card.getAttribute('data-bairro');
-    const quartosCard = parseInt(card.getAttribute('data-quartos'));
-    const precoCard = parseInt(card.getAttribute('data-preco'));
-    const codigoCard = card.getAttribute('data-codigo');
+    const cidadeCard = (card.getAttribute('data-cidade') || "").toLowerCase();
+    const bairroCard = (card.getAttribute('data-bairro') || "").toLowerCase();
+    const quartosCard = parseInt(card.getAttribute('data-quartos')) || 0;
+    const precoCard = parseInt(card.getAttribute('data-preco')) || 0;
+    const codigoCard = card.getAttribute('data-codigo') || "";
 
     let visivel = true;
 
-    if (cidade && cidadeCard !== cidade) visivel = false;
-    if (bairro && bairroCard !== bairro) visivel = false;
+    // filtros principais
+    if (cidade && cidadeCard !== cidade.toLowerCase()) visivel = false;
+    if (bairro && bairroCard !== bairro.toLowerCase()) visivel = false;
     if (quartos && (quartosCard != quartos && !(quartos === "4" && quartosCard >= 4))) visivel = false;
     if (precoCard < min || precoCard > max) visivel = false;
-    if (codigo && codigoCard !== codigo) visivel = false;
+    if (codigo && codigoCard.toLowerCase() !== codigo.toLowerCase()) visivel = false;
+
+    // filtro de busca livre (cidade/bairro)
+    if (busca && !(cidadeCard.includes(busca) || bairroCard.includes(busca))) visivel = false;
 
     card.style.display = visivel ? 'block' : 'none';
   });
 }
 
+function limparFiltros() {
+  // limpa todos os campos
+  if (document.getElementById('filtro-cidade')) document.getElementById('filtro-cidade').value = "";
+  if (document.getElementById('filtro-bairro')) document.getElementById('filtro-bairro').value = "";
+  if (document.getElementById('filtro-quartos')) document.getElementById('filtro-quartos').value = "";
+  if (document.getElementById('filtro-min')) document.getElementById('filtro-min').value = "";
+  if (document.getElementById('filtro-max')) document.getElementById('filtro-max').value = "";
+  if (document.getElementById('filtro-codigo')) document.getElementById('filtro-codigo').value = "";
+  if (document.getElementById('filtro-cidade-busca')) document.getElementById('filtro-cidade-busca').value = "";
+
+  // mostra todos os cards novamente
+  const cards = document.querySelectorAll('.property-card');
+  cards.forEach(card => card.style.display = 'block');
+}
 
 function compartilhar(link) {
   navigator.clipboard.writeText(link);
@@ -189,8 +211,8 @@ function compartilhar(link) {
 function toggleFavorito(btn) {
   btn.classList.toggle("favorito");
 }
-
 </script>
+
 
 
 
