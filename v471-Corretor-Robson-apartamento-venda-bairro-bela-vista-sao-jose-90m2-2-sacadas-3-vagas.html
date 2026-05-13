@@ -262,28 +262,7 @@
           </div>
         </div>
       </div>
-          let currentIndex = 0;
-
-        function openModal(index) {
-          currentIndex = index;
-          document.getElementById('modalImage').src = images[currentIndex];
-          document.getElementById('imageModal').classList.add('active');
-        }
-
-        function closeModal() {
-          document.getElementById('imageModal').classList.remove('active');
-        }
-
-        function prevImage() {
-          currentIndex = (currentIndex - 1 + images.length) % images.length;
-          document.getElementById('modalImage').src = images[currentIndex];
-        }
-
-        function nextImage() {
-          currentIndex = (currentIndex + 1) % images.length;
-          document.getElementById('modalImage').src = images[currentIndex];
-        
-          </script>
+         
 
      
       <div style="text-align:center; margin-top:18px;">
