@@ -361,3 +361,76 @@
       from {opacity: 0;}
       to {opacity: 1;}
     }
+.property-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dourado);
+  margin-bottom: 2px;
+}
+
+.property-code {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--bronze);
+  margin-top: 0;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.property-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.btn-details {
+  background: var(--preto);
+  color: var(--branco);
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  transition: background 0.3s;
+}
+
+.btn-details:hover {
+  background: var(--bronze);
+}
+
+.btn-whats,
+.btn-compartilhar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--bronze);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.btn-whats:hover,
+.btn-compartilhar:hover {
+  color: var(--preto);
+}
+
+.btn-favorito {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: auto;
+  transition: color 0.3s;
+}
+
+.btn-favorito.favorito {
+  color: red;
+}
