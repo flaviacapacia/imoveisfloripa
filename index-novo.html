@@ -184,10 +184,12 @@ function toggleFavorito(btn) {
   btn.classList.toggle("favorito");
 }
 
-// Compartilhar
-function compartilhar(link) {
+// Compartilhar (mostra link no card)
+function compartilhar(link, cardId) {
   navigator.clipboard.writeText(link);
-  alert("Link copiado para compartilhar!");
+  const card = document.getElementById(cardId);
+  const shareBox = card.querySelector(".property-share");
+  shareBox.innerHTML = `🔗 Link: <a href="${link}" target="_blank">${link}</a>`;
 }
 </script>
 
@@ -543,7 +545,7 @@ function compartilhar(link) {
         </div>
       </article>
       
-<article class="property-card" 
+<article id="card-v468" class="property-card" 
          data-cidade="São José" 
          data-bairro="Forquilhas" 
          data-quartos="3" 
@@ -561,8 +563,10 @@ function compartilhar(link) {
       <div class="feature-item"><strong>2</strong> Vagas</div>
     </div>
     <div class="property-price">R$ 890.000</div>
-    <!-- Código visível -->
+    <!-- Código logo abaixo do valor -->
     <div class="property-code">Código: v468</div>
+    <!-- Área onde o link compartilhado aparece -->
+    <div class="property-share"></div>
     <div class="property-actions">
       <a href="v468-casa-unifamiliar-a-venda-em-forquilhas.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20em%20Forquilhas" class="btn-whats" target="_blank" aria-label="WhatsApp">
@@ -572,11 +576,10 @@ function compartilhar(link) {
         </svg>
       </a>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
-      <button class="btn-compartilhar" onclick="compartilhar('v468-casa-unifamiliar-a-venda-em-forquilhas.html')" aria-label="Compartilhar">🔗</button>
+      <button class="btn-compartilhar" onclick="compartilhar('v468-casa-unifamiliar-a-venda-em-forquilhas.html','card-v468')" aria-label="Compartilhar">🔗</button>
     </div>
   </div>
 </article>
-
 
 
 <!-- v469 - Casa em Condomínio Palhoça -->
