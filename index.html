@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -100,52 +101,99 @@
     <div class="section-header">
       <h2 class="section-title">Imóveis em Destaque</h2>
       <p class="section-subtitle">Confira nossa seleção especial de imóveis de alto padrão</p>
+    </div><div class="filter-section">
+  <div class="filter-grid">
+    <div class="filter-item">
+      <label>Cidade</label>
+      <select id="filtro-cidade">
+        <option value="">Todas</option>
+        <option value="Florianópolis">Florianópolis</option>
+        <option value="São José">São José</option>
+        <option value="Palhoça">Palhoça</option>
+      </select>
     </div>
-    <div class="filter-section">
-      <div class="filter-grid">
-        <div class="filter-item">
-          <label>Cidade</label>
-          <select>
-            <option>Todas</option>
-            <option>Florianópolis</option>
-            <option>São José</option>
-            <option>Palhoça</option>
-          </select>
-        </div>
-        <div class="filter-item">
-          <label>Bairro</label>
-          <select>
-            <option>Todos</option>
-            <option>Agronômica</option>
-            <option>Centro</option>
-            <option>Kobrasol</option>
-            <option>Trindade</option>
-          </select>
-        </div>
-        <div class="filter-item">
-          <label>Quartos</label>
-          <select>
-            <option>Todos</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4+</option>
-          </select>
-        </div>
-        <div class="filter-item">
-          <label>Valor Mínimo</label>
-          <input type="text" placeholder="R$ 0">
-        </div>
-        <div class="filter-item">
-          <label>Valor Máximo</label>
-          <input type="text" placeholder="R$ 0">
-        </div>
-        <div class="filter-item">
-          <button class="filter-btn">Filtrar</button>
-        </div>
-      </div>
+    <div class="filter-item">
+      <label>Bairro</label>
+      <select id="filtro-bairro">
+        <option value="">Todos</option>
+        <option value="Agronômica">Agronômica</option>
+        <option value="Centro">Centro</option>
+        <option value="Kobrasol">Kobrasol</option>
+        <option value="Trindade">Trindade</option>
+      </select>
     </div>
-   </div>  
+    <div class="filter-item">
+      <label>Quartos</label>
+      <select id="filtro-quartos">
+        <option value="">Todos</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4+</option>
+      </select>
+    </div>
+    <div class="filter-item">
+      <label>Valor Mínimo</label>
+      <input type="number" id="filtro-min" placeholder="R$ 0">
+    </div>
+    <div class="filter-item">
+      <label>Valor Máximo</label>
+      <input type="number" id="filtro-max" placeholder="R$ 0">
+    </div>
+    <div class="filter-item">
+  <label>Código</label>
+  <input type="text" id="filtro-codigo" placeholder="Digite o código...">
+</div>
+
+    <div class="filter-item">
+      <button class="filter-btn" onclick="aplicarFiltros()">Filtrar</button>
+    </div>
+  </div>
+</div>
+<script>
+function aplicarFiltros() {
+  const cidade = document.getElementById('filtro-cidade').value;
+  const bairro = document.getElementById('filtro-bairro').value;
+  const quartos = document.getElementById('filtro-quartos').value;
+  const min = parseInt(document.getElementById('filtro-min').value) || 0;
+  const max = parseInt(document.getElementById('filtro-max').value) || Infinity;
+  const codigo = document.getElementById('filtro-codigo').value.trim();
+
+  const cards = document.querySelectorAll('.property-card');
+
+  cards.forEach(card => {
+    const cidadeCard = card.getAttribute('data-cidade');
+    const bairroCard = card.getAttribute('data-bairro');
+    const quartosCard = parseInt(card.getAttribute('data-quartos'));
+    const precoCard = parseInt(card.getAttribute('data-preco'));
+    const codigoCard = card.getAttribute('data-codigo');
+
+    let visivel = true;
+
+    if (cidade && cidadeCard !== cidade) visivel = false;
+    if (bairro && bairroCard !== bairro) visivel = false;
+    if (quartos && (quartosCard != quartos && !(quartos === "4" && quartosCard >= 4))) visivel = false;
+    if (precoCard < min || precoCard > max) visivel = false;
+    if (codigo && codigoCard !== codigo) visivel = false;
+
+    card.style.display = visivel ? 'block' : 'none';
+  });
+}
+
+
+function compartilhar(link) {
+  navigator.clipboard.writeText(link);
+  alert("Link copiado! Você pode enviar para alguém no WhatsApp ou redes sociais.");
+}
+
+function toggleFavorito(btn) {
+  btn.classList.toggle("favorito");
+}
+
+</script>
+
+
+
    
    <!-- OS IMÓVEIS EM DESTAQUE AQUI -->
     <div class="properties-grid">
@@ -554,6 +602,58 @@
   </div>
 </article>
 
+  <!-- Container para imóveis da API -->
+<section class="imoveis-api">
+  <h2 class="titulo-dourado-centralizado">Outros Imóveis Disponíveis</h2>
+  <p class="status" id="imoveis-status">Carregando imóveis…</p>
+  <div id="lista-imoveis" class="grid-imoveis"></div>
+</section>
+  </main>
+  <section class="lancamentos-section" id="lancamentos">
+    <div class="lancamentos-content">
+      <div class="lancamentos-header">
+        <h2>Lançamentos Exclusivos</h2>
+        <p>Conheça os empreendimentos mais aguardados de Florianópolis</p>
+      </div>
+      <div class="lancamentos-grid">
+        <article class="lancamento-card">
+          <img src="https://gralha2.inforcedata.com.br/api/image/76402473.jpg" alt="Um Milano" class="lancamento-image">
+          <div class="lancamento-info">
+            <span class="lancamento-badge">Pré-Lançamento</span>
+            <h3 class="lancamento-title">Um Milano</h3>
+            <div class="lancamento-location"> Beira-Mar Norte - Florianópolis/SC</div>
+            <p class="lancamento-description">
+              Apartamentos de 231 a 452m² com 3 e 4 suítes. Alto padrão à beira-mar com vista privilegiada.
+            </p>
+            <a href="apartamento-um-milano-v450.html" class="lancamento-btn">Saiba Mais</a>
+          </div>
+        </article>
+        <article class="lancamento-card">
+          <img src="https://gralha2.inforcedata.com.br/api/image/76413761.jpg" alt="Connect 233" class="lancamento-image">
+          <div class="lancamento-info">
+            <span class="lancamento-badge">Lançamento</span>
+            <h3 class="lancamento-title">Connect 233</h3>
+            <div class="lancamento-location"> Centro - Florianópolis/SC</div>
+            <p class="lancamento-description">
+              Studios e apartamentos de 23 a 85m². Perfeito para investimento e moradia no coração da cidade.
+            </p>
+            <a href="apartamento-connect-233-v451.html" class="lancamento-btn">Saiba Mais</a>
+          </div>
+        </article>
+        <article class="lancamento-card">
+          <img src="https://gralha2.inforcedata.com.br/api/image/76467398.jpg" alt="ARKKI" class="lancamento-image">
+          <div class="lancamento-info">
+            <span class="lancamento-badge">Em Obras</span>
+            <h3 class="lancamento-title">ARKKI</h3>
+            <div class="lancamento-location"> Centro - Florianópolis/SC</div>
+            <p class="lancamento-description">
+              Apartamentos de 82 a 146m² com 2 e 3 suítes. Arquitetura moderna e localização privilegiada.
+            </p>
+            <a href="apartamento-arkki-v452.html" class="lancamento-btn">Saiba Mais</a>
+          </div>
+        </article>
+      </div>
+             
   <!-- Container para imóveis da API -->
 <section class="imoveis-api">
   <h2 class="titulo-dourado-centralizado">Outros Imóveis Disponíveis</h2>
