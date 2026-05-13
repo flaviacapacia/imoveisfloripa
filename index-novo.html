@@ -185,13 +185,17 @@ function toggleFavorito(btn) {
   btn.classList.toggle("favorito");
 }
 
-// Compartilhar (mostra link no card)
-function compartilhar(link, cardId) {
+<script>
+function compartilhar(link) {
   navigator.clipboard.writeText(link);
-  const card = document.getElementById(cardId);
-  const shareBox = card.querySelector(".property-share");
-  shareBox.innerHTML = `🔗 Link: <a href="${link}" target="_blank">${link}</a>`;
+  alert("Link copiado! Você pode enviar para alguém no WhatsApp ou redes sociais.");
 }
+
+function toggleFavorito(btn) {
+  btn.classList.toggle("favorito");
+}
+</script>
+
 </script>
 
 
@@ -564,12 +568,12 @@ function compartilhar(link, cardId) {
       <div class="feature-item"><strong>2</strong> Vagas</div>
     </div>
     <div class="property-price">R$ 890.000</div>
-    <!-- Código logo abaixo do valor -->
     <div class="property-code">Código: v468</div>
     <div class="property-actions">
       <a href="v468-casa-unifamiliar-a-venda-em-forquilhas.html" class="btn-details">Ver Detalhes</a>
-      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20em%20Forquilhas%20-%20Código:%20v468%20%20Link:%20https://imoveisfloripa.online/v468-casa-unifamiliar-a-venda-em-forquilhas.html" 
-         class="btn-compartilhar" target="_blank" aria-label="Compartilhar no WhatsApp">🔗 Compartilhar</a>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20em%20Forquilhas%20-%20Código:%20v468" 
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
+      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v468-casa-unifamiliar-a-venda-em-forquilhas.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
   </div>
