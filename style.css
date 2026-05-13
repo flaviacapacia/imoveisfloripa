@@ -361,4 +361,20 @@
       from {opacity: 0;}
       to {opacity: 1;}
     }
+.property-code {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+}
+
+.btn-favorito {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-favorito.favorito {
+  color: red;
+}
 
