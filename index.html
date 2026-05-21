@@ -218,7 +218,39 @@ function toggleFavorito(btn) {
 
    
    <!-- OS IMÓVEIS EM DESTAQUE AQUI -->
-<div class="properties-grid">
+
+    <div class="properties-grid">
+     <article id="card-v439" class="property-card" 
+         data-cidade="Florianópolis" 
+         data-bairro="Agronômica" 
+         data-quartos="2" 
+         data-preco="780000"
+         data-codigo="v439">
+  <span class="property-tag">Destaque</span>
+  <img src="img/v439/v439-1.webp" class="property-image" alt="Apartamento Agronômica">
+  <div class="property-details">
+    <div class="property-type">Apartamento</div>
+    <h3 class="property-title">Apartamento na Agronômica</h3>
+    <div class="property-location">Agronômica - Florianópolis/SC</div>
+    <div class="property-features">
+      <div class="feature-item"><strong>2</strong> Quartos</div>
+      <div class="feature-item"><strong>1</strong> Suíte</div>
+      <div class="feature-item"><strong>1</strong> Vaga</div>
+    </div>
+    <div class="property-price">R$ 815.000</div>
+    <div class="property-code">Código: v439</div>
+    <div class="property-actions">
+      <a href="apartamento-venda-agronomica-v439.html" class="btn-details">Ver Detalhes</a>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica%20-%20Código:%20v439" 
+         class="btn-whats" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/apartamento-venda-agronomica-v439.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
+      <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
+    </div>
+  </div>
+</article>
+
+      <!-- Os cards antigos permanecem acima. Inserir os 3 novos imóveis ao final da grid -->
+      <div class="properties-grid">
      <article id="card-v472" class="property-card" 
          data-cidade="Florianópolis" 
          data-bairro="Agronômica" 
@@ -248,37 +280,6 @@ function toggleFavorito(btn) {
   </div>
 </article> 
 </div>
-    <div class="properties-grid">
-     <article id="card-v439" class="property-card" 
-         data-cidade="Florianópolis" 
-         data-bairro="Agronômica" 
-         data-quartos="2" 
-         data-preco="780000"
-         data-codigo="v439">
-  <span class="property-tag">Destaque</span>
-  <img src="img/v439/v439-1.webp" class="property-image" alt="Apartamento Agronômica">
-  <div class="property-details">
-    <div class="property-type">Apartamento</div>
-    <h3 class="property-title">Apartamento na Agronômica</h3>
-    <div class="property-location">Agronômica - Florianópolis/SC</div>
-    <div class="property-features">
-      <div class="feature-item"><strong>2</strong> Quartos</div>
-      <div class="feature-item"><strong>1</strong> Suíte</div>
-      <div class="feature-item"><strong>1</strong> Vaga</div>
-    </div>
-    <div class="property-price">R$ 780.000</div>
-    <div class="property-code">Código: v439</div>
-    <div class="property-actions">
-      <a href="apartamento-venda-agronomica-v439.html" class="btn-details">Ver Detalhes</a>
-      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica%20-%20Código:%20v439" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp">WhatsApp</a>
-      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/apartamento-venda-agronomica-v439.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
-      <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
-    </div>
-  </div>
-</article>
-
-      <!-- Os cards antigos permanecem acima. Inserir os 3 novos imóveis ao final da grid -->
    <article id="card-v456" class="property-card" 
          data-cidade="Governador Celso Ramos" 
          data-bairro="Palmas" 
