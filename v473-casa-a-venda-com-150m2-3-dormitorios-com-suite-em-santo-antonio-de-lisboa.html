@@ -111,6 +111,7 @@
     @media (max-width: 900px) { .footer-container { grid-template-columns: 1fr; gap: 20px; } .outros-imoveis ul { grid-template-columns: repeat(2, minmax(180px, 1fr)); } .zoom-gallery { grid-template-columns: repeat(2, 1fr); } .modal-content img { width: 320px; height: 320px; } }
     @media (max-width: 560px) { .footer-container { grid-template-columns: 1fr; gap: 20px; } .outros-imoveis ul { grid-template-columns: 1fr; } .zoom-gallery { grid-template-columns: 1fr; } .modal-content img { width: 98vw; height: 60vw; } }
   </style>
+
 <body>
   <header class="site-header">
     <div class="logo-area">
@@ -135,43 +136,103 @@
     <section class="card">
       <h2>Sobre o Imóvel</h2>
       <ul class="imovel-lista">
-        {{detalhesImovel}}
-      </ul>
       <div class="descricao">
-        <p>Equilíbrio entre a Tradição e a Conveniência em Santo Antônio de Lisboa</p><p>Situada em uma das regiões mais autênticas e desejadas de Florianópolis, a Casa 01 do Residencial Recanto II é o refúgio ideal para quem busca uma rotina que prioriza o bem-estar e a praticidade.1
-Viver em Santo Antônio de Lisboa: O bairro é um convite à contemplação, com seu pôr do sol icônico e uma atmosfera que preserva a herança histórica da Ilha. Reconhecida por sua gastronomia de referência e ruas charmosas, a região oferece uma qualidade de vida singular, onde o ritmo de vila encontra a sofisticação contemporânea.1
-Localização Estratégica: A propriedade está posicionada para facilitar o deslocamento tanto para o centro da capital quanto para o dinamismo das praias do Norte, garantindo agilidade no dia a dia.1
-O Imóvel: Com um projeto de 149,80 m² de área privativa, a residência entrega ambientes totalmente mobiliados e prontos para morar. Dispõe de 3 suítes cuidadosamente planejadas e 2 vagas de garagem, inseridas em um terreno privativo de 247,76 m².23
-Valorização e Exclusividade: Santo Antônio é um destino consolidado, com baixa densidade e alta procura, o que assegura uma valorização constante ao patrimônio.</p><p>Uma oportunidade para quem aprecia o silêncio, a história e a facilidade de acesso no melhor endereço da Ilha.</p>
-      </div>
-    </section>
+  <p>Casa de alto padrão em Santo Antônio de Lisboa – Florianópolis</p>
+  <p>Localizada em um dos bairros mais charmosos e seguros da Ilha, esta residência une tradição e modernidade. Santo Antônio de Lisboa é conhecido pelo pôr do sol mais icônico de Florianópolis, pela gastronomia premiada e pela atmosfera acolhedora que mistura história e sofisticação.</p>
+  <p>Segurança e conforto: viver em Santo Antônio é desfrutar de ruas tranquilas, baixa densidade residencial e qualidade de vida elevada, com fácil acesso ao centro da cidade e às praias do Norte.</p>
+  <p>Proximidade estratégica: a poucos minutos da Beira-Mar Norte e da futura marina, o imóvel garante praticidade no dia a dia e valorização constante.</p>
+  <p>O imóvel: projeto exclusivo com 149,80 m² de área privativa, 3 suítes planejadas, ambientes mobiliados e 2 vagas de garagem em terreno privativo de 247,76 m².</p>
+  <p>Uma oportunidade única para quem busca alto padrão, bem-estar e exclusividade em um dos endereços mais desejados de Florianópolis.</p>
+</div>
 
-    <section class="card destaques">
-      <h2>Destaques</h2>
-      <ul class="imovel-lista">
-        {{destaques}}
-      </ul>
-    </section>
+<section class="card destaques">
+  <h2>Destaques</h2>
+  <ul class="imovel-lista">
+    <li>Pôr do sol icônico de Santo Antônio</li>
+    <li>Gastronomia de referência</li>
+    <li>Segurança e tranquilidade</li>
+    <li>Próximo ao centro de Florianópolis</li>
+    <li>Valorização imobiliária constante</li>
+  </ul>
+</section>
 
-    <section class="card caracteristicas">
-      <h2>Características</h2>
-      <ul class="imovel-lista">
-        {{caracteristicas}}
-      </ul>
-    </section>
+<section class="card caracteristicas">
+  <h2>Características</h2>
+  <ul class="imovel-lista">
+    <li>Área privativa: 149,80 m²</li>
+    <li>Terreno: 247,76 m²</li>
+    <li>3 suítes planejadas</li>
+    <li>2 vagas de garagem</li>
+    <li>Ambientes mobiliados</li>
+  </ul>
+</section>
 
-    <section class="card diferenciais">
-      <h2>Diferenciais</h2>
-      <ul class="imovel-lista">
-        {{diferenciais}}
-      </ul>
-    </section>
+<section class="card diferenciais">
+  <h2>Diferenciais</h2>
+  <ul class="imovel-lista">
+    <li>Localização nobre em Santo Antônio de Lisboa</li>
+    <li>Baixa densidade residencial</li>
+    <li>Atmosfera histórica e cultural</li>
+    <li>Próximo à futura marina da Beira-Mar Norte</li>
+    <li>Alto padrão de acabamento</li>
+  </ul>
+</section>
 
     <section class="card">
       <h2>Galeria de fotos</h2>
       
       <div class="zoom-gallery">
-        <div class="zoom-container" onclick="openModal(0)"><img src="img/v473/casa1.HEIC" alt="Foto do imóvel 1" /></div><div class="zoom-container" onclick="openModal(1)"><img src="img/v473/casa1.JPG" alt="Foto do imóvel 2" /></div><div class="zoom-container" onclick="openModal(2)"><img src="img/v473/casa10.HEIC" alt="Foto do imóvel 3" /></div><div class="zoom-container" onclick="openModal(3)"><img src="img/v473/casa11.HEIC" alt="Foto do imóvel 4" /></div><div class="zoom-container" onclick="openModal(4)"><img src="img/v473/casa12.HEIC" alt="Foto do imóvel 5" /></div><div class="zoom-container" onclick="openModal(5)"><img src="img/v473/casa13.HEIC" alt="Foto do imóvel 6" /></div><div class="zoom-container" onclick="openModal(6)"><img src="img/v473/casa14.HEIC" alt="Foto do imóvel 7" /></div><div class="zoom-container" onclick="openModal(7)"><img src="img/v473/casa15.HEIC" alt="Foto do imóvel 8" /></div><div class="zoom-container" onclick="openModal(8)"><img src="img/v473/casa16.HEIC" alt="Foto do imóvel 9" /></div><div class="zoom-container" onclick="openModal(9)"><img src="img/v473/casa17.HEIC" alt="Foto do imóvel 10" /></div><div class="zoom-container" onclick="openModal(10)"><img src="img/v473/casa18.HEIC" alt="Foto do imóvel 11" /></div><div class="zoom-container" onclick="openModal(11)"><img src="img/v473/casa19.HEIC" alt="Foto do imóvel 12" /></div><div class="zoom-container" onclick="openModal(12)"><img src="img/v473/casa2.HEIC" alt="Foto do imóvel 13" /></div><div class="zoom-container" onclick="openModal(13)"><img src="img/v473/casa20.HEIC" alt="Foto do imóvel 14" /></div><div class="zoom-container" onclick="openModal(14)"><img src="img/v473/casa21.HEIC" alt="Foto do imóvel 15" /></div><div class="zoom-container" onclick="openModal(15)"><img src="img/v473/casa22.HEIC" alt="Foto do imóvel 16" /></div><div class="zoom-container" onclick="openModal(16)"><img src="img/v473/casa23.HEIC" alt="Foto do imóvel 17" /></div><div class="zoom-container" onclick="openModal(17)"><img src="img/v473/casa24.HEIC" alt="Foto do imóvel 18" /></div><div class="zoom-container" onclick="openModal(18)"><img src="img/v473/casa25.HEIC" alt="Foto do imóvel 19" /></div><div class="zoom-container" onclick="openModal(19)"><img src="img/v473/casa26.HEIC" alt="Foto do imóvel 20" /></div><div class="zoom-container" onclick="openModal(20)"><img src="img/v473/casa27.HEIC" alt="Foto do imóvel 21" /></div><div class="zoom-container" onclick="openModal(21)"><img src="img/v473/casa28.HEIC" alt="Foto do imóvel 22" /></div><div class="zoom-container" onclick="openModal(22)"><img src="img/v473/casa29.HEIC" alt="Foto do imóvel 23" /></div><div class="zoom-container" onclick="openModal(23)"><img src="img/v473/casa3.HEIC" alt="Foto do imóvel 24" /></div><div class="zoom-container" onclick="openModal(24)"><img src="img/v473/casa30.HEIC" alt="Foto do imóvel 25" /></div><div class="zoom-container" onclick="openModal(25)"><img src="img/v473/casa31.HEIC" alt="Foto do imóvel 26" /></div><div class="zoom-container" onclick="openModal(26)"><img src="img/v473/casa32.HEIC" alt="Foto do imóvel 27" /></div><div class="zoom-container" onclick="openModal(27)"><img src="img/v473/casa33.HEIC" alt="Foto do imóvel 28" /></div><div class="zoom-container" onclick="openModal(28)"><img src="img/v473/casa34.HEIC" alt="Foto do imóvel 29" /></div><div class="zoom-container" onclick="openModal(29)"><img src="img/v473/casa35.HEIC" alt="Foto do imóvel 30" /></div><div class="zoom-container" onclick="openModal(30)"><img src="img/v473/casa4.HEIC" alt="Foto do imóvel 31" /></div><div class="zoom-container" onclick="openModal(31)"><img src="img/v473/casa5.HEIC" alt="Foto do imóvel 32" /></div><div class="zoom-container" onclick="openModal(32)"><img src="img/v473/casa6.HEIC" alt="Foto do imóvel 33" /></div><div class="zoom-container" onclick="openModal(33)"><img src="img/v473/casa7.HEIC" alt="Foto do imóvel 34" /></div><div class="zoom-container" onclick="openModal(34)"><img src="img/v473/casa8.HEIC" alt="Foto do imóvel 35" /></div><div class="zoom-container" onclick="openModal(35)"><img src="img/v473/casa9.HEIC" alt="Foto do imóvel 36" /></div>
+        <div class="zoom-container" onclick="openModal(0)">
+          <img src="img/v473/casa1.jpg" alt="Foto do imóvel 1" />
+        </div><div class="zoom-container" onclick="openModal(1)">
+          <img src="img/v473/casa1.JPG" alt="Foto do imóvel 2" />
+        </div><div class="zoom-container" onclick="openModal(2)">
+          <img src="img/v473/casa10.jpg" alt="Foto do imóvel 3" />
+        </div><div class="zoom-container" onclick="openModal(3)">
+          <img src="img/v473/casa11.jpg" alt="Foto do imóvel 4" />
+        </div><div class="zoom-container" onclick="openModal(4)">
+          <img src="img/v473/casa12.jpg" alt="Foto do imóvel 5" />
+        </div><div class="zoom-container" onclick="openModal(5)">
+          <img src="img/v473/casa13.jpg" alt="Foto do imóvel 6" />
+        </div><div class="zoom-container" onclick="openModal(6)">
+          <img src="img/v473/casa14.jpg" alt="Foto do imóvel 7" />
+        </div><div class="zoom-container" onclick="openModal(7)">
+          <img src="img/v473/casa15.jpg" alt="Foto do imóvel 8" />
+        </div><div class="zoom-container" onclick="openModal(8)">
+          <img src="img/v473/casa16.jpg" alt="Foto do imóvel 9" />
+        </div><div class="zoom-container" onclick="openModal(9)">
+          <img src="img/v473/casa17.jpg" alt="Foto do imóvel 10" />
+        </div><div class="zoom-container" onclick="openModal(10)">
+          <img src="img/v473/casa18.jpg" alt="Foto do imóvel 11" />
+        </div><div class="zoom-container" onclick="openModal(11)">
+          <img src="img/v473/casa19.jpg" alt="Foto do imóvel 12" />
+        </div><div class="zoom-container" onclick="openModal(12)">
+          <img src="img/v473/casa2.jpg" alt="Foto do imóvel 13" />
+        </div><div class="zoom-container" onclick="openModal(13)">
+          <img src="img/v473/casa20.jpg" alt="Foto do imóvel 14" />
+        </div><div class="zoom-container" onclick="openModal(14)">
+          <img src="img/v473/casa21.jpg" alt="Foto do imóvel 15" />
+        </div><div class="zoom-container" onclick="openModal(15)">
+          <img src="img/v473/casa22.jpg" alt="Foto do imóvel 16" />
+        </div><div class="zoom-container" onclick="openModal(16)">
+          <img src="img/v473/casa23.jpg" alt="Foto do imóvel 17" />
+        </div><div class="zoom-container" onclick="openModal(17)">
+          <img src="img/v473/casa24.jpg" alt="Foto do imóvel 18" />
+        </div><div class="zoom-container" onclick="openModal(18)">
+          <img src="img/v473/casa25.jpg" alt="Foto do imóvel 19" />
+        </div><div class="zoom-container" onclick="openModal(19)">
+          <img src="img/v473/casa26.jpg" alt="Foto do imóvel 20" />
+        </div><div class="zoom-container" onclick="openModal(20)">
+          <img src="img/v473/casa27.jpg" alt="Foto do imóvel 21" />
+        </div><div class="zoom-container" onclick="openModal(21)">
+          <img src="img/v473/casa28.jpg" alt="Foto do imóvel 22" />
+        </div><div class="zoom-container" onclick="openModal(22)">
+          <img src="img/v473/casa29.jpg" alt="Foto do imóvel 23" />
+        </div><div class="zoom-container" onclick="openModal(23)">
+          <img src="img/v473/casa3.jpg" alt="Foto do imóvel 24" />
+        </div><div class="zoom-container" onclick="openModal(24)">
+          <img src="img/v473/casa30.jpg" alt="Foto do imóvel 25" />
+        </div>
       </div>
       <div id="imageModal" class="modal">
         <div class="modal-content">
@@ -185,42 +246,42 @@ Valorização e Exclusividade: Santo Antônio é um destino consolidado, com bai
       </div>
       <script>
         const images = [
-  "img/v473/casa1.HEIC",
-  "img/v473/casa1.JPG",
-  "img/v473/casa10.HEIC",
-  "img/v473/casa11.HEIC",
-  "img/v473/casa12.HEIC",
-  "img/v473/casa13.HEIC",
-  "img/v473/casa14.HEIC",
-  "img/v473/casa15.HEIC",
-  "img/v473/casa16.HEIC",
-  "img/v473/casa17.HEIC",
-  "img/v473/casa18.HEIC",
-  "img/v473/casa19.HEIC",
-  "img/v473/casa2.HEIC",
-  "img/v473/casa20.HEIC",
-  "img/v473/casa21.HEIC",
-  "img/v473/casa22.HEIC",
-  "img/v473/casa23.HEIC",
-  "img/v473/casa24.HEIC",
-  "img/v473/casa25.HEIC",
-  "img/v473/casa26.HEIC",
-  "img/v473/casa27.HEIC",
-  "img/v473/casa28.HEIC",
-  "img/v473/casa29.HEIC",
-  "img/v473/casa3.HEIC",
-  "img/v473/casa30.HEIC",
-  "img/v473/casa31.HEIC",
-  "img/v473/casa32.HEIC",
-  "img/v473/casa33.HEIC",
-  "img/v473/casa34.HEIC",
-  "img/v473/casa35.HEIC",
-  "img/v473/casa4.HEIC",
-  "img/v473/casa5.HEIC",
-  "img/v473/casa6.HEIC",
-  "img/v473/casa7.HEIC",
-  "img/v473/casa8.HEIC",
-  "img/v473/casa9.HEIC"
+  "img/v473/casa1.jpg",
+  "img/v473/casa1.jpg",
+  "img/v473/casa10.jpg",
+  "img/v473/casa11.jpg",
+  "img/v473/casa12.jpg",
+  "img/v473/casa13.jpg",
+  "img/v473/casa14.jpg",
+  "img/v473/casa15.jpg",
+  "img/v473/casa16.jpg",
+  "img/v473/casa17.jpg",
+  "img/v473/casa18.jpg",
+  "img/v473/casa19.jpg",
+  "img/v473/casa2.jpg",
+  "img/v473/casa20.jpg",
+  "img/v473/casa21.jpg",
+  "img/v473/casa22.jpg",
+  "img/v473/casa23.jpg",
+  "img/v473/casa24.jpg",
+  "img/v473/casa25.jpg",
+  "img/v473/casa26.jpg",
+  "img/v473/casa27.jpg",
+  "img/v473/casa28.jpg",
+  "img/v473/casa29.jpg",
+  "img/v473/casa3.jpg",
+  "img/v473/casa30.jpg",
+  "img/v473/casa31.jpg",
+  "img/v473/casa32.jpg",
+  "img/v473/casa33.jpg",
+  "img/v473/casa34.jpg",
+  "img/v473/casa35.jpg",
+  "img/v473/casa4.jpg",
+  "img/v473/casa5.jpg",
+  "img/v473/casa6.jpg",
+  "img/v473/casa7.jpg",
+  "img/v473/casa8.jpg",
+  "img/v473/casa9.jpg"
 ];
         let currentIndex = 0;
 
