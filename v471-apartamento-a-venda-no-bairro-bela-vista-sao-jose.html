@@ -132,6 +132,21 @@ nav {
   z-index: 100;
 }
 
+#menu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  background-color: #fff;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  min-width: 200px;
+  z-index: 100;
+}
+
 #menu.open { display: block; }
 
 #menu li { margin: 6px 0; }
@@ -141,8 +156,17 @@ nav {
   color: var(--cinza-texto);
   font-weight: bold;
   display: block;
-  padding: 8px 10px; /* mais espaço */
+  padding: 8px 10px;
   border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* efeito hover dourado */
+#menu li a:hover {
+  background-color: var(--bronze-medio); /* cor dourada do site */
+  color: #fff; /* texto branco */
+}
+
 }
 
     #menu li a:hover { color: var(--bronze-medio); background: #fafafa; }
