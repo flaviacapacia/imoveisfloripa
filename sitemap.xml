@@ -18,7 +18,7 @@
   <url><loc>https://www.imoveisfloripa.online/apartamento-venda-kobrasol-v440.html</loc><priority>0.9</priority></url>
   <url><loc>https://www.imoveisfloripa.online/apartamento-venda-centro-v447.html</loc><priority>0.9</priority></url>
   <url><loc>https://www.imoveisfloripa.online/apartamento-venda-floresta-v441.html</loc><priority>0.8</priority></url>
-  <url><loc>https://www.imoveisfloripa.online/apartamento-venda-trindade-v448.html</loc><priority>0.8</priority></url>
+
   <url><loc>https://www.imoveisfloripa.online/apartamento-venda-ratones-v449.html</loc><priority>0.8</priority></url>
   <url><loc>https://www.imoveisfloripa.online/apartamento-arkki-v452.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.imoveisfloripa.online/apartamento-venda-campinas-v457.html</loc><priority>0.7</priority></url>
@@ -36,4 +36,75 @@
   <url><loc>https://imoveisfloripa.online/apartamento-venda-floresta-v441.html</loc><priority>0.8</priority></url>
   <url><loc>https://imoveisfloripa.online/apartamento-venda-centro-florianopolis-v450.html</loc><priority>0.8</priority></url>
   <url><loc>https://imoveisfloripa.online/v463-casa-a-venda-com-03-dormitorios-no-bairro-forquilhas-em-sao-jose-sc.html</loc><priority>0.8</priority></url>
+<url>
+    <loc>https://imoveisfloripa.online/artigo-novo-wellness-imoveis-alto-padrao-luxo-floripa.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://imoveisfloripa.online/artigo-campinas-kobrasol-investir-morar-qualidade-de-vida-apartamentos-sao-jose.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://imoveisfloripa.online/artigo-marina-mercadoimobiliario.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Imóveis/Unidades criados hoje -->
+  <url>
+    <loc>https://imoveisfloripa.online/v473-casa-a-venda-com-150m2-3-dormitorios-com-suite-em-santo-antonio-de-lisboa.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://imoveisfloripa.online/v472-apartamento-3-quartos-agronomica-florianopolis-ancoradouro.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://imoveisfloripa.online/v471-apartamento-a-venda-no-bairro-bela-vista-sao-jose.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://imoveisfloripa.online/v469-casa-a-venda-em-condominio-com-02-dormitorios-em-palhoca.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://imoveisfloripa.online/v468-casa-unifamiliar-a-venda-em-forquilhas.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://imoveisfloripa.online/v464-apartamento-3-quartos-agronomica-florianopolis-ancoradouro.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://imoveisfloripa.online/v464-apartamento-novo-a-venda-com-3-suites-no-kobrasol-em-sao-jose.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
 </urlset>
+
