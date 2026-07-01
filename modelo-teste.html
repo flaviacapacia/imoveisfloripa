@@ -178,10 +178,21 @@ body {
   transform: scale(1.05);
 }
 
-/* Vídeo */
-.video-container iframe {
-  border-radius: 8px;
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* proporção 16:9 */
+  height: 0;
+  overflow: hidden;
 }
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 /* Botão flutuante WhatsApp */
 .whatsapp-float {
@@ -467,12 +478,16 @@ body {
   </section>
 
   <!-- Vídeo -->
-  <section class="card">
-    <h2>Vídeo do imóvel</h2>
-    <div class="video-container">
-      <iframe width="100%" height="400" src="https://youtu.be/2djh3peNI6E" title="Vídeo do imóvel" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
+ <section class="card">
+  <h2>Vídeo do imóvel</h2>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/2djh3peNI6E" 
+            title="Vídeo do imóvel" 
+            frameborder="0" 
+            allowfullscreen>
+    </iframe>
+  </div>
+</section>
 
  
 </main>
