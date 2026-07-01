@@ -216,6 +216,21 @@ body {
 .whatsapp-float:hover img {
   transform: scale(1.1);
 }
+.map-container {
+  position: relative;
+  padding-bottom: 56.25%; /* proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 /* FOOTER */
 .site-footer {
@@ -370,7 +385,9 @@ body {
 }
 
 
-</style><main class="imovel-page">
+</style>
+  
+  <main class="imovel-page">
   <h1>Apartamento à venda - 3 dormitórios na Praia de Palmas SC</h1>
   <p class="preco">R$ 889.000,00</p>
   <p class="codigo">Praia de Palmas &nbsp;|&nbsp; Código: v474</p>
@@ -466,17 +483,20 @@ body {
 
 </main>
   <!-- Mapa -->
-  <section class="card">
-    <h2>Mapa do imóvel</h2>
+<section class="card">
+  <h2>Mapa do imóvel</h2>
+  <div class="map-container">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.123456!2d-48.547!3d-27.317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95274a123456789%3A0xabcdef!2sPraia%20de%20Palmas%2C%20Governador%20Celso%20Ramos%20-%20SC!5e0!3m2!1spt-BR!2sbr!4v1680000000000"
-      width="100%"
-      height="350"
-      style="border:0;"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3544.3102159768705!2d-48.5316877!3d-27.3347685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95275b5eac2c6cc9%3A0x1b22510360624e6a!2sPraia%20de%20Palmas!5e0!3m2!1spt-BR!2sbr!4v1782920446909!5m2!1spt-BR!2sbr"
       allowfullscreen=""
-      loading="lazy">
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin">
     </iframe>
-  </section>
+  </div>
+</section>
+
+
+
 
   <!-- Vídeo -->
  <section class="card">
