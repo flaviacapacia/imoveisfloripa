@@ -46,7 +46,28 @@
   </script>
 </head>
 
-<style>
+<body>
+  <header class="site-header">
+    <div class="logo-area">
+      <a href="index.html"><img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png/:/rs=w:170,h:170,mx" alt="Logo Flavia Imóveis" /></a>
+    </div>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+         <li><a href="blog.html">Blog</a></li>
+        <li><a href="negocie.html">Anuncie</a></li>
+       
+      </ul>
+    </nav>
+  </header>
+
+  <main class="imovel-page">
+    <h1>Apartamento à venda 3 dormitórios na Praia de Palmas SC</h1>
+    <p class="preco">890.000,00</p>
+    <p class="codigo">Praia de Palmas &nbsp;|&nbsp; Código: v474</p>
+  
+  <style>
 :root {
   --fundo-branco: #ffffff;
   --texto-bronze: #4B3A2F;
@@ -63,7 +84,6 @@ body {
   font-family: var(--fonte-padrao);
   line-height: 1.6;
 }
-
 /* Barra de Cookies */
 .cookie-banner {
   position: fixed;
@@ -109,8 +129,6 @@ body {
 .logo-area img {
   max-width: 170px;
   height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 .main-nav ul {
@@ -135,7 +153,7 @@ body {
 .imovel-page {
   max-width: 1000px;
   margin: 40px auto;
-  padding: 30px;
+  padding: 30px; /* margem interna mais ampla */
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -166,7 +184,7 @@ body {
   background: #fafafa;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 25px;
+  padding: 25px; /* mais respiro */
   margin-bottom: 25px;
 }
 
@@ -177,8 +195,6 @@ body {
   border-left: 4px solid var(--dourado);
   padding-left: 8px;
 }
-
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -224,6 +240,25 @@ body {
   cursor: pointer;
 }
 
+.carousel-controls {
+  margin-top: 15px;
+}
+
+.carousel-btn {
+  background: var(--dourado);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  margin: 0 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.carousel-btn:hover {
+  background: var(--bronze-claro);
+}
+
 /* Galeria */
 .zoom-gallery {
   display: grid;
@@ -233,7 +268,7 @@ body {
 
 .zoom-gallery img {
   width: 100%;
-  height: 240px;
+  height: 240px; /* altura maior para equilibrar com mapa/form */
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -272,7 +307,7 @@ body {
 /* Mapa responsivo */
 .map-container {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* proporção 16:9 */
   height: 0;
   overflow: hidden;
 }
@@ -310,32 +345,42 @@ body {
 }
 
 .contato-form textarea {
-  min-height: 120px;
+  min-height: 120px; /* altura maior para equilibrar */
 }
 
-/* Botões padronizados */
-.contato-form button,
-.whatsapp-banner a,
-.ver-mais-fotos {
-  display: inline-block;
-  width: 220px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
+.contato-form button {
   background: var(--dourado);
   color: #fff;
   border: none;
+  padding: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.contato-form button:hover {
+  background: var(--bronze-claro);
+}
+.contato-form button,
+.whatsapp-banner a {
+  display: block;            /* ocupa toda a largura */
+  width: 100%;               /* mesmo tamanho do botão do formulário */
+  background: var(--dourado);
+  color: #fff;
+  border: none;
+  padding: 14px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   font-size: 1rem;
+  text-align: center;
   text-decoration: none;
   transition: background 0.3s ease;
 }
 
 .contato-form button:hover,
-.whatsapp-banner a:hover,
-.ver-mais-fotos:hover {
+.whatsapp-banner a:hover {
   background: var(--bronze-claro);
 }
 
@@ -367,7 +412,6 @@ body {
   color: #000000;
   padding: 40px 20px;
   border-top: 1px solid #ddd;
-  text-align: center;
 }
 
 .footer-container {
@@ -393,8 +437,6 @@ body {
 
 .footer-logo img {
   width: 180px;
-  display: block;
-  margin: 0 auto;
   transition: transform 0.3s ease;
 }
 
@@ -422,33 +464,88 @@ body {
 .icon-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  color: var(--texto-bronze);
+}
 
-  
+.icon-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+/* Diferenciais */
+.diferenciais ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.diferenciais li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  /* Container principal */
+  .imovel-page {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: left; /* textos alinhados à esquerda */
+  }
+
+  /* Header e Menu */
+  .site-header {
+    flex-direction: column;
+    align-items: center;   /* logo centralizada */
+    text-align:center;     
+    padding: 15px;
+  }
+
+  .logo-area img {
+    margin: 0 auto;        /* centraliza logo no header */
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: center;
+ 
+    align-items: center;
+  }
+
+  /* Cards e Formulário */
+  .card, .form-card {
+    margin: 0 auto 20px auto;
+    width: 100%;
+    text-align: left; /* textos alinhados à esquerda */
+  }
+
+  .contato-form {
+    align-items: stretch;
+  }
+
+  .contato-form input,
+  .contato-form textarea {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center ; /* textos alinhados centro*/
+  }
+
+  .footer-logo img {
+    display: block;
+    margin: 0 auto; /* logo centralizada no footer */
+  }
+}
+
+
 </style>
-
- 
-<body>
-  <header class="site-header">
-    <div class="logo-area">
-      <a href="index.html"><img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png/:/rs=w:170,h:170,mx" alt="Logo Flavia Imóveis" /></a>
-    </div>
-    <nav class="main-nav" aria-label="Navegação principal">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-         <li><a href="blog.html">Blog</a></li>
-        <li><a href="negocie.html">Anuncie</a></li>
-       
-      </ul>
-    </nav>
-  </header>
- 
-  <main class="imovel-page">
-    <h1>Apartamento à venda 3 dormitórios na Praia de Palmas SC</h1>
-    <p class="preco">890.000,00</p>
-    <p class="codigo">Praia de Palmas &nbsp;|&nbsp; Código: v474</p>
   
-
   <!-- Galeria -->
 <section class="card">
   <h2>Galeria de fotos</h2>
