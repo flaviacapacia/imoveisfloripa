@@ -178,31 +178,32 @@ body {
   transform: scale(1.05);
 }
 
-.video-container {
+.video-thumbnail {
   position: relative;
-  padding-bottom: 56.25%; /* proporção 16:9 */
-  height: 0;
-  overflow: hidden;
+  cursor: pointer;
+  display: inline-block;
 }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.video-thumbnail img {
   width: 100%;
-  height: 100%;
+  border-radius: 8px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 
-/* Botão flutuante WhatsApp */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  z-index: 1000;
-}
 
 .whatsapp-float img {
   width: 100%;
@@ -481,13 +482,33 @@ body {
  <section class="card">
   <h2>Vídeo do imóvel</h2>
   <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/2djh3peNI6E" 
+    <!-- Imagem de miniatura -->
+    <div class="video-thumbnail" onclick="loadVideo()">
+      <img src="https://img.youtube.com/vi/2djh3peNI6E/maxresdefault.jpg" 
+           alt="Miniatura do vídeo do imóvel">
+      <button class="play-button">▶</button>
+    </div>
+
+    <!-- Iframe escondido inicialmente -->
+    <iframe id="videoFrame" 
+            src="" 
             title="Vídeo do imóvel" 
             frameborder="0" 
-            allowfullscreen>
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen 
+            style="display:none;">
     </iframe>
   </div>
 </section>
+
+<script>
+  function loadVideo() {
+    const iframe = document.getElementById('videoFrame');
+    iframe.src = "https://www.youtube.com/embed/2djh3peNI6E?autoplay=1";
+    iframe.style.display = "block";
+    document.querySelector('.video-thumbnail').style.display = "none";
+  }
+</script>
 
  
 </main>
