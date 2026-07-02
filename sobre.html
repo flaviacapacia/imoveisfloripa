@@ -34,6 +34,100 @@
 </head>
 
 <style>
+   <style>
+    :root {
+      --fundo-branco: #ffffff;
+      --texto-bronze: #4B3A2F;
+      --bronze-claro: #7A5C45;
+      --dourado: #b08d57;
+      --borda: #e8dfd6;
+      --fonte-padrao: 'Inter', 'Playfair Display', Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--fundo-branco);
+      color: var(--texto-bronze);
+      font-family: var(--fonte-padrao);
+      line-height: 1.6;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 18px 20px;
+      text-align: center;
+    }
+
+    .logo-area img { max-width: 170px; height: auto; }
+
+    .main-nav ul {
+      list-style: none;
+      margin: 12px 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--texto-bronze);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--dourado);
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      color: var(--texto-bronze);
+      font-size: 1.3rem;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      background: var(--dourado);
+      color: #fff;
+      font-weight: 700;
+      padding: 12px 18px;
+      border-radius: 8px;
+    }
+
+    /* HERO */
+    .hero {
+      width: 100%;
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 18px 18px 0;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--borda);
+      display: block;
+    }
 .sobre-container {
   display: flex;
   gap: 40px;
@@ -105,6 +199,107 @@
   }
 }
 
+    .outros-imoveis {
+      padding: 30px 18px;
+      margin-top: 20px;
+      background: #fff;
+    }
+
+    .outros-imoveis h2 {
+      margin: 0 0 24px;
+      text-align: center;
+      color: var(--dourado);
+      font-size: 2rem;
+    }
+
+    .outros-imoveis ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(200px, 1fr));
+      gap: 16px 26px;
+      justify-items: center;
+    }
+
+    .outros-imoveis li { margin: 0; text-align: center; }
+
+    .outros-imoveis a {
+      color: var(--dourado);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
+    }
+
+    .outros-imoveis a:hover {
+      background-color: var(--dourado);
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .site-footer {
+      background: #ffffff;
+      color: #000000;
+      padding: 40px 20px;
+      font-family: var(--fonte-padrao);
+      margin-top: 34px;
+      border-top: 1px solid #ddd;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    .footer-contact, .footer-logo, .footer-social { text-align: center; }
+
+    .footer-logo img { width: 180px; transition: transform 0.7s ease; }
+    .footer-logo img:hover { transform: scale(1.05); }
+
+    .footer-contact h3, .footer-social h3 { color: var(--dourado); margin-bottom: 10px; }
+
+    .footer-contact a, .footer-social a {
+      color: var(--dourado);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-contact a:hover, .footer-social a:hover {
+      color: var(--dourado);
+      text-decoration: underline;
+      background: none;
+    }
+
+    .footer-contact p { color: var(--dourado); font-size: 16px; margin: 6px 0; }
+
+    .footer-social ul { list-style: none; padding: 0; margin: 0; }
+    .footer-social li { margin-bottom: 8px; }
+
+    .footer-credit {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #000000;
+    }
+
+    @media (max-width: 900px) {
+      .footer-container { grid-template-columns: 1fr; gap: 20px; }
+      .outros-imoveis ul { grid-template-columns: repeat(2, minmax(180px, 1fr)); }
+    }
+
+    @media (max-width: 560px) {
+      .footer-container { grid-template-columns: 1fr; gap: 20px; }
+      .outros-imoveis ul { grid-template-columns: 1fr; }
+      .hero img { height: 220px; }
+    }
 </style>
 
 <body>
