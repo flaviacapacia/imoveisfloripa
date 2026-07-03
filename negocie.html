@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- SEO -->
-  <meta name="description" content="Negocie seu imóvel com a Flavia Capacia. Imóveis de alto padrão em Florianópolis, São José, Palhoça e Biguaçu. Apartamentos, casas e coberturas." />
+  <meta name="description" content="Anuncie seu imóvel com a Flavia Capacia em Imoveis em Floripa FC. Imóveis de alto padrão em Florianópolis, São José, Palhoça e Biguaçu. Apartamentos, casas e coberturas." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.imoveisfloripa.online/negocie.html" />
 
@@ -25,8 +25,8 @@
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Negocie seu Imóvel | Flavia Capacia Corretora" />
-  <meta name="twitter:description" content="Venda, alugue ou negocie seu imóvel na Grande Florianópolis." />
+  <meta name="twitter:title" content="Anuncie  seu Imóvel | Flavia Capacia Corretora" />
+  <meta name="twitter:description" content="Anuncie aqui, Venda ou alugue seu imóvel na Grande Florianópolis." />
   <meta name="twitter:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
 
   <!-- Google / Schema.org -->
@@ -71,10 +71,11 @@
       </div>
       <nav class="nav-menu">
         <ul>
-          <li><a href="index.html">Início</a></li>
           <li><a href="index.html">Comprar</a></li>
-          <li><a href="#lancamentos">Lançamentos</a></li>
-          <li><a href="negocie.html" class="active">Negocie</a></li>
+          <li><a href="Sobre.html">Sobre</a></li>
+             <li><a href="negocie.html" class="active">Anuncie</a></li>
+          <li><a href="Blog>Blog</a></li>
+       
         </ul>
       </nav>
     </div>
@@ -185,145 +186,97 @@ button:hover {
 #button:hover {
   background-color: #996515; /* tom mais escuro para hover */
 }
+  .sobre-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.texto-sobre p {
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border-left: 3px solid #d4af37; /* toque de profundidade */
+}
+  .sobre-foto {
+  margin-top: 40px; /* empurra a foto mais para baixo */
+  text-align: center;
+}
+
+.sobre-foto img {
+  width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+.frase-impacto {
+  margin-top: 12px;
+  font-style: italic;
+  color: #cd7f32; /* tom bronze */
+  font-weight: 600;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .texto-sobre p {
+    text-align: left;
+    font-size: 1rem;
+  }
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px; /* altura padrão no desktop */
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* cobre toda a área sem distorcer */
+  object-position: center; /* centraliza o foco da imagem */
+  display: block;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .hero {
+    height: 250px; /* altura menor no mobile */
+  }
+}
 </style>
 
+
 <main>
-  <section class="form-contato">
-    <form id="negocieForm">
-      <h2>Quer vender seu imóvel?</h2>
-      <p>Preencha seus dados e entraremos em contato para negociar seu imóvel com segurança e agilidade</p>
-
-      <div class="field">
-        <label for="Proprietario">Proprietário</label>
-        <input type="text" name="Proprietario" id="Proprietario" required>
+  <!-- Seção Sobre dividida -->
+  <section id="sobre" class="sobre-section">
+    <div class="sobre-container">
+      <!-- Lado esquerdo: foto + frase -->
+      <div class="sobre-foto">
+        <img src="img/sobre.webp" alt="Flavia Capacia">
+        <p class="frase-impacto">Transformando sonhos em imóveis de sucesso</p>
       </div>
 
-      <div class="field">
-        <label for="Contato">Contato (telefone ou email)</label>
-        <input type="text" name="Contato" id="Contato" required>
+      <!-- Lado direito: texto limpo -->
+      <div class="texto-sobre">
+        <h2 class="titulo-dourado">Sobre Flavia Capacia</h2>
+        <p>Apaixonada pela corretagem de imóveis, Flavia Capacia é a profissional por trás de grandes realizações na Grande Florianópolis.</p>
+        <p>Com mais de 10 anos de experiência, destaca-se pela conduta ética, compromisso e transparência, conquistando a confiança de clientes e parceiros.</p>
+        <p>Determinada a unir as necessidades de venda e a realização de compra, Flavia busca sempre entregar o melhor, concretizando sonhos e fechando negócios de sucesso.</p>
       </div>
-
-      <div class="field">
-        <label for="VendaOuAluguel">Venda ou Aluguel</label>
-        <select name="VendaOuAluguel" id="VendaOuAluguel" required>
-          <option value="">Selecione</option>
-          <option value="Venda">Venda</option>
-          <option value="Aluguel">Aluguel</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="Tipo">Tipo</label>
-        <select name="Tipo" id="Tipo" required>
-          <option value="">Selecione</option>
-          <option value="Casa">Casa</option>
-          <option value="Apartamento">Apartamento</option>
-          <option value="Terreno">Terreno</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="Valor">Valor</label>
-        <input type="text" name="Valor" id="Valor" placeholder="Valor">
-      </div>
-
-      <div class="field">
-        <label for="ValorCondominio">Valor do Condomínio</label>
-        <input type="text" name="ValorCondominio" id="ValorCondominio" placeholder="Valor do Condomínio">
-      </div>
-
-      <div class="field">
-        <label for="ValorIPTU">Valor do IPTU</label>
-        <input type="text" name="ValorIPTU" id="ValorIPTU" placeholder="Valor do IPTU">
-      </div>
-
-      <div class="field">
-        <label for="Endereco">Endereço</label>
-        <input type="text" name="Endereco" id="Endereco" placeholder="Endereço">
-      </div>
-
-      <div class="field">
-        <label for="Condominio">Condomínio</label>
-        <input type="text" name="Condominio" id="Condominio" placeholder="Condomínio">
-      </div>
-
-      <div class="field">
-        <label for="Descricao">Descrição do imóvel</label>
-        <textarea name="Descricao" id="Descricao" placeholder="Descrição do imóvel"></textarea>
-      </div>
-
-      <div class="field">
-        <label for="ImagemUrl">Link da imagem (Google Drive, Imgur, etc)</label>
-        <input type="text" name="ImagemUrl" id="ImagemUrl" placeholder="Link da imagem">
-      </div>
-
-      <div class="field">
-        <label for="Files">Imagens (opcional)</label>
-        <input type="file" name="Files" id="Files" multiple accept="image/*">
-      </div>
-
-      <button type="submit" id="button">Enviar</button>
-      <div id="mensagem"></div>
-    </form>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const form = document.getElementById("negocieForm");
-        const msg = document.getElementById("mensagem");
-        const button = document.getElementById("button");
-
-        if (!form) return;
-
-        form.addEventListener("submit", async function (e) {
-          e.preventDefault();
-          msg.innerText = "";
-          button.textContent = "Enviando...";
-          button.disabled = true;
-
-          const formData = new FormData(form);
-
-          const data = {
-            Proprietario: formData.get("Proprietario"),
-            Contato: formData.get("Contato"),
-            VendaOuAluguel: formData.get("VendaOuAluguel"),
-            Tipo: formData.get("Tipo"),
-            Valor: formData.get("Valor"),
-            ValorCondominio: formData.get("ValorCondominio"),
-            ValorIPTU: formData.get("ValorIPTU"),
-            Endereco: formData.get("Endereco"),
-            Condominio: formData.get("Condominio"),
-            Descricao: formData.get("Descricao"),
-            ImagemUrl: formData.get("ImagemUrl"),
-            Data: new Date().toLocaleString("pt-BR")
-          };
-
-          try {
-            const response = await fetch("https://formulario-site-1028879773485.southamerica-east1.run.app/negocie", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(data)
-            });
-
-            if (response.ok) {
-              msg.innerText = "✅ Imóvel enviado com sucesso!";
-              msg.style.color = "green";
-              form.reset();
-            } else {
-              const text = await response.text();
-              msg.innerText = "⚠️ Erro ao enviar: " + text;
-              msg.style.color = "red";
-            }
-          } catch (error) {
-            console.error(error);
-            msg.innerText = "❌ Erro de conexão com o servidor.";
-            msg.style.color = "red";
-          } finally {
-            button.textContent = "Enviar";
-            button.disabled = false;
-          }
-        });
-      });
-    </script>
+    </div>
   </section>
 </main>
 
@@ -337,7 +290,7 @@ button:hover {
    target="_blank">
    💬 Fale pelo WhatsApp
 </a>
-
+            
 <!-- Rodapé -->
 <footer class="main-footer">
   <div class="footer-grid">
