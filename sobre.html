@@ -34,7 +34,6 @@
 </head>
 
 <style>
-   <style>
     :root {
       --fundo-branco: #ffffff;
       --texto-bronze: #4B3A2F;
@@ -128,76 +127,79 @@
       border: 1px solid var(--borda);
       display: block;
     }
-.sobre-container {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: center;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-.texto-sobre p {
-  padding: 12px;
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  border-left: 3px solid #d4af37; /* toque de profundidade */
-}
-  .sobre-foto {
-  margin-top: 40px; /* empurra a foto mais para baixo */
-  text-align: center;
-}
+    
+    .sobre-container {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    .texto-sobre p {
+      padding: 12px;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      border-left: 3px solid #d4af37; /* toque de profundidade */
+    }
+    
+    .sobre-foto {
+      margin-top: 40px; /* empurra a foto mais para baixo */
+      text-align: center;
+    }
 
-.sobre-foto img {
-  width: 180px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  display: block;
-  margin: 0 auto;
-}
+    .sobre-foto img {
+      width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: block;
+      margin: 0 auto;
+    }
 
-.frase-impacto {
-  margin-top: 12px;
-  font-style: italic;
-  color: #cd7f32; /* tom bronze */
-  font-weight: 600;
-}
+    .frase-impacto {
+      margin-top: 12px;
+      font-style: italic;
+      color: #cd7f32; /* tom bronze */
+      font-weight: 600;
+    }
 
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .sobre-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .texto-sobre p {
+        text-align: left;
+        font-size: 1rem;
+      }
+    }
+    
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 400px; /* altura padrão no desktop */
+      overflow: hidden;
+    }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .sobre-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .texto-sobre p {
-    text-align: left;
-    font-size: 1rem;
-  }
-}
-.hero {
-  position: relative;
-  width: 100%;
-  height: 400px; /* altura padrão no desktop */
-  overflow: hidden;
-}
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;      /* cobre toda a área sem distorcer */
+      object-position: center; /* centraliza o foco da imagem */
+      display: block;
+    }
 
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;      /* cobre toda a área sem distorcer */
-  object-position: center; /* centraliza o foco da imagem */
-  display: block;
-}
-
-/* Responsivo para celular */
-@media (max-width: 768px) {
-  .hero {
-    height: 250px; /* altura menor no mobile */
-  }
-}
+    /* Responsivo para celular */
+    @media (max-width: 768px) {
+      .hero {
+        height: 250px; /* altura menor no mobile */
+      }
+    }
 
     .outros-imoveis {
       padding: 30px 18px;
@@ -306,7 +308,7 @@
 
 <header class="site-header">
   <div class="logo-area">
-    <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png/:/rs=w:170,h:170,mx" alt="Logo Flavia Imóveis" class="logo"/>
+    <img src="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" alt="Logo Flavia Imóveis" class="logo"/>
   </div>
   <nav class="main-nav">
     <ul>
@@ -379,8 +381,7 @@
       <p><a href="tel:+5548999600601">(48) 99960-0601</a></p>
       <p>Florianópolis • São José</p>
       <p> Palhoça </p>
-      </div>
-    
+    </div>
 
     <!-- Coluna central: Logo -->
     <div class="footer-logo">
@@ -411,8 +412,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
