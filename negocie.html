@@ -39,6 +39,7 @@
 
  <!-- CSS -->
   <link rel="stylesheet" href="style.css"></head>
+</head>
 <body>
 
   <!-- ========== BARRA TOPO ========== -->
@@ -189,8 +190,14 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     z-index: 1000;
   }
-  </style>
   
+  @media (max-width: 768px) {
+    .form-contato { padding: 20px 14px; }
+    .form-contato h2 { font-size: 1.7rem; }
+     }
+
+</style>
+ <main>
  <section class="form-contato">
     <form id="negocieForm">
       <h2>Quer vender seu imóvel?</h2>
@@ -267,17 +274,8 @@
 
       <button type="submit" id="button">Enviar</button>
       <div id="mensagem"></div>
-    </form>
-<section class="cta-banner">
-  <h2>Seu imóvel a um clique de você</h2>
-</section>
+    </form
 
-<!-- Botão Whatsapp flutuante -->
-<a href="https://wa.me/5548999600601" 
-   class="whatsapp-btn-fixed" 
-   target="_blank">
-   Fale com a corretora 
-</a>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const form = document.getElementById("negocieForm");
@@ -340,10 +338,6 @@
 </main>
 
 
-
-
-
-  </section>
   <a href="https://wa.me/5548999600601?text=Olá! Vim pelo site e gostaria de mais informações sobre os imóveis" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     <span style="position:relative;display:flex;align-items:center;justify-content:center;width:82px;height:82px;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(34,34,34,0.10);">
       <img src="img/imagens/logo-Imóveis-em-Floripa.png" alt="Imóveis em Floripa FC" style="width:72px;height:72px;object-fit:contain;display:block;">
