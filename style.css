@@ -439,6 +439,9 @@ main {
   justify-content: center;   /* centro horizontal */
   align-items: center;       /* centro vertical */
   min-height: 100vh;         /* ocupa toda a altura da tela */
+  padding-top: 80px; /* ajuste conforme a altura do seu menu/nav */
+
+
 }
 
 
@@ -452,10 +455,13 @@ main {
   width: 100%;
 
   /* Centralização horizontal */
+.form-contato {
   margin-left: auto;
   margin-right: auto;
-  display: block;
+  margin-top: 100px; /* empurra o formulário para baixo */
 }
+
+
 
 
 
