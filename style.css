@@ -434,6 +434,13 @@
 .btn-favorito.favorito {
   color: red;
 }
+main {
+  display: flex;
+  justify-content: center;   /* centro horizontal */
+  align-items: center;       /* centro vertical */
+  min-height: 100vh;         /* ocupa toda a altura da tela */
+}
+
  .form-contato {
   background: #fff;
   padding: 24px;
