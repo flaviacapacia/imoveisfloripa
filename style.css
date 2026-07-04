@@ -434,16 +434,22 @@
 .btn-favorito.favorito {
   color: red;
 }
-  
-  .form-contato {
-    background: #fff;
-    padding: 24px;
-    border: 1px solid var(--borda);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    max-width: 720px;
-    width: 100%;
-  }
+ .form-contato {
+  background: #fff;
+  padding: 24px;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 720px;
+  width: 100%;
+
+  /* Centralização */
+  margin: 0 auto;          /* centraliza horizontalmente */
+  position: relative;
+  top: 50%;                /* move para o meio da tela */
+  transform: translateY(-50%); /* ajusta para ficar centralizado */
+}
+
 
   .form-contato h2 {
     text-align: center;
