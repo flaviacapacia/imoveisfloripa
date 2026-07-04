@@ -441,6 +441,7 @@ main {
   min-height: 100vh;         /* ocupa toda a altura da tela */
 }
 
+
  .form-contato {
   background: #fff;
   padding: 24px;
@@ -450,12 +451,12 @@ main {
   max-width: 720px;
   width: 100%;
 
-  /* Centralização */
-  margin: 0 auto;          /* centraliza horizontalmente */
-  position: relative;
-  top: 50%;                /* move para o meio da tela */
-  transform: translateY(-50%); /* ajusta para ficar centralizado */
+  /* Centralização horizontal */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
+
 
 
   .form-contato h2 {
