@@ -459,10 +459,6 @@ main {
   margin-top: 100px; /* empurra o formulário para baixo */
 }
 
-
-
-
-
   .form-contato h2 {
     text-align: center;
     margin: 0 0 10px;
@@ -557,9 +553,10 @@ main {
     z-index: 1000;
   }
   
-  @media (max-width: 768px) {
-    .form-contato { padding: 20px 14px; }
-    .form-contato h2 { font-size: 1.7rem; }
-     }
-
+@media (min-width: 1024px) {
+  .form-contato { margin-top: 120px; }
+}
+@media (max-width: 768px) {
+  .form-contato { margin-top: 80px; }
+}
 
