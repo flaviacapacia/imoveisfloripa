@@ -436,71 +436,7 @@
 }
 
 
- .form-contato {
-  background: #fff;
-  margin: 120px auto 40px; /* 120px empurra abaixo do menu */
-  padding: 24px;
-  border: 1px solid var(--borda);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  max-width: 720px;
-  width: 100%;
-
-  /* Centralização horizontal */
-.form-contato {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px; /* empurra o formulário para baixo */
-}
-
-  .form-contato h2 {
-    text-align: center;
-    margin: 0 0 10px;
-    color: var(--dourado);
-    font-size: 2rem;
-  }
-
-  .form-contato p {
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--bronze-claro);
-  }
-
-  .field { margin-bottom: 15px; }
-
-  .field label {
-    display: block;
-    font-weight: 700;
-    margin-bottom: 6px;
-    color: var(--texto-bronze);
-  }
-
-  .field input,
-  .field select,
-  .field textarea {
-    width: 100%;
-    padding: 11px 12px;
-    border: 1px solid var(--borda);
-    border-radius: 8px;
-    font-size: 15px;
-    color: var(--texto-bronze);
-    font-family: var(--fonte-padrao);
-    background: #fff;
-  }
-
-  .field textarea {
-    min-height: 120px;
-    resize: vertical;
-  }
-
-  .field input:focus,
-  .field select:focus,
-  .field textarea:focus {
-    border-color: var(--dourado);
-    outline: none;
-    box-shadow: 0 0 0 3px #b08d5726;
-  }
-
+ 
   #mensagem {
     margin-top: 15px;
     text-align: center;
