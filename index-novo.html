@@ -215,10 +215,1180 @@ function toggleFavorito(btn) {
 
 
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imóveis em Floripa FC | Imóveis em Florianópolis | São José | Palhoça | Biguaçu</title>
+  
+  <!-- SEO -->
+  <meta name="description" content="Imóveis de alto padrão em Florianópolis, São José, Palhoça e Biguaçu. Apartamentos, casas e coberturas com a experiência de Flavia Capacia." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.imoveisfloripa.online/index.html" />
+  <meta name="google-site-verification" content="COLOQUE_AQUI_O_CODIGO_DO_SEARCH_CONSOLE" />
+  <link rel="alternate" hreflang="pt-BR" href="https://www.imoveisfloripa.online/index.html" />
+  <link rel="alternate" hreflang="en" href="https://www.imoveisfloripa.online/en/index.html" />
+  <link rel="alternate" hreflang="es" href="https://www.imoveisfloripa.online/es/index.html" />
+  <meta property="og:title" content="Flavia Capacia Corretora | Imóveis em Florianópolis" />
+  <meta property="og:description" content="Encontre seu imóvel dos sonhos na Grande Florianópolis" />
+  <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
+  <meta property="og:url" content="https://www.imoveisfloripa.online/index.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Flavia Capacia Corretora | Imóveis em Florianópolis" />
+  <meta name="twitter:description" content="Encontre seu imóvel dos sonhos na Grande Florianópolis" />
+  <meta name="twitter:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
+  <meta itemprop="name" content="Flavia Capacia Corretora | Imóveis em Florianópolis" />
+  <meta itemprop="description" content="Imóveis de alto padrão em Florianópolis, São José, Palhoça e Biguaçu. Apartamentos, casas e coberturas com a experiência de Flavia Capacia." />
+  <meta itemprop="image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --preto: #0f1115;
+      --preto-suave: #1a1c23;
+      --dourado: #c8a951;
+      --dourado-suave: #d9c88c;
+      --branco: #ffffff;
+      --cinza-suave: #b8b8b8;
+      --borda-dourada: rgba(200, 169, 81, 0.18);
+      --sobreposicao: rgba(15, 17, 21, 0.65);
+    }
 
-   
-   <!-- OS IMÓVEIS EM DESTAQUE AQUI -->
-    <div class="properties-grid">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: var(--preto);
+      color: var(--branco);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========== BARRA TOPO ========== */
+    .top-bar {
+      background: var(--preto-suave);
+      border-bottom: 1px solid var(--borda-dourada);
+      padding: 10px 5%;
+      font-size: 14px;
+      color: var(--cinza-suave);
+    }
+
+    .top-bar-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .top-bar-contact {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .icon-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--cinza-suave);
+      transition: color 0.3s;
+    }
+
+    .icon-link:hover {
+      color: var(--dourado);
+    }
+
+    /* ========== CABEÇALHO ========== */
+    .main-header {
+      position: fixed;
+      top: 42px;
+      width: 100%;
+      padding: 15px 5%;
+      z-index: 998;
+      transition: all 0.3s ease;
+    }
+
+    .main-header.rolagem {
+      background: rgba(15, 17, 21, 0.92);
+      backdrop-filter: blur(10px);
+      top: 0;
+      border-bottom: 1px solid var(--borda-dourada);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .nav-menu ul {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+
+    .nav-menu a {
+      color: var(--branco);
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    .nav-menu a:hover {
+      color: var(--dourado);
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--dourado);
+      transition: width 0.3s;
+    }
+
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+
+    /* ========== HERO COM SLIDER ========== */
+    .hero-slider {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .slides {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .slide.ativo {
+      opacity: 1;
+    }
+
+    .sobreposicao-escura {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(15,17,21,0.85), rgba(15,17,21,0.45));
+    }
+
+    .hero-conteudo {
+      position: relative;
+      z-index: 3;
+      max-width: 1200px;
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 60px;
+    }
+
+    .tag-local {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--borda-dourada);
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-size: 14px;
+      color: var(--dourado-suave);
+      margin-bottom: 28px;
+      letter-spacing: 1px;
+    }
+
+    .hero-conteudo h1 {
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      line-height: 1.15;
+      margin-bottom: 24px;
+      color: var(--branco);
+    }
+
+    .hero-conteudo h1 span {
+      color: var(--dourado);
+      font-style: italic;
+    }
+
+    .hero-conteudo > p {
+      font-size: 17px;
+      color: var(--cinza-suave);
+      margin-bottom: 36px;
+      line-height: 1.8;
+      max-width: 640px;
+    }
+
+    .hero-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .hero-tab {
+      padding: 10px 24px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--cinza-suave);
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 14px;
+    }
+
+    .hero-tab.active {
+      background: var(--branco);
+      color: var(--preto);
+      border-color: var(--branco);
+      font-weight: 600;
+    }
+
+    .hero-tab:hover:not(.active) {
+      border-color: var(--dourado);
+      color: var(--dourado);
+    }
+
+    .hero-search-advanced {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--borda-dourada);
+      border-radius: 12px;
+      padding: 24px;
+      max-width: 720px;
+      backdrop-filter: blur(10px);
+    }
+
+    .search-input-main {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(15,17,21,0.6);
+      border: 1px solid rgba(200,169,81,0.2);
+      color: var(--branco);
+      border-radius: 8px;
+      font-size: 15px;
+      margin-bottom: 16px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .search-input-main:focus {
+      border-color: var(--dourado);
+    }
+
+    .search-filters {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .search-filters select,
+    .search-filters input {
+      width: 100%;
+      padding: 12px 14px;
+      background: rgba(15,17,21,0.6);
+      border: 1px solid rgba(200,169,81,0.2);
+      color: var(--branco);
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .search-filters select:focus,
+    .search-filters input:focus {
+      border-color: var(--dourado);
+    }
+
+    .search-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .search-btn-main {
+      flex: 1;
+      padding: 13px;
+      background: linear-gradient(90deg, var(--dourado), #b89a3f);
+      color: var(--preto);
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .search-btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(200,169,81,0.2);
+    }
+
+    .filter-btn {
+      padding: 13px 24px;
+      background: transparent;
+      border: 1px solid var(--dourado);
+      color: var(--dourado);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .filter-btn:hover {
+      background: var(--dourado);
+      color: var(--preto);
+    }
+
+    /* Indicadores do Slider */
+    .indicadores {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 4;
+    }
+
+    .indicador {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .indicador.ativo {
+      background: var(--dourado);
+      transform: scale(1.2);
+    }
+
+    /* ========== BREADCRUMB ========== */
+    .breadcrumb-bar {
+      background: var(--preto-suave);
+      border-bottom: 1px solid var(--borda-dourada);
+      padding: 12px 5%;
+      font-size: 14px;
+      color: var(--cinza-suave);
+    }
+
+    .breadcrumb-content a {
+      color: var(--dourado-suave);
+    }
+
+    /* ========== SEÇÃO FILTROS ========== */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 5%;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin-bottom: 10px;
+      color: var(--branco);
+    }
+
+    .section-title span {
+      color: var(--dourado);
+    }
+
+    .section-subtitle {
+      color: var(--cinza-suave);
+    }
+
+    .filter-section {
+      background: var(--preto-suave);
+      border: 1px solid var(--borda-dourada);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 50px;
+    }
+
+    .filter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px;
+      align-items: end;
+    }
+
+    .filter-item label {
+      display: block;
+      font-size: 13px;
+      color: var(--dourado-suave);
+      margin-bottom: 6px;
+    }
+
+    .filter-item select,
+    .filter-item input {
+      width: 100%;
+      padding: 12px 14px;
+      background: var(--preto);
+      border: 1px solid rgba(200,169,81,0.2);
+      color: var(--branco);
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .filter-item select:focus,
+    .filter-item input:focus {
+      border-color: var(--dourado);
+    }
+
+    /* ========== GRID DE IMÓVEIS ========== */
+    .properties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+    }
+
+    .property-card {
+      background: var(--preto-suave);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(200,169,81,0.08);
+      transition: all 0.35s ease;
+      position: relative;
+    }
+
+    .property-card:hover {
+      border-color: rgba(200,169,81,0.25);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    }
+
+    .property-tag {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: linear-gradient(90deg, var(--dourado), #b89a3f);
+      color: var(--preto);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      z-index: 2;
+    }
+
+    .property-image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .property-card:hover .property-image {
+      transform: scale(1.05);
+    }
+
+    .property-details {
+      padding: 22px;
+    }
+
+    .property-type {
+      font-size: 13px;
+      color: var(--dourado-suave);
+      margin-bottom: 6px;
+    }
+
+    .property-title {
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: var(--branco);
+    }
+
+    .property-location {
+      font-size: 14px;
+      color: var(--cinza-suave);
+      margin-bottom: 14px;
+    }
+
+    .property-features {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .feature-item {
+      font-size: 14px;
+      color: var(--cinza-suave);
+    }
+
+    .feature-item strong {
+      color: var(--branco);
+    }
+
+    .property-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dourado);
+      margin-bottom: 6px;
+    }
+
+    .property-code {
+      font-size: 13px;
+      color: var(--cinza-suave);
+      margin-bottom: 14px;
+    }
+
+    .property-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .btn-details,
+    .btn-whats,
+    .btn-compartilhar,
+    .btn-favorito {
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .btn-details {
+      background: linear-gradient(90deg, var(--dourado), #b89a3f);
+      color: var(--preto);
+    }
+
+    .btn-details:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-whats {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-compartilhar,
+    .btn-favorito {
+      background: transparent;
+      border: 1px solid var(--borda-dourada);
+      color: var(--cinza-suave);
+    }
+
+    .btn-compartilhar:hover,
+    .btn-favorito:hover,
+    .btn-favorito.favorito {
+      border-color: var(--dourado);
+      color: var(--dourado);
+    }
+
+    /* ========== LANÇAMENTOS ========== */
+    .lancamentos-section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 5%;
+    }
+
+    .lancamentos-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .lancamentos-header h2 {
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
+      margin-bottom: 10px;
+      color: var(--branco);
+    }
+
+    .lancamentos-header p {
+      color: var(--cinza-suave);
+    }
+
+    .lancamentos-content {
+      position: relative;
+    }
+
+    .lancamentos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .lancamento-card {
+      background: var(--preto-suave);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--borda-dourada);
+      transition: all 0.35s;
+    }
+
+    .lancamento-card:hover {
+      border-color: var(--dourado);
+      transform: translateY(-5px);
+    }
+
+    .lancamento-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .lancamento-info {
+      padding: 22px;
+    }
+
+    .lancamento-badge {
+      display: inline-block;
+      background: var(--dourado);
+      color: var(--preto);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .lancamento-title {
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: var(--branco);
+    }
+
+    .lancamento-location {
+      font-size: 14px;
+      color: var(--cinza-suave);
+      margin-bottom: 12px;
+    }
+
+    .lancamento-description {
+      font-size: 14px;
+      color: var(--cinza-suave);
+      margin-bottom: 16px;
+    }
+
+    .lancamento-btn {
+      display: inline-block;
+      padding: 10px 24px;
+      background: transparent;
+      border: 1px solid var(--dourado);
+      color: var(--dourado);
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .lancamento-btn:hover {
+      background: var(--dourado);
+      color: var(--preto);
+    }
+
+    .lancamentos-arrow {
+      background: var(--branco) !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important;
+    }
+
+    /* ========== BLOG ========== */
+    .blog-section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 5%;
+    }
+
+    .blog-section h2 {
+      text-align: center;
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
+      margin-bottom: 40px;
+      color: var(--branco);
+    }
+
+    .blog-slider {
+      position: relative;
+    }
+
+    .blog-posts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .blog-post {
+      background: var(--preto-suave);
+      border: 1px solid var(--borda-dourada);
+      border-radius: 10px;
+      padding: 24px;
+      transition: all 0.35s;
+    }
+
+    .blog-post:hover {
+      border-color: var(--dourado);
+    }
+
+    .blog-post h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .blog-post h3 a {
+      color: var(--branco);
+      transition: color 0.3s;
+    }
+
+    .blog-post h3 a:hover {
+      color: var(--dourado);
+    }
+
+    .blog-post p {
+      font-size: 14px;
+      color: var(--cinza-suave);
+    }
+
+    .blog-arrow {
+      background: var(--branco) !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important;
+    }
+
+    /* ========== WHATSAPP FLUTUANTE ========== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 900;
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    /* ========== RODAPÉ ========== */
+    .main-footer {
+      background: var(--preto-suave);
+      border-top: 1px solid var(--borda-dourada);
+      padding: 60px 5% 30px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    .footer-logo {
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+
+    .footer-column h3 {
+      font-size: 16px;
+      color: var(--dourado);
+      margin-bottom: 16px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      font-size: 14px;
+      color: var(--cinza-suave);
+      line-height: 1.8;
+    }
+
+    .footer-column a:hover {
+      color: var(--dourado);
+    }
+
+    .footer-contact-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .social-icons .icon-bg {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(200,169,81,0.1);
+      border: 1px solid var(--borda-dourada);
+      transition: all 0.3s;
+    }
+
+    .social-icons a:hover .icon-bg {
+      background: var(--dourado);
+      border-color: var(--dourado);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid var(--borda-dourada);
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ========== RESPONSIVO ========== */
+    @media(max-width:900px) {
+      .top-bar-content,
+      .top-bar-contact {
+        flex-direction: column;
+        gap: 4px;
+      }
+      .main-header {
+        top: 70px;
+      }
+      .header-container {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .nav-menu ul {
+        gap: 14px;
+      }
+      .search-filters {
+        grid-template-columns: 1fr;
+      }
+      .property-actions {
+        grid-template-columns: 1fr;
+      }
+      .blog-posts {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== BARRA TOPO ========== -->
+<div class="top-bar">
+  <div class="top-bar-content">
+    <div class="top-bar-contact">
+      <a href="mailto:imoveisemfloripa.fc@gmail.com" class="icon-link" aria-label="E-mail">
+        <span class="icon-bg">✉️</span>
+        imoveisemfloripa.fc@gmail.com
+      </a>
+      <a href="tel:+5548999600601" class="icon-link" aria-label="Telefone">
+        <span class="icon-bg">📞</span>
+        (48) 99960-0601
+      </a>
+    </div>
+    <div class="icon-link" aria-label="Localização">
+      <span class="icon-bg">📍</span>
+      Florianópolis • São José • Palhoça
+    </div>
+  </div>
+</div>
+
+<!-- ========== CABEÇALHO ========== -->
+<header class="main-header" id="cabecalho">
+  <div class="header-container">
+    <div class="logo-section">
+      <img src="img/imagens/logo-Imóveis-em-Floripa.png" alt="Imóveis em Floripa FC" class="logo-img">
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#imoveis">Comprar</a></li>
+        <li><a href="#lancamentos">Lançamentos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== HERO COM SLIDER ========== -->
+<section class="hero-slider" id="inicio">
+  <div class="slides">
+    <div class="slide ativo" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80');"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80');"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80');"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1600566753086-00f0fb83693c?w=1920&q=80');"></div>
+  </div>
+  <div class="sobreposicao-escura"></div>
+
+  <div class="hero-conteudo">
+    <div class="tag-local">FLORIANÓPOLIS • ALTO PADRÃO</div>
+    <h1>Encontre o seu imóvel na <span>Grande Florianópolis</span></h1>
+    <p>De Jurerê Internacional à Lagoa da Conceição, da Beira Mar Norte ao Campeche. Curadoria, discrição e atendimento sob medida para você.</p>
+    
+    <div class="hero-tabs">
+      <button class="hero-tab active">Venda</button>
+      <button class="hero-tab">Lançamentos</button>
+      <button class="hero-tab">Aluguel</button>
+    </div>
+
+    <div class="hero-search-advanced">
+      <input type="text" id="filtro-cidade-busca" class="search-input-main" placeholder="Digite a cidade, bairro ou condomínio...">
+      <div class="search-filters">
+        <select id="filtro-tipo">
+          <option value="">Tipo de Imóvel</option>
+          <option value="Apartamento">Apartamento</option>
+          <option value="Casa">Casa</option>
+          <option value="Cobertura">Cobertura</option>
+          <option value="Studio">Studio</option>
+          <option value="Terreno">Terreno</option>
+        </select>
+        <select id="filtro-quartos">
+          <option value="">Dormitórios(s)</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4+</option>
+        </select>
+        <input type="text" id="filtro-codigo" placeholder="Código...">
+      </div>
+      <div class="search-actions">
+        <button class="search-btn-main" onclick="aplicarFiltros()">🔍 Buscar</button>
+        <button class="filter-btn" onclick="limparFiltros()">Limpar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="indicadores">
+    <div class="indicador ativo" data-slide="0"></div>
+    <div class="indicador" data-slide="1"></div>
+    <div class="indicador" data-slide="2"></div>
+    <div class="indicador" data-slide="3"></div>
+  </div>
+</section>
+
+<!-- ========== BREADCRUMB ========== -->
+<div class="breadcrumb-bar">
+  <div class="breadcrumb-content">
+    <a href="#início">Início</a> &gt; <span>Imóveis à venda</span>
+  </div>
+</div>
+
+<!-- ========== FILTROS E IMÓVEIS ========== -->
+<main class="main-content" id="imoveis">
+  <div class="section-header">
+    <h2 class="section-title">Imóveis em <span>Destaque</span></h2>
+    <p class="section-subtitle">Confira nossa seleção especial de imóveis na Grande Florianópolis</p>
+  </div>
+
+  <!-- FILTROS CORRIGIDOS -->
+  <div class="filter-section">
+    <div class="filter-grid">
+      <div class="filter-item">
+        <label>Cidade</label>
+        <select id="filtro-cidade">
+          <option value="">Todas</option>
+          <option value="Florianópolis">Florianópolis</option>
+          <option value="São José">São José</option>
+          <option value="Palhoça">Palhoça</option>
+          <option value="Governador Celso Ramos">Gov. Celso Ramos</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label>Bairro</label>
+        <select id="filtro-bairro">
+          <option value="">Todos</option>
+          <option value="Agronômica">Agronômica</option>
+          <option value="Beira Mar Norte">Beira Mar Norte</option>
+          <option value="Centro">Centro</option>
+          <option value="Estreito">Estreito</option>
+          <option value="Ratones">Ratones</option>
+          <option value="Saco dos Limões">Saco dos Limões</option>
+          <option value="Santo Antônio de Lisboa">Santo Antônio de Lisboa</option>
+          <option value="Kobrasol">Kobrasol</option>
+          <option value="Bela Vista">Bela Vista</option>
+          <option value="Campinas">Campinas</option>
+          <option value="Floresta">Floresta / N. Sra. do Rosário</option>
+          <option value="Forquilhas">Forquilhas</option>
+          <option value="Nova Palhoça">Nova Palhoça</option>
+          <option value="Palmas">Palmas</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label>Quartos</label>
+        <select id="filtro-quartos">
+          <option value="">Todos</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4+</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label>Valor Mínimo (R$)</label>
+        <input type="number" id="filtro-min" placeholder="0">
+      </div>
+      <div class="filter-item">
+        <label>Valor Máximo (R$)</label>
+        <input type="number" id="filtro-max" placeholder="0">
+      </div>
+      <div class="filter-item">
+        <label>Código</label>
+        <input type="text" id="filtro-codigo" placeholder="Ex: v439">
+      </div>
+      <div class="filter-item">
+        <button class="filter-btn" onclick="aplicarFiltros()">Filtrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TODOS OS IMÓVEIS -->
+  <div class="properties-grid">
+
+<article id="card-v439" class="property-card" data-cidade="Florianópolis" data-bairro="Agronômica" data-quartos="2" data-preco="815000" data-codigo="v439">
+  <span class="property-tag">Destaque</span>
+  <img src="img/v439/v439-1.webp" class="property-image" alt="Apartamento Agronômica">
+  <div class="property-details">
+    <div class="property-type">Apartamento</div>
+    <h3 class="property-title">Apartamento na Agronômica</h3>
+    <div class="property-location">Agronômica - Florianópolis/SC</div>
+    <div class="property-features">
+      <div class="feature-item"><strong>2</strong> Quartos</div>
+      <div class="feature-item"><strong>1</strong> Suíte</div>
+      <div class="feature-item"><strong>1</strong> Vaga</div>
+    </div>
+    <div class="property-price">R$ 815.000</div>
+    <div class="property-code">Código: v439</div>
+    <div class="property-actions">
+      <a href="apartamento-venda-agronomica-v439.html" class="btn-details">Ver Detalhes</a>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica%20-%20Código:%20v439" class="btn-whats" target="_blank">WhatsApp</a>
+      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/apartamento-venda-agronomica-v439.html')">🔗</button>
+      <button class="btn-favorito" onclick="toggleFavorito(this)">❤️</button>
+    </div>
+  </div>
+</article>
+
+<article id="card-v472" class="property-card" data-cidade="Florianópolis" data-bairro="Agronômica" data-quartos="3" data-preco="2995000" data-codigo="v472">
+  <span class="property-tag">Destaque</span>
+  <img src="img/v472/anco1.jpeg" class="property-image" alt="Apartamento Agronômica">
+  <div class="property-details">
+    <div class="property-type">Apartamento</div>
+    <h3 class="property-title">Apartamento na Agronômica — Ancoradouro</h3>
+    <div class="property-location">Agronômica - Florianópolis/SC</div>
+    <div class="property-features">
+      <div class="feature-item"><strong>3</strong> Quartos</div>
+      <div class="feature-item"><strong>1</strong> Suíte</div>
+      <div class="feature-item"><strong>1</strong> Vaga</div>
+    </div>
+    <div class="property-price">R$ 2.995.000</div>
+    <div class="property-code">Código: v472</div>
+    <div class="property-actions">
+      <a href="v472-apartamento-3-quartos-agronomica-florianopolis-ancoradouro.html" class="btn-details">Ver Detalhes</a>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica%20-%20Código:%20v472" class="btn-whats" target="_blank">WhatsApp</a>
+      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v472-apartamento-3-quartos-agronomica-florianopolis-ancoradouro.html')">🔗</button>
+      <button class="btn-favorito" onclick="toggleFavorito(this)">❤️</button>
+    </div>
+  </div>
+</article>
+
+<article id="card-v456" class="property-card" data-cidade="Governador Celso Ramos" data-bairro="Palmas" data-quartos="3" data-preco="1270000" data-codigo="v456">
+  <span class="property-tag">Praia</span>
+  <img src="img/v456/palmas1.jpeg" class="property-image" alt="Apartamento Palmas Celso Ramos">
+  <div class="property-details">
+    <div class="property-type">Apartamento</div>
+    <h3 class="property-title">Apartamento Palmas — Sacada com Vista Mar</h3>
+    <div class="property-location">Palmas - Gov. Celso Ramos/SC</div>
+    <div class="property-features">
+      <div class="feature-item"><strong>3</strong> Quartos</div>
+      <div class="feature-item"><strong>1</strong> Suíte</div>
+      <div class="feature-item"><strong>1</strong> Vaga</div>
+    </div>
+    <div class="property-price">R$ 1.270.000</div>
+    <div class="property-code">Código: v456</div>
+    <div class="property-actions">
+      <a href="v456-apartamento-venda-palmas-sacada-praia-celso-ramos+3dormitorios+suite.html" class="btn-details">Ver Detalhes</a>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20em%20Palmas%20-%20Código:%20v456" class="btn-whats" target="_blank">WhatsApp</a>
+      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v456-apartamento-venda-palmas-sacada-praia-celso-ramos+3dormitorios+suite.html')">🔗</button>
+      <button class="btn-favorito" onclick="toggleFavorito(this)">❤️</button>
+    </div>
+  </div>
+</article>
+
+<article id="card-v465" class="property-card" data-cidade="Florianópolis" data-bairro="Saco dos Limões" data-quartos="2" data-preco="1690000" data-codigo="v465">
+  <span class="property-tag">Novo</span>
+  <img src="img/v465/sala.jpeg" class="property-image" alt="Apartamento Saco dos Limões">
+  <div class="property-details">
+    <div class="property-type">Apartamento</div>
+    <h3 class="property-title">Apartamento no Saco dos Limões — 2 Suítes</h3>
+    <div class="property-location">Sul da Ilha - Florianópolis/SC</div>
+    <div class="property-features">
+      <div class="feature-item"><strong>2</strong> Quartos</div>
+      <div class="feature-item"><strong>2</strong> Suítes</div>
+      <div class="feature-item"><strong>2</strong> Vagas</div>
+    </div>
+    <div class="property-price">R$ 1.690.000</div>
+    <div class="property-code">Código: v465</div>
+    <div class="property-actions">
+      <a href="v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html" class="btn-details">Ver Detalhes</a>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Saco%20dos%20Limões%20-%20Código:%20v465" class="btn-whats" target="_blank">WhatsApp</a>
+      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html')">🔗</button>
+      <button class="btn-favorito" onclick="toggleFavorito(this)">❤️</button>
+    </div>
+  </div>
+</article>
+
      <article id="card-v439" class="property-card" 
          data-cidade="Florianópolis" 
          data-bairro="Agronômica" 
