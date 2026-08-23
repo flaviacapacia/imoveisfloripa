@@ -3,339 +3,1072 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Imóveis em Floripa FC | Imóveis em Florianópolis | São José | Palhoça | Biguaçu</title>
+  <title>Imóveis em Floripa FC | Imóveis de Alto Padrão em Florianópolis</title>
   
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
   <!-- SEO -->
-  <meta name="description" content="Imóveis de alto padrão em Florianópolis, São José, Palhoça e Biguaçu. Apartamentos, casas e coberturas com a experiência de Flavia Capacia." />
+  <meta name="description" content="Imóveis de alto padrão em Florianópolis e Grande Florianópolis. Mais de 10 anos de experiência no mercado imobiliário." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.imoveisfloripa.online/index.html" />
-
-  <!-- Google Verification -->
-  <meta name="google-site-verification" content="COLOQUE_AQUI_O_CODIGO_DO_SEARCH_CONSOLE" />
-
-  <!-- Hreflang (Multilíngue) -->
-  <link rel="alternate" hreflang="pt-BR" href="https://www.imoveisfloripa.online/index.html" />
-  <link rel="alternate" hreflang="en" href="https://www.imoveisfloripa.online/en/index.html" />
-  <link rel="alternate" hreflang="es" href="https://www.imoveisfloripa.online/es/index.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Flavia Capacia Corretora | Imóveis em Florianópolis" />
-  <meta property="og:description" content="Encontre seu imóvel dos sonhos na Grande Florianópolis" />
-  <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
-  <meta property="og:url" content="https://www.imoveisfloripa.online/index.html" />
+  <link rel="canonical" href="https://imoveisemfloripa.com.br/" />
+  <meta name="google-site-verification" content="" />
+  
+  <!-- Redes Sociais -->
+  <meta property="og:title" content="Imóveis em Floripa FC" />
+  <meta property="og:description" content="Imóveis de alto padrão em Florianópolis e região." />
   <meta property="og:type" content="website" />
-
-  <!-- Twitter Cards -->
+  <meta property="og:url" content="https://imoveisemfloripa.com.br/" />
+  <meta property="og:image" content="" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Flavia Capacia Corretora | Imóveis em Florianópolis" />
-  <meta name="twitter:description" content="Encontre seu imóvel dos sonhos na Grande Florianópolis" />
-  <meta name="twitter:image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
+  
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================
+      VARIAVEIS GLOBAIS
+    ========================================== */
+    :root {
+      --preto: #0f1115;
+      --preto-suave: #1a1c23;
+      --preto-claro: #242730;
+      --dourado: #c8a951;
+      --dourado-escuro: #b09440;
+      --dourado-suave: #d9c88c;
+      --dourado-claro: #e8dcb4;
+      --branco: #ffffff;
+      --cinza-suave: #b8b8b8;
+      --cinza-claro: #888888;
+      --borda-dourada: rgba(200, 169, 81, 0.18);
+      --borda-dourada-forte: rgba(200, 169, 81, 0.40);
+      --sombra-dourada: 0 4px 20px rgba(200, 169, 81, 0.15);
+      --sombra-escura: 0 8px 30px rgba(0, 0, 0, 0.35);
+      --raio-borda: 12px;
+      --transicao: all 0.3s ease;
+    }
 
-  <!-- Google / Schema.org -->
-  <meta itemprop="name" content="Flavia Capacia Corretora | Imóveis em Florianópolis" />
-  <meta itemprop="description" content="Imóveis de alto padrão em Florianópolis, São José, Palhoça e Biguaçu. Apartamentos, casas e coberturas com a experiência de Flavia Capacia." />
-  <meta itemprop="image" content="https://img1.wsimg.com/isteam/ip/07e23903-74f7-4959-8978-9a8be272f898/Logo%20Flavia%20Marca%20dagua%20dourada.png" />
+    /* ==========================================
+      RESET E ESTILOS GERAIS
+    ========================================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: var(--preto);
+      color: var(--branco);
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    select, input, button {
+      font-family: inherit;
+    }
+
+    /* ==========================================
+      BARRA TOPO
+    ========================================== */
+    .top-bar {
+      background: var(--preto-suave);
+      border-bottom: 1px solid var(--borda-dourada);
+      padding: 10px 5%;
+      font-size: 14px;
+      color: var(--cinza-suave);
+    }
+
+    .top-bar-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .top-bar-contact {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .icon-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--cinza-suave);
+      transition: var(--transicao);
+    }
+
+    .icon-link:hover {
+      color: var(--dourado);
+    }
+
+    /* ==========================================
+      CABEÇALHO / MENU
+    ========================================== */
+    .main-header {
+      position: fixed;
+      top: 42px;
+      width: 100%;
+      padding: 15px 5%;
+      z-index: 998;
+      transition: var(--transicao);
+      background: rgba(15, 17, 21, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--borda-dourada);
+    }
+
+    .main-header.scrolled {
+      top: 0;
+      background: rgba(15, 17, 21, 0.96);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-menu ul {
+      display: flex;
+      list-style: none;
+      gap: 36px;
+    }
+
+    .nav-menu a {
+      color: var(--branco);
+      font-size: 15px;
+      font-weight: 500;
+      transition: var(--transicao);
+      position: relative;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-menu a:hover {
+      color: var(--dourado);
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--dourado), var(--dourado-suave));
+      transition: width 0.3s ease;
+    }
+
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+
+    /* ==========================================
+      HERO / SLIDER DA CAPA
+    ========================================== */
+    .hero-slider {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .slides {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+      background-size: cover;
+      background-position: center center;
+      transform: scale(1.02);
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .overlay-dark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(15,17,21,0.88), rgba(15,17,21,0.35));
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 1200px;
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 60px;
+    }
+
+    .tag-local {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--borda-dourada);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      color: var(--dourado-suave);
+      margin-bottom: 28px;
+      letter-spacing: 1px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      line-height: 1.15;
+      margin-bottom: 24px;
+      color: var(--branco);
+    }
+
+    .hero-content h1 span {
+      color: var(--dourado);
+      font-style: italic;
+    }
+
+    .hero-content > p {
+      font-size: 17px;
+      color: var(--cinza-suave);
+      margin-bottom: 36px;
+      line-height: 1.8;
+      max-width: 640px;
+    }
+
+    .hero-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .hero-tab {
+      padding: 11px 26px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--cinza-suave);
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transicao);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .hero-tab.active {
+      background: linear-gradient(135deg, var(--dourado), var(--dourado-escuro));
+      color: var(--preto);
+      border-color: transparent;
+      font-weight: 600;
+      box-shadow: var(--sombra-dourada);
+    }
+
+    .hero-tab:hover:not(.active) {
+      border-color: var(--dourado);
+      color: var(--dourado);
+    }
+
+    /* Indicadores do Slider */
+    .indicators {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 4;
+    }
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      cursor: pointer;
+      transition: var(--transicao);
+      border: 2px solid transparent;
+    }
+
+    .indicator.active {
+      background: var(--dourado);
+      transform: scale(1.2);
+      border-color: var(--dourado-claro);
+      box-shadow: 0 0 10px rgba(200,169,81,0.4);
+    }
+
+    /* ==========================================
+      SEÇÃO DE FILTROS
+    ========================================== */
+    .filters-section {
+      background: linear-gradient(180deg, var(--preto-suave), var(--preto));
+      border-top: 1px solid var(--borda-dourada);
+      border-bottom: 1px solid var(--borda-dourada);
+      padding: 50px 5%;
+    }
+
+    .filters-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .filters-header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .filters-header h2 {
+      font-size: 1.75rem;
+      color: var(--branco);
+      margin-bottom: 8px;
+    }
+
+    .filters-header h2 span {
+      color: var(--dourado);
+    }
+
+    .filters-header p {
+      color: var(--cinza-claro);
+      font-size: 15px;
+    }
+
+    .filters-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 18px;
+      align-items: end;
+    }
+
+    .filter-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .filter-item label {
+      font-size: 13px;
+      color: var(--dourado-suave);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .filter-item select,
+    .filter-item input {
+      width: 100%;
+      padding: 13px 16px;
+      background: var(--preto);
+      border: 1px solid var(--borda-dourada);
+      color: var(--branco);
+      border-radius: var(--raio-borda);
+      font-size: 14.5px;
+      outline: none;
+      transition: var(--transicao);
+    }
+
+    .filter-item select:focus,
+    .filter-item input:focus {
+      border-color: var(--dourado);
+      box-shadow: 0 0 0 3px rgba(200,169,81,0.10);
+    }
+
+    .filter-item input::placeholder {
+      color: var(--cinza-claro);
+    }
+
+    .filter-btn {
+      padding: 13px 16px;
+      background: linear-gradient(135deg, var(--dourado), var(--dourado-escuro));
+      color: var(--preto);
+      border: none;
+      border-radius: var(--raio-borda);
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: var(--transicao);
+      height: 48px;
+    }
+
+    .filter-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--sombra-dourada);
+    }
+
+    .filter-btn:active {
+      transform: translateY(0);
+    }
+
+    /* ==========================================
+      LISTA DE IMÓVEIS
+    ========================================== */
+    .main-content {
+      max-width: 1200px;
+      margin: 70px auto;
+      padding: 0 5%;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin-bottom: 10px;
+      color: var(--branco);
+    }
+
+    .section-title span {
+      color: var(--dourado);
+    }
+
+    .section-subtitle {
+      color: var(--cinza-claro);
+      font-size: 15px;
+    }
+
+    .properties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+    }
+
+    .property-card {
+      background: var(--preto-suave);
+      border-radius: var(--raio-borda);
+      overflow: hidden;
+      border: 1px solid var(--borda-dourada);
+      transition: var(--transicao);
+      position: relative;
+    }
+
+    .property-card:hover {
+      border-color: var(--borda-dourada-forte);
+      transform: translateY(-6px);
+      box-shadow: var(--sombra-escura);
+    }
+
+    .property-tag {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: linear-gradient(135deg, var(--dourado), var(--dourado-escuro));
+      color: var(--preto);
+      padding: 5px 16px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      z-index: 2;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    .property-image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .property-card:hover .property-image {
+      transform: scale(1.06);
+    }
+
+    .property-details {
+      padding: 22px;
+    }
+
+    .property-type {
+      font-size: 13px;
+      color: var(--dourado-suave);
+      margin-bottom: 6px;
+    }
+
+    .property-title {
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: var(--branco);
+    }
+
+    .property-location {
+      font-size: 14px;
+      color: var(--cinza-suave);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .property-features {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--borda-dourada);
+    }
+
+    .feature-item {
+      font-size: 14px;
+      color: var(--cinza-suave);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .property-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dourado);
+      margin-bottom: 6px;
+    }
+
+    .property-code {
+      font-size: 13px;
+      color: var(--cinza-claro);
+      margin-bottom: 16px;
+    }
+
+    .property-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transicao);
+      border: none;
+    }
+
+    .btn-details {
+      background: linear-gradient(135deg, var(--dourado), var(--dourado-escuro));
+      color: var(--preto);
+    }
+
+    .btn-details:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(200,169,81,0.25);
+    }
+
+    .btn-whats {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-whats:hover {
+      background: #20b85a;
+      transform: translateY(-2px);
+    }
+
+    .btn-action {
+      background: transparent;
+      border: 1px solid var(--borda-dourada-forte);
+      color: var(--cinza-suave);
+    }
+
+    .btn-action:hover,
+    .btn-action.favorited {
+      border-color: var(--dourado);
+      color: var(--dourado);
+      background: rgba(200,169,81,0.05);
+    }
+
+    /* ==========================================
+      SEÇÃO LANÇAMENTOS
+    ========================================== */
+    .launches-section {
+      background: linear-gradient(180deg, var(--preto), var(--preto-suave));
+      padding: 70px 5%;
+      border-top: 1px solid var(--borda-dourada);
+    }
+
+    .launches-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .launches-header h2 {
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      color: var(--branco);
+      margin-bottom: 10px;
+    }
+
+    .launches-header h2 span {
+      color: var(--dourado);
+    }
+
+    .launches-header p {
+      color: var(--cinza-claro);
+      font-size: 15px;
+    }
+
+    .launches-content {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .launches-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .launch-card {
+      background: var(--preto);
+      border-radius: var(--raio-borda);
+      overflow: hidden;
+      border: 1px solid var(--borda-dourada);
+      transition: var(--transicao);
+    }
+
+    .launch-card:hover {
+      border-color: var(--borda-dourada-forte);
+      transform: translateY(-6px);
+      box-shadow: var(--sombra-escura);
+    }
+
+    .launch-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .launch-card:hover .launch-image {
+      transform: scale(1.05);
+    }
+
+    .launch-info {
+      padding: 22px;
+    }
+
+    .launch-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--dourado), var(--dourado-escuro));
+      color: var(--preto);
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .launch-title {
+      font-size: 18px;
+      color: var(--branco);
+      margin-bottom: 6px;
+    }
+
+    .launch-location {
+      font-size: 14px;
+      color: var(--cinza-suave);
+      margin-bottom: 12px;
+    }
+
+    .launch-description {
+      font-size: 14px;
+      color: var(--cinza-claro);
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    .launch-btn {
+      display: inline-block;
+      padding: 10px 24px;
+      background: transparent;
+      border: 1px solid var(--dourado);
+      color: var(--dourado);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: var(--transicao);
+    }
+
+    .launch-btn:hover {
+      background: var(--dourado);
+      color: var(--preto);
+    }
+
+    /* ==========================================
+      SEÇÃO BLOG
+    ========================================== */
+    .blog-section {
+      background: var(--preto-suave);
+      padding: 70px 5%;
+      border-top: 1px solid var(--borda-dourada);
+    }
+
+    .blog-section h2 {
+      text-align: center;
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      color: var(--branco);
+      margin-bottom: 45px;
+    }
+
+    .blog-section h2 span {
+      color: var(--dourado);
+    }
+
+    .blog-posts {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .blog-post {
+      background: var(--preto);
+      border: 1px solid var(--borda-dourada);
+      border-radius: var(--raio-borda);
+      padding: 24px;
+      height: 100%;
+      transition: var(--transicao);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-post:hover {
+      border-color: var(--borda-dourada-forte);
+      transform: translateY(-4px);
+      box-shadow: var(--sombra-dourada);
+    }
+
+    .blog-post h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .blog-post h3 a {
+      color: var(--branco);
+      transition: color 0.3s;
+    }
+
+    .blog-post h3 a:hover {
+      color: var(--dourado);
+    }
+
+    .blog-post p {
+      font-size: 14px;
+      color: var(--cinza-claro);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    /* ==========================================
+      WHATSAPP FLUTUANTE
+    ========================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 900;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float > span {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 82px;
+      height: 82px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+    }
+
+    .whatsapp-float img {
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+      display: block;
+      border-radius: 50%;
+    }
+
+    .whatsapp-float > span > span:last-child {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      width: 20px;
+      height: 20px;
+      background: #25D366;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 1px 4px rgba(34, 34, 34, 0.1);
+    }
+
+    /* ==========================================
+      RODAPÉ
+    ========================================== */
+    .main-footer {
+      background: var(--preto);
+      border-top: 1px solid var(--borda-dourada);
+      padding: 60px 5% 30px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    .footer-column h3 {
+      font-size: 16px;
+      color: var(--dourado);
+      margin-bottom: 16px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      font-size: 14px;
+      color: var(--cinza-suave);
+      line-height: 1.8;
+    }
+
+    .footer-column a {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .footer-column a:hover {
+      color: var(--dourado);
+    }
+
+    .footer-contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .footer-contact-row .icon-bg {
+      flex-shrink: 0;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .social-icons .icon-bg {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(200,169,81,0.08);
+      border: 1px solid var(--borda-dourada);
+      transition: var(--transicao);
+    }
+
+    .social-icons a:hover .icon-bg {
+      background: var(--dourado);
+      border-color: var(--dourado);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--borda-dourada);
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+      margin-top: 20px;
+    }
+
+    /* ==========================================
+      RESPONSIVIDADE
+    ========================================== */
+    @media(max-width: 1024px) {
+      .filters-grid { grid-template-columns: repeat(3, 1fr); }
+      .launches-grid, .blog-posts { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media(max-width: 768px) {
+      .top-bar-content, .top-bar-contact { flex-direction: column; gap: 4px; align-items: flex-start; }
+      .main-header { top: 70px; }
+      .header-container { flex-direction: column; gap: 12px; }
+      .nav-menu ul { gap: 18px; }
+      .filters-grid { grid-template-columns: repeat(2, 1fr); }
+      .launches-grid, .blog-posts { grid-template-columns: 1fr; }
+      .whatsapp-float > span { width: 70px; height: 70px; }
+      .whatsapp-float img { width: 58px; height: 58px; }
+    }
+
+    @media(max-width: 480px) {
+      .filters-grid { grid-template-columns: 1fr; }
+      .hero-tabs { flex-wrap: wrap; }
+      .launches-section, .blog-section { padding: 50px 5%; }
+    }
+  </style>
 </head>
 <body>
 
-
-  <!-- ========== BARRA TOPO ========== -->
-  <div class="top-bar">
-    <div class="top-bar-content">
-      <div class="top-bar-contact">
-        <a href="mailto: imoveisemfloripa.fc@gmail.com" class="icon-link" aria-label="E-mail">
-          <span class="icon-bg">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#8B8B97"/><path d="M4 7.5V16a1.5 1.5 0 001.5 1.5h13A1.5 1.5 0 0020 16V7.5l-8 5.5-8-5.5z" fill="#fff"/><path d="M20 6a1.5 1.5 0 00-1.5-1.5h-13A1.5 1.5 0 004 6l8 5.5L20 6z" fill="#fff"/></svg>
-          </span>
-          imoveisemfloripa.fc@gmail.com
-        </a>
-        <a href="tel:+5548999600601" class="icon-link" aria-label="Telefone">
-          <span class="icon-bg">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#8B8B97"/><path d="M17.472 14.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff"/></svg>
-          </span>
-          (48) 99960-0601
-        </a>
-      </div>
-      <div class="icon-link" aria-label="Localização">
-        <span class="icon-bg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#8B8B97"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" fill="#fff"/></svg>
-        </span>
-        Florianópolis • São José • Palhoça
-      </div>
+<!-- ========== BARRA TOPO ========== -->
+<div class="top-bar">
+  <div class="top-bar-content">
+    <div class="top-bar-contact">
+      <a href="mailto:imoveisemfloripa.fc@gmail.com" class="icon-link">✉️ imoveisemfloripa.fc@gmail.com</a>
+      <a href="tel:+5548999600601" class="icon-link">📞 (48) 99960-0601</a>
     </div>
-  </div>
-  <header class="main-header">
-    <div class="header-container">
-      <div class="logo-section">
-        <img src="img/imagens/logo-Imóveis-em-Floripa.png" alt="imoveis em floripa fc" class="logo-img">
-      </div>
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="index.html">Comprar</a></li>
-          <!-- ==========  <li><a href="#alugar">Alugar</a></li>========== -->
-          <li><a href="#lancamentos">Lançamentos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-
-         
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- ========== HERO ========== -->
-  <section class="hero-image-section">
-    <div class="hero-image-content">
-      <h1>Encontre o seu imóvel na Grande Florianópolis</h1>
-      <div class="hero-tabs">
-        <button class="hero-tab active">Venda</button>
-        <button class="hero-tab">Lançamentos</button>
-        <button class="hero-tab">Aluguel</button>
-      </div>
-   <div class="hero-search-advanced">
-  <input type="text" id="filtro-cidade-busca" class="search-input-main" placeholder="Digite a cidade, bairro ou condomínio...">
-  <div class="search-filters">
-    <select id="filtro-tipo">
-      <option value="">Tipo de Imóvel</option>
-      <option value="Apartamento">Apartamento</option>
-      <option value="Casa">Casa</option>
-      <option value="Cobertura">Cobertura</option>
-      <option value="Studio">Studio</option>
-      <option value="Terreno">Terreno</option>
-    </select>
-    <select id="filtro-quartos">
-      <option value="">Dormitórios(s)</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4+</option>
-    </select>
-    <input type="text" id="filtro-codigo" placeholder="Digite o código...">
-  </div>
-  <div class="search-actions">
-    <button class="search-btn-main" onclick="aplicarFiltros()">🔍 Buscar</button>
-    <button class="filter-btn" onclick="limparFiltros()">Limpar</button>
+    <div class="icon-link">📍 Florianópolis • São José • Palhoça</div>
   </div>
 </div>
 
-  </section>
-  <div class="breadcrumb-bar">
-    <div class="breadcrumb-content">
-      <a href="index.html">Início</a> > <span>Imóveis à venda</span>
+<!-- ========== CABEÇALHO ========== -->
+<header class="main-header" id="mainHeader">
+  <div class="header-container">
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#imoveis">Comprar</a></li>
+        <li><a href="#lancamentos">Lançamentos</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== HERO / SLIDER ========== -->
+<section class="hero-slider" id="inicio">
+  <div class="slides">
+    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80');"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80');"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80');"></div>
+  </div>
+  <div class="overlay-dark"></div>
+
+  <div class="hero-content">
+    <div class="tag-local">FLORIANÓPOLIS • ALTO PADRÃO</div>
+    <h1>Encontre o imóvel dos seus sonhos em <span>Florianópolis</span></h1>
+    <p>Imóveis de alto padrão selecionados nas melhores localizações da ilha. Mais de 10 anos de experiência ajudando você a encontrar o lar ideal.</p>
+    <div class="hero-tabs">
+      <button class="hero-tab active">Comprar</button>
+      <button class="hero-tab">Lançamentos</button>
+      <button class="hero-tab">Alugar</button>
     </div>
   </div>
-  <main class="main-content">
-    <div class="section-header">
-      <h2 class="section-title">Imóveis em Destaque</h2>
-      <p class="section-subtitle">Confira nossa seleção especial de imóveis de alto padrão</p>
-    </div><div class="filter-section">
-  <div class="filter-grid">
-    <div class="filter-item">
-      <label>Cidade</label>
-      <select id="filtro-cidade">
-        <option value="">Todas</option>
-        <option value="Florianópolis">Florianópolis</option>
-        <option value="São José">São José</option>
-        <option value="Palhoça">Palhoça</option>
-      </select>
-    </div>
-    <div class="filter-item">
-      <label>Bairro</label>
-      <select id="filtro-bairro">
-        <option value="">Todos</option>
-       <option value="Areias">Areias</option>
-<option value="Jardim Santiago">Jardim Santiago</option>
-<option value="Ipiranga">Ipiranga</option>
-<option value="Bela Vista">Bela Vista</option>
-<option value="Nossa Senhora do Rosário">Nossa Senhora do Rosário</option>
-<option value="Jardim Cidade de Florianópolis">Jardim Cidade de Florianópolis</option>
-<option value="Real Parque">Real Parque</option>
-<option value="Pedregal">Pedregal</option>
-<option value="Barreiros">Barreiros</option>
-<option value="Bosque das Mansões">Bosque das Mansões</option>
-<option value="São Luiz">São Luiz</option>
-<option value="Roçado">Roçado</option>
-<option value="Campinas">Campinas</option>
-<option value="Centro">Centro</option>
-<option value="Kobrasol">Kobrasol</option>
-<option value="Praia Comprida">Praia Comprida</option>
-<option value="Serraria">Serraria</option>
-<option value="Potecas">Potecas</option>
-<option value="Forquilhas do Leste">Forquilhas do Leste</option>
-<option value="Forquilhas do Oeste">Forquilhas do Oeste</option>
-<option value="Alto Forquilhas">Alto Forquilhas</option>
-<option value="Ponta de Baixo">Ponta de Baixo</option>
-<option value="Fazenda Santo Antônio">Fazenda Santo Antônio</option>
-<option value="Picadas do Sul">Picadas do Sul</option>
-<option value="Flor de Nápolis">Flor de Nápolis</option>
-<option value="Forquilhinha">Forquilhinha</option>
-<option value="Distrito Industrial">Distrito Industrial</option>
-<option value="Sertão do Maruim">Sertão do Maruim</option>
-<option value="Pagará">Pagará</option>
-<option value="Colônia Santana">Colônia Santana</option>
 
-<option value="Centro">Centro</option>
-<option value="Agronômica">Agronômica</option>
-<option value="Trindade">Trindade</option>
-<option value="Pantanal">Pantanal</option>
-<option value="Córrego Grande">Córrego Grande</option>
-<option value="Itacorubi">Itacorubi</option>
-<option value="Campeche">Campeche</option>
-<option value="Rio Tavares">Rio Tavares</option>
-<option value="Lagoa da Conceição">Lagoa da Conceição</option>
-<option value="Ingleses">Ingleses</option>
-<option value="Canasvieiras">Canasvieiras</option>
-<option value="Jurerê">Jurerê</option>
-<option value="Coqueiros">Coqueiros</option>
-<option value="Estreito">Estreito</option>
-<option value="Saco dos Limões">Saco dos Limões</option>
-<option value="Monte Verde">Monte Verde</option>
-<option value="Morro das Pedras">Morro das Pedras</option>
-<option value="Santinho">Santinho</option>
-<option value="Ratones">Ratones</option>
-<option value="Costeira do Pirajubaé">Costeira do Pirajubaé</option>
-        <option value="Albardão">Albardão</option>
-<option value="Alto Aririú">Alto Aririú</option>
-<option value="Aririú">Aririú</option>
-<option value="Aririú da Formiga">Aririú da Formiga</option>
-<option value="Balneário Ponta do Papagaio">Balneário Ponta do Papagaio</option>
-<option value="Barra do Aririú">Barra do Aririú</option>
-<option value="Bela Vista">Bela Vista</option>
-<option value="Brejarú">Brejarú</option>
-<option value="Caminho Novo">Caminho Novo</option>
-<option value="Centro">Centro</option>
-<option value="Enseada do Brito">Enseada do Brito</option>
-<option value="Furadinho">Furadinho</option>
-<option value="Guarda do Cubatão">Guarda do Cubatão</option>
-<option value="Guarda do Embaú">Guarda do Embaú</option>
-<option value="Jardim Eldorado">Jardim Eldorado</option>
-<option value="Madri">Madri</option>
-<option value="Massiambu Pequeno">Massiambu Pequeno</option>
-<option value="Morretes">Morretes</option>
-<option value="Nova Palhoça">Nova Palhoça</option>
-<option value="Pachecos">Pachecos</option>
-<option value="Pagani">Pagani</option>
-<option value="Passa Vinte">Passa Vinte</option>
-<option value="Passagem do Massiambú">Passagem do Massiambú</option>
-<option value="Pedra Branca">Pedra Branca</option>
-<option value="Pinheira">Pinheira</option>
-<option value="Ponte do Imaruim">Ponte do Imaruim</option>
-<option value="Praia de Fora">Praia de Fora</option>
-<option value="Praia do Pontal">Praia do Pontal</option>
-<option value="Praia do Sonho">Praia do Sonho</option>
-<option value="Rio Grande">Rio Grande</option>
-<option value="São Sebastião">São Sebastião</option>
-<option value="Sertão do Campo">Sertão do Campo</option>
-<option value="Três Barras">Três Barras</option>
+  <div class="indicators">
+    <div class="indicator active" data-slide="0"></div>
+    <div class="indicator" data-slide="1"></div>
+    <div class="indicator" data-slide="2"></div>
+  </div>
+</section>
 
-      </select>
+<!-- ========== FILTROS ========== -->
+<section class="filters-section">
+  <div class="filters-container">
+    <div class="filters-header">
+      <h2>Buscar <span>Imóveis</span></h2>
+      <p>Selecione os filtros e encontre o imóvel perfeito</p>
     </div>
-    <div class="filter-item">
-      <label>Quartos</label>
-      <select id="filtro-quartos">
-        <option value="">Todos</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4+</option>
-      </select>
-    </div>
-    <div class="filter-item">
-      <label>Valor Mínimo</label>
-      <input type="number" id="filtro-min" placeholder="R$ 0">
-    </div>
-    <div class="filter-item">
-      <label>Valor Máximo</label>
-      <input type="number" id="filtro-max" placeholder="R$ 0">
-    </div>
-    <div class="filter-item">
-  <label>Código</label>
-  <input type="text" id="filtro-codigo" placeholder="Digite o código...">
-</div>
-
-    <div class="filter-item">
-      <button class="filter-btn" onclick="aplicarFiltros()">Filtrar</button>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <label>Cidade</label>
+        <select id="filterCity">
+          <option value="">Todas</option>
+          <option value="Florianópolis">Florianópolis</option>
+          <option value="São José">São José</option>
+          <option value="Palhoça">Palhoça</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label>Bairro</label>
+        <select id="filterNeighborhood">
+          <option value="">Todos</option>
+          <option value="Beira-Mar Norte">Beira-Mar Norte</option>
+          <option value="Centro">Centro</option>
+          <option value="Campeche">Campeche</option>
+          <option value="Jurerê">Jurerê</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label>Quartos</label>
+        <select id="filterRooms">
+          <option value="">Todos</option>
+          <option value="1">1 ou mais</option>
+          <option value="2">2 ou mais</option>
+          <option value="3">3 ou mais</option>
+          <option value="4">4 ou mais</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label>Valor Mínimo</label>
+        <input type="number" id="filterMinPrice" placeholder="R$ 0">
+      </div>
+      <div class="filter-item">
+        <label>Valor Máximo</label>
+        <input type="number" id="filterMaxPrice" placeholder="R$ ∞">
+      </div>
+      <div class="filter-item">
+        <button class="filter-btn" onclick="applyFilters()">🔍 Buscar</button>
+      </div>
     </div>
   </div>
-</div>
-<script>
-function aplicarFiltros() {
-  const cidade = document.getElementById('filtro-cidade')?.value || "";
-  const bairro = document.getElementById('filtro-bairro')?.value || "";
-  const quartos = document.getElementById('filtro-quartos')?.value || "";
-  const min = parseInt(document.getElementById('filtro-min')?.value) || 0;
-  const max = parseInt(document.getElementById('filtro-max')?.value) || Infinity;
-  const codigo = document.getElementById('filtro-codigo')?.value.trim() || "";
-  const busca = document.getElementById('filtro-cidade-busca')?.value.toLowerCase() || "";
+</section>
 
-  const cards = document.querySelectorAll('.property-card');
+<!-- ========== IMÓVEIS EM DESTAQUE ========== -->
+<main class="main-content" id="imoveis">
+  <div class="section-header">
+    <h2 class="section-title">Imóveis em <span>Destaque</span></h2>
+    <p class="section-subtitle">Confira nossas melhores oportunidades selecionadas</p>
+  </div>
+  <div class="properties-grid" id="propertiesGrid">
 
-  cards.forEach(card => {
-    const cidadeCard = (card.getAttribute('data-cidade') || "").toLowerCase();
-    const bairroCard = (card.getAttribute('data-bairro') || "").toLowerCase();
-    const quartosCard = parseInt(card.getAttribute('data-quartos')) || 0;
-    const precoCard = parseInt(card.getAttribute('data-preco')) || 0;
-    const codigoCard = card.getAttribute('data-codigo') || "";
-
-    let visivel = true;
-
-    // filtros principais
-    if (cidade && cidadeCard !== cidade.toLowerCase()) visivel = false;
-    if (bairro && bairroCard !== bairro.toLowerCase()) visivel = false;
-    if (quartos && (quartosCard != quartos && !(quartos === "4" && quartosCard >= 4))) visivel = false;
-    if (precoCard < min || precoCard > max) visivel = false;
-    if (codigo && codigoCard.toLowerCase() !== codigo.toLowerCase()) visivel = false;
-
-    // filtro de busca livre (cidade/bairro)
-    if (busca && !(cidadeCard.includes(busca) || bairroCard.includes(busca))) visivel = false;
-
-    card.style.display = visivel ? 'block' : 'none';
-  });
-}
-
-function limparFiltros() {
-  // limpa todos os campos
-  if (document.getElementById('filtro-cidade')) document.getElementById('filtro-cidade').value = "";
-  if (document.getElementById('filtro-bairro')) document.getElementById('filtro-bairro').value = "";
-  if (document.getElementById('filtro-quartos')) document.getElementById('filtro-quartos').value = "";
-  if (document.getElementById('filtro-min')) document.getElementById('filtro-min').value = "";
-  if (document.getElementById('filtro-max')) document.getElementById('filtro-max').value = "";
-  if (document.getElementById('filtro-codigo')) document.getElementById('filtro-codigo').value = "";
-  if (document.getElementById('filtro-cidade-busca')) document.getElementById('filtro-cidade-busca').value = "";
-
-  // mostra todos os cards novamente
-  const cards = document.querySelectorAll('.property-card');
-  cards.forEach(card => card.style.display = 'block');
-}
-
-function compartilhar(link) {
-  navigator.clipboard.writeText(link);
-  alert("Link copiado! Você pode enviar para alguém no WhatsApp ou redes sociais.");
-}
-
-function toggleFavorito(btn) {
-  btn.classList.toggle("favorito");
-}
-</script>
-
-
-
-
-   
-   <!-- OS IMÓVEIS EM DESTAQUE AQUI -->
-
-    <div class="properties-grid">
-     <article id="card-v439" class="property-card" 
-         data-cidade="Florianópolis" 
-         data-bairro="Agronômica" 
-         data-quartos="2" 
-         data-preco="815000"
-         data-codigo="v439">
+<article id="card-v439" class="property-card" data-cidade="Florianópolis" data-bairro="Agronômica" data-quartos="2" data-preco="815000" data-codigo="v439">
   <span class="property-tag">Destaque</span>
   <img src="img/v439/v439-1.webp" class="property-image" alt="Apartamento Agronômica">
   <div class="property-details">
@@ -351,27 +1084,19 @@ function toggleFavorito(btn) {
     <div class="property-code">Código: v439</div>
     <div class="property-actions">
       <a href="apartamento-venda-agronomica-v439.html" class="btn-details">Ver Detalhes</a>
-      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica%20-%20Código:%20v439" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp">WhatsApp</a>
-      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/apartamento-venda-agronomica-v439.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
-      <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica%20-%20Código:%20v439" class="btn-whats" target="_blank">WhatsApp</a>
+      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/apartamento-venda-agronomica-v439.html')">🔗</button>
+      <button class="btn-favorito" onclick="toggleFavorito(this)">❤️</button>
     </div>
   </div>
 </article>
 
-      <!-- Os cards antigos permanecem acima. Inserir os 3 novos imóveis ao final da grid -->
-      <div class="properties-grid">
-     <article id="card-v472" class="property-card" 
-         data-cidade="Florianópolis" 
-         data-bairro="Agronômica" 
-         data-quartos="3" 
-         data-preco="2.995.000"
-         data-codigo="v472">
+<article id="card-v472" class="property-card" data-cidade="Florianópolis" data-bairro="Agronômica" data-quartos="3" data-preco="2995000" data-codigo="v472">
   <span class="property-tag">Destaque</span>
   <img src="img/v472/anco1.jpeg" class="property-image" alt="Apartamento Agronômica">
   <div class="property-details">
     <div class="property-type">Apartamento</div>
-    <h3 class="property-title">Apartamento na Agronômica</h3>
+    <h3 class="property-title">Apartamento na Agronômica — Ancoradouro</h3>
     <div class="property-location">Agronômica - Florianópolis/SC</div>
     <div class="property-features">
       <div class="feature-item"><strong>3</strong> Quartos</div>
@@ -381,15 +1106,90 @@ function toggleFavorito(btn) {
     <div class="property-price">R$ 2.995.000</div>
     <div class="property-code">Código: v472</div>
     <div class="property-actions">
-      <a href="v472-apartamento-3-quartos-agronomica-florianopolis-ancoradouro.html"class="btn-details">Ver Detalhes</a>
-      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica%20-%20Código:%20v472" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp">WhatsApp</a>
-      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v472-apartamento-3-quartos-agronomica-florianopolis-ancoradouro.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
+      <a href="v472-apartamento-3-quartos-agronomica-florianopolis-ancoradouro.html" class="btn-details">Ver Detalhes</a>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica%20-%20Código:%20v472" class="btn-whats" target="_blank">WhatsApp</a>
+      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v472-apartamento-3-quartos-agronomica-florianopolis-ancoradouro.html')">🔗</button>
+      <button class="btn-favorito" onclick="toggleFavorito(this)">❤️</button>
+    </div>
+  </div>
+</article>
+
+<article id="card-v456" class="property-card" data-cidade="Governador Celso Ramos" data-bairro="Palmas" data-quartos="3" data-preco="1270000" data-codigo="v456">
+  <span class="property-tag">Praia</span>
+  <img src="img/v456/palmas1.jpeg" class="property-image" alt="Apartamento Palmas Celso Ramos">
+  <div class="property-details">
+    <div class="property-type">Apartamento</div>
+    <h3 class="property-title">Apartamento Palmas — Sacada com Vista Mar</h3>
+    <div class="property-location">Palmas - Gov. Celso Ramos/SC</div>
+    <div class="property-features">
+      <div class="feature-item"><strong>3</strong> Quartos</div>
+      <div class="feature-item"><strong>1</strong> Suíte</div>
+      <div class="feature-item"><strong>1</strong> Vaga</div>
+    </div>
+    <div class="property-price">R$ 1.270.000</div>
+    <div class="property-code">Código: v456</div>
+    <div class="property-actions">
+      <a href="v456-apartamento-venda-palmas-sacada-praia-celso-ramos+3dormitorios+suite.html" class="btn-details">Ver Detalhes</a>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20em%20Palmas%20-%20Código:%20v456" class="btn-whats" target="_blank">WhatsApp</a>
+      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v456-apartamento-venda-palmas-sacada-praia-celso-ramos+3dormitorios+suite.html')">🔗</button>
+      <button class="btn-favorito" onclick="toggleFavorito(this)">❤️</button>
+    </div>
+  </div>
+</article>
+
+<article id="card-v465" class="property-card" data-cidade="Florianópolis" data-bairro="Saco dos Limões" data-quartos="2" data-preco="1690000" data-codigo="v465">
+  <span class="property-tag">Novo</span>
+  <img src="img/v465/sala.jpeg" class="property-image" alt="Apartamento Saco dos Limões">
+  <div class="property-details">
+    <div class="property-type">Apartamento</div>
+    <h3 class="property-title">Apartamento no Saco dos Limões — 2 Suítes</h3>
+    <div class="property-location">Sul da Ilha - Florianópolis/SC</div>
+    <div class="property-features">
+      <div class="feature-item"><strong>2</strong> Quartos</div>
+      <div class="feature-item"><strong>2</strong> Suítes</div>
+      <div class="feature-item"><strong>2</strong> Vagas</div>
+    </div>
+    <div class="property-price">R$ 1.690.000</div>
+    <div class="property-code">Código: v465</div>
+    <div class="property-actions">
+      <a href="v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html" class="btn-details">Ver Detalhes</a>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Saco%20dos%20Limões%20-%20Código:%20v465" class="btn-whats" target="_blank">WhatsApp</a>
+      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html')">🔗</button>
+      <button class="btn-favorito" onclick="toggleFavorito(this)">❤️</button>
+    </div>
+  </div>
+</article>
+
+     <article id="card-v439" class="property-card" 
+         data-cidade="Florianópolis" 
+         data-bairro="Agronômica" 
+         data-quartos="2" 
+         data-preco="780000"
+         data-codigo="v439">
+  <span class="property-tag">Destaque</span>
+  <img src="img/v439/v439-1.webp" class="property-image" alt="Apartamento Agronômica">
+  <div class="property-details">
+    <div class="property-type">Apartamento</div>
+    <h3 class="property-title">Apartamento na Agronômica</h3>
+    <div class="property-location">Agronômica - Florianópolis/SC</div>
+    <div class="property-features">
+      <div class="feature-item"><strong>2</strong> Quartos</div>
+      <div class="feature-item"><strong>1</strong> Suíte</div>
+      <div class="feature-item"><strong>1</strong> Vaga</div>
+    </div>
+    <div class="property-price">R$ 780.000</div>
+    <div class="property-code">Código: v439</div>
+    <div class="property-actions">
+      <a href="apartamento-venda-agronomica-v439.html" class="btn-details">Ver Detalhes</a>
+      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Agronômica%20-%20Código:%20v439" 
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
+      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/apartamento-venda-agronomica-v439.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
   </div>
-</article> 
-</div>
+</article>
+
+      <!-- Os cards antigos permanecem acima. Inserir os 3 novos imóveis ao final da grid -->
    <article id="card-v456" class="property-card" 
          data-cidade="Governador Celso Ramos" 
          data-bairro="Palmas" 
@@ -412,7 +1212,7 @@ function toggleFavorito(btn) {
     <div class="property-actions">
       <a href="v456-apartamento-venda-palmas-sacada-praia-celso-ramos+3dormitorios+suite.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20em%20Palmas%20Celso%20Ramos%20-%20Código:%20v456" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v456-apartamento-venda-palmas-sacada-praia-celso-ramos+3dormitorios+suite.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
@@ -441,7 +1241,7 @@ function toggleFavorito(btn) {
     <div class="property-actions">
       <a href="v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Saco%20dos%20Limões%20-%20Código:%20v465" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v465-apartamento-venda-saco-dos-limoes-florianopolis-2-quartos-sendo-2-suites-sacada-vaga.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
@@ -452,7 +1252,7 @@ function toggleFavorito(btn) {
          data-cidade="Florianópolis" 
          data-bairro="Estreito" 
          data-quartos="3" 
-         data-preco="2020000" 
+         data-preco="1950000" 
          data-codigo="v448">
   <span class="property-tag">Duplex</span>
   <img src="img/v448/12.1 sacada mesanino.jpg" class="property-image" alt="Duplex Cobertura Estreito">
@@ -465,12 +1265,12 @@ function toggleFavorito(btn) {
       <div class="feature-item"><strong>1</strong> Suíte</div>
       <div class="feature-item"><strong>2</strong> Vagas</div>
     </div>
-    <div class="property-price">R$ 2.020.000</div>
+    <div class="property-price">R$ 1.950.000</div>
     <div class="property-code">Código: v448</div>
     <div class="property-actions">
       <a href="v448-apartamento-duplex-cobertura-220m2-3dormitorios-sacada+churrasqueira+vista+academia.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20duplex%20cobertura%20no%20Estreito%20-%20Código:%20v448" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v448-apartamento-duplex-cobertura-220m2-3dormitorios-sacada+churrasqueira+vista+academia.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
@@ -498,95 +1298,13 @@ function toggleFavorito(btn) {
     <div class="property-actions">
       <a href="v460-apartamento-venda-3dormitorios-beira-mar-norte+marina+110m2+vaga+florianopolis.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20na%20Beira%20Mar%20Norte%20Marina%20-%20Código:%20v460" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v460-apartamento-venda-3dormitorios-beira-mar-norte+marina+110m2+vaga+florianopolis.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
   </div>
 </article>
-      <article id="card-v473" class="property-card" 
-         data-cidade="Florianópolis" 
-         data-bairro="Santo Antônio de Lisboa" 
-         data-quartos="3" 
-         data-preco="1250000"
-         data-codigo="v473">
-  <img src="img/v473/casa5.jpg" class="property-image" alt="Casa em Santo Antônio de Lisboa">
-  <div class="property-details">
-    <div class="property-type">Casa</div>
-    <h3 class="property-title">Casa em Santo Antônio de Lisboa</h3>
-    <div class="property-location">Santo Antônio de Lisboa - Florianópolis/SC</div>
-    <div class="property-features">
-      <div class="feature-item"><strong>3</strong> Dormitórios</div>
-      <div class="feature-item"><strong>1</strong> Suíte</div>
-      <div class="feature-item"><strong>2</strong> Vagas</div>
-    </div>
-    <div class="property-price">R$ 1.850.000</div>
-    <div class="property-code">Código: v473</div>
-    <div class="property-actions">
-      <a href="v473-casa-a-venda-com-150m2-3-dormitorios-com-suite-em-santo-antonio-de-lisboa.html" class="btn-details">Ver Detalhes</a>
-      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20em%20Santo%20Antônio%20de%20Lisboa%20-%20Código:%20v473" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp">WhatsApp</a>
-      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v473-casa-a-venda-com-150m2-3-dormitorios-com-suite-em-santo-antonio-de-lisboa.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
-      <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
-    </div>
-  </div>
-</article>
-<article id="card-v466" class="property-card" 
-         data-cidade="Palhoça" 
-         data-bairro="Praia" 
-         data-quartos="3" 
-         data-preco="890000"
-         data-codigo="v466">
-  <span class="property-tag">Destaque</span>
-  <img src="img/v466/1.0-piscina.jpeg" class="property-image" alt="Casa com piscina na Praia em Palhoça">
-  <div class="property-details">
-    <div class="property-type">Casa</div>
-    <h3 class="property-title">Casa com piscina na Praia</h3>
-    <div class="property-location">Praia - Palhoça/SC</div>
-    <div class="property-features">
-      <div class="feature-item"><strong>3</strong> Dormitórios</div>
-      <div class="feature-item"><strong>1</strong> Suíte</div>
-      <div class="feature-item"><strong>2</strong> Vagas</div>
-    </div>
-    <div class="property-price">R$ 998.000</div>
-    <div class="property-code">Código: v466</div>
-    <div class="property-actions">
-      <a href="v466-casa-a-venda-com-03-dormitorios-e-piscina-na-praia-em-palhoca-sc.html" class="btn-details">Ver Detalhes</a>
-      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20na%20Praia%20-%20Código:%20v466" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp">WhatsApp</a>
-      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v466-casa-a-venda-com-03-dormitorios-e-piscina-na-praia-em-palhoca-sc.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
-      <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
-    </div>
-  </div>
-</article>
 
-<article id="card-v469" class="property-card" 
-         data-cidade="Palhoça" 
-         data-bairro="Condomínio" 
-         data-quartos="2" 
-         data-preco="380000"
-         data-codigo="v469">
-  <img src="img/v469/1.14casa.jpeg" class="property-image" alt="Casa em condomínio em Palhoça">
-  <div class="property-details">
-    <div class="property-type">Casa</div>
-    <h3 class="property-title">Casa em condomínio</h3>
-    <div class="property-location">Palhoça/SC</div>
-    <div class="property-features">
-      <div class="feature-item"><strong>2</strong> Dormitórios</div>
-      <div class="feature-item"><strong>1</strong> Banheiro</div>
-      <div class="feature-item"><strong>1</strong> Vaga</div>
-    </div>
-    <div class="property-price">R$ 320.000</div>
-    <div class="property-code">Código: v469</div>
-    <div class="property-actions">
-      <a href="v469-casa-a-venda-em-condominio-com-02-dormitorios-em-palhoca.html" class="btn-details">Ver Detalhes</a>
-      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20em%20condomínio%20-%20Código:%20v469" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp">WhatsApp</a>
-      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v469-casa-a-venda-em-condominio-com-02-dormitorios-em-palhoca.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
-      <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
-    </div>
-  </div>
-</article>
 
           <article id="card-v450" class="property-card" 
          data-cidade="Florianópolis" 
@@ -610,7 +1328,7 @@ function toggleFavorito(btn) {
     <div class="property-actions">
       <a href="../apartamento-venda-centro-florianopolis-v450.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Centro%20Kuboo%20-%20Código:%20v450" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/apartamento-venda-centro-florianopolis-v450.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
@@ -638,7 +1356,7 @@ function toggleFavorito(btn) {
     <div class="property-actions">
       <a href="apartamento-venda-kobrasol-v440.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Kobrasol%20-%20Código:%20v440" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/apartamento-venda-kobrasol-v440.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
@@ -666,37 +1384,8 @@ function toggleFavorito(btn) {
     <div class="property-actions">
       <a href="v463-casa-a-venda-com-03-dormitorios-no-bairro-forquilhas-em-sao-jose-sc.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20no%20Forquilhas%20-%20Código:%20v463" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v463-casa-a-venda-com-03-dormitorios-no-bairro-forquilhas-em-sao-jose-sc.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
-      <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
-    </div>
-  </div>
-</article>
-<article id="card-v474" class="property-card" 
-         data-cidade="Governador Celso Ramos" 
-         data-bairro="Praia de Palmas" 
-         data-quartos="3" 
-         data-preco="890000" 
-         data-codigo="v474">
-  <span class="property-tag">Apartamento</span>
-  <img src="img/v474/v4745.jpeg" class="property-image" alt="Apartamento Praia de Palmas">
-  <div class="property-details">
-    <div class="property-type">Apartamento</div>
-    <h3 class="property-title">Apartamento à venda na Praia de Palmas</h3>
-    <div class="property-location">Governador Celso Ramos - SC</div>
-    <div class="property-features">
-      <div class="feature-item"><strong>3</strong> Quartos</div>
-      <div class="feature-item"><strong>1</strong> Suíte</div>
-      <div class="feature-item"><strong>1</strong> Vagas</div>
-      <div class="feature-item">Sacada</div>
-    </div>
-    <div class="property-price">R$ 890.000</div>
-    <div class="property-code">Código: v474</div>
-    <div class="property-actions">
-      <a href="v474-apartamento-a-venda-3-dormitorios-sacada-na-praia-de-palmas-sc.html" class="btn-details">Ver Detalhes</a>
-      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20em%20Palmas%20-%20Código:%20v474" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
-      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v474-apartamento-a-venda-3-dormitorios-sacada-na-praia-de-palmas-sc.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
   </div>
@@ -725,35 +1414,35 @@ function toggleFavorito(btn) {
     <div class="property-actions">
       <a href="apartamento-venda-centro-v447.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20no%20Centro%20-%20Código:%20v447" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/apartamento-venda-centro-v447.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
   </div>
 </article>
 <article id="card-v457" class="property-card" 
-         data-cidade="São José" 
+         data-cidade="Florianópolis" 
          data-bairro="Campinas" 
          data-quartos="1" 
-         data-preco="318000" 
+         data-preco="355000" 
          data-codigo="v457">
   <span class="property-tag">Oportunidade</span>
   <img src="img/v457/v457-1.jpeg" class="property-image" alt="Apartamento Campinas">
   <div class="property-details">
     <div class="property-type">Apartamento</div>
     <h3 class="property-title">Apartamento Campinas</h3>
-    <div class="property-location">Campinas - São José</div>
+    <div class="property-location">Campinas - Florianópolis/SC</div>
     <div class="property-features">
       <div class="feature-item"><strong>1</strong> Quarto</div>
       <div class="feature-item"><strong>1</strong> Suíte</div>
       <div class="feature-item"><strong>1</strong> Vaga</div>
     </div>
-    <div class="property-price">R$ 318.000</div>
+    <div class="property-price">R$ 355.000</div>
     <div class="property-code">Código: v457</div>
     <div class="property-actions">
       <a href="apartamento-venda-campinas-v457.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20em%20Campinas%20-%20Código:%20v457" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/apartamento-venda-campinas-v457.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
@@ -781,7 +1470,7 @@ function toggleFavorito(btn) {
     <div class="property-actions">
       <a href="v471-Corretor-Robson-apartamento-venda-bairro-bela-vista-sao-jose-90m2-2-sacadas-3-vagas.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20em%20Bela%20Vista%20-%20Código:%20v471" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v471-Corretor-Robson-apartamento-venda-bairro-bela-vista-sao-jose-90m2-2-sacadas-3-vagas.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
@@ -809,72 +1498,12 @@ function toggleFavorito(btn) {
     <div class="property-actions">
       <a href="apartamento-venda-floresta-v441.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20Nossa%20Sra%20do%20Rosário%20-%20Código:%20v441" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/apartamento-venda-floresta-v441.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
   </div>
 </article>
-      <article id="card-v449" class="property-card" 
-         data-cidade="Florianópolis" 
-         data-bairro="Ratones" 
-         data-quartos="4" 
-         data-preco="1450000" 
-         data-codigo="v449">
-  <span class="property-tag">Casa</span>
-  <img src="img/v449/casav4491.jpg" class="property-image" alt="Casa Ratones Florianópolis">
-  <div class="property-details">
-    <div class="property-type">Casa</div>
-    <h3 class="property-title">Casa à venda em Ratones</h3>
-    <div class="property-location">Norte da Ilha - Florianópolis</div>
-    <div class="property-features">
-      <div class="feature-item"><strong>4</strong> Quartos</div>
-      <div class="feature-item"><strong>1</strong> Suíte</div>
-      <div class="feature-item"><strong>3</strong> Vagas</div>
-      <div class="feature-item"><strong>355m²</strong> Área construída</div>
-    </div>
-    <div class="property-price">R$ 1.450.000</div>
-    <div class="property-code">Código: v449</div>
-    <div class="property-actions">
-      <a href="v449-casa-venda-norte-da-ilha-ratones-florianopolis-355m2-4quartos.html" class="btn-details">Ver Detalhes</a>
-      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20em%20Ratones%20-%20Código:%20v449" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
-      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v449-casa-venda-norte-da-ilha-ratones-florianopolis-355m2-4quartos.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
-      <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
-    </div>
-  </div>
-</article>
-      <article id="card-v475" class="property-card" 
-         data-cidade="São José" 
-         data-bairro="São José" 
-         data-quartos="2" 
-         data-preco="590000" 
-         data-codigo="v475">
-  <span class="property-tag">Casa</span>
-  <img src="img/v475/v4751.jpeg" class="property-image" alt="Casa São José">
-  <div class="property-details">
-    <div class="property-type">Casa</div>
-    <h3 class="property-title">Casa à venda em São José</h3>
-    <div class="property-location">São José - SC</div>
-    <div class="property-features">
-      <div class="feature-item"><strong>2</strong> Quartos</div>
-      <div class="feature-item"><strong>0</strong> Suíte</div>
-      <div class="feature-item"><strong>2</strong> Vagas</div>
-      <div class="feature-item"><strong>Área gourmet</strong> com hidro</div>
-    </div>
-    <div class="property-price">R$ 590.000</div>
-    <div class="property-code">Código: v475</div>
-    <div class="property-actions">
-      <a href="v475-casa-a-venda-com-2-dormitorios-area-gourmet-com-hidro-em-sao-jose-sc.html" class="btn-details">Ver Detalhes</a>
-      <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20em%20São%20José%20-%20Código:%20v475" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
-      <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v475-casa-a-venda-com-2-dormitorios-area-gourmet-com-hidro-em-sao-jose-sc.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
-      <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
-    </div>
-  </div>
-</article>
-
-
 
 <article id="card-v468" class="property-card" 
          data-cidade="São José" 
@@ -898,7 +1527,7 @@ function toggleFavorito(btn) {
     <div class="property-actions">
       <a href="v468-casa-unifamiliar-a-venda-em-forquilhas.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20na%20casa%20em%20Forquilhas%20-%20Código:%20v468" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v468-casa-unifamiliar-a-venda-em-forquilhas.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
@@ -929,505 +1558,187 @@ function toggleFavorito(btn) {
     <div class="property-actions">
       <a href="v467-apartamento-com-02-dormitorios-em-palhoca-sc.html" class="btn-details">Ver Detalhes</a>
       <a href="https://wa.me/5548999600601?text=Tenho%20interesse%20no%20apartamento%20em%20Palhoça%20-%20Código:%20v467" 
-         class="btn-whats" target="_blank" aria-label="WhatsApp"> WhatsApp</a>
+         class="btn-whats" target="_blank" aria-label="WhatsApp">💬 WhatsApp</a>
       <button class="btn-compartilhar" onclick="compartilhar('https://imoveisfloripa.online/v467-apartamento-com-02-dormitorios-em-palhoca-sc.html')" aria-label="Compartilhar">🔗 Compartilhar</button>
       <button class="btn-favorito" onclick="toggleFavorito(this)" aria-label="Favoritar">❤️</button>
     </div>
   </div>
 </article>
-  </main>
+
   
-  <section class="lancamentos-section" id="lancamentos">
-    <div class="lancamentos-content">
-      <div class="lancamentos-header">
-        <h2>Lançamentos Exclusivos</h2>
-        <p>Conheça os empreendimentos mais aguardados de Florianópolis</p>
-      </div>
-      <div class="lancamentos-grid">
-        <article class="lancamento-card">
-          <img src="https://gralha2.inforcedata.com.br/api/image/76402473.jpg" alt="Um Milano" class="lancamento-image">
-          <div class="lancamento-info">
-            <span class="lancamento-badge">Pré-Lançamento</span>
-            <h3 class="lancamento-title">Um Milano</h3>
-            <div class="lancamento-location"> Beira-Mar Norte - Florianópolis/SC</div>
-            <p class="lancamento-description">
-              Apartamentos de 231 a 452m² com 3 e 4 suítes. Alto padrão à beira-mar com vista privilegiada.
-            </p>
-            <a href="v452-arkki-apartamentos-de-2-e-3-suites-no-centro-de-florianopolis.html" class="lancamento-btn">Saiba Mais</a>
-          </div>
-        </article>
-        <article class="lancamento-card">
-          <img src="img/v452/76467372.jpg" alt="Connect 233" class="lancamento-image">
-          <div class="lancamento-info">
-            <span class="lancamento-badge">Lançamento</span>
-            <h3 class="lancamento-title">Connect 233</h3>
-            <div class="lancamento-location"> Centro - Florianópolis/SC</div>
-            <p class="lancamento-description">
-              Studios e apartamentos de 23 a 85m². Perfeito para investimento e moradia no coração da cidade.
-            </p>
-            <a href="v452-arkki-apartamentos-de-2-e-3-suites-no-centro-de-florianopolis.html" class="lancamento-btn">Saiba Mais</a>
-          </div>
-        </article>
-        <article class="lancamento-card">
-          <img src="https://gralha2.inforcedata.com.br/api/image/76467398.jpg" alt="ARKKI" class="lancamento-image">
-          <div class="lancamento-info">
-            <span class="lancamento-badge">Em Obras</span>
-            <h3 class="lancamento-title">ARKKI</h3>
-            <div class="lancamento-location"> Centro - Florianópolis/SC</div>
-            <p class="lancamento-description">
-              Apartamentos de 82 a 146m² com 2 e 3 suítes. Arquitetura moderna e localização privilegiada.
-            </p>
-            <a href="v452-arkki-apartamentos-de-2-e-3-suites-no-centro-de-florianopolis.html" class="lancamento-btn">Saiba Mais</a>
-          </div>
-        </article>
-      </div>
-              
-      <button class="lancamentos-arrow lancamentos-arrow-right" aria-label="Próximos lançamentos" style="position:absolute;right:-28px;top:50%;transform:translateY(-50%);background:#fff;border:none;box-shadow:0 2px 8px rgba(34,34,34,0.10);border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="14" cy="14" r="14" fill="#fff"/>
-          <path d="M11 9l5 5-5 5" stroke="#8B8B97" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
+  </div>
+</main>
+
+<!-- ========== LANÇAMENTOS ========== -->
+<section class="launches-section" id="lancamentos">
+  <div class="launches-header">
+    <h2>Lançamentos <span>Exclusivos</span></h2>
+    <p>Conheça os empreendimentos mais aguardados de Florianópolis</p>
+  </div>
+  <div class="launches-content">
+    <div class="launches-grid">
+      <article class="launch-card">
+        <img src="https://gralha2.inforcedata.com.br/api/image/76402473.jpg" alt="Um Milano" class="launch-image">
+        <div class="launch-info">
+          <span class="launch-badge">Pré-Lançamento</span>
+          <h3 class="launch-title">Um Milano</h3>
+          <div class="launch-location">📍 Beira-Mar Norte - Florianópolis/SC</div>
+          <p class="launch-description">Apartamentos de 231 a 452m² com 3 e 4 suítes. Alto padrão à beira-mar com vista privilegiada.</p>
+          <a href="apartamento-um-milano-v450.html" class="launch-btn">Saiba Mais →</a>
+        </div>
+      </article>
+      <article class="launch-card">
+        <img src="https://gralha2.inforcedata.com.br/api/image/76413761.jpg" alt="Connect 233" class="launch-image">
+        <div class="launch-info">
+          <span class="launch-badge">Lançamento</span>
+          <h3 class="launch-title">Connect 233</h3>
+          <div class="launch-location">📍 Centro - Florianópolis/SC</div>
+          <p class="launch-description">Studios e apartamentos de 23 a 85m². Perfeito para investimento e moradia no coração da cidade.</p>
+          <a href="apartamento-connect-233-v451.html" class="launch-btn">Saiba Mais →</a>
+        </div>
+      </article>
+      <article class="launch-card">
+        <img src="https://gralha2.inforcedata.com.br/api/image/76467398.jpg" alt="ARKKI" class="launch-image">
+        <div class="launch-info">
+          <span class="launch-badge">Em Obras</span>
+          <h3 class="launch-title">ARKKI</h3>
+          <div class="launch-location">📍 Centro - Florianópolis/SC</div>
+          <p class="launch-description">Apartamentos de 82 a 146m² com 2 e 3 suítes. Arquitetura moderna e localização privilegiada.</p>
+          <a href="apartamento-arkki-v452.html" class="launch-btn">Saiba Mais →</a>
+        </div>
+      </article>
     </div>
-  <script>
-    // Carrossel de 3 em 3 lançamentos
-    (function(){
-      const lancs = Array.from(document.querySelectorAll('.lancamentos-grid .lancamento-card'));
-      const arrow = document.querySelector('.lancamentos-arrow-right');
-      let idx = 0;
-      function showLanc(idx) {
-        lancs.forEach((el,i)=>{
-          el.style.display = (i >= idx && i < idx+3) ? 'block' : 'none';
-        });
-      }
-      // A seta sempre aparece, igual ao blog
-      if(lancs.length > 0 && arrow) {
-        showLanc(0);
-        arrow.addEventListener('click',()=>{
-          idx += 3;
-          if(idx >= lancs.length) idx = 0;
-          showLanc(idx);
-        });
-      }
-    })();
-  </script>
-  </section>
-  <a href="https://wa.me/5548999600601?text=Olá! Vim pelo site e gostaria de mais informações sobre os imóveis" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-    <span style="position:relative;display:flex;align-items:center;justify-content:center;width:82px;height:82px;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(34,34,34,0.10);">
-      <img src="img/imagens/logo-Imóveis-em-Floripa.png" alt="Imóveis em Floripa FC" style="width:72px;height:72px;object-fit:contain;display:block;">
-      <span style="position:absolute;bottom:8px;right:8px;width:18px;height:18px;background:#25D366;border:2.5px solid #fff;border-radius:50%;box-shadow:0 1px 4px rgba(34,34,34,0.10);"></span>
-    </span>
-  </a>
-   <section class="blog-section">
-    <h2>Blog Imobiliário</h2>
-    <div class="blog-posts blog-slider" style="position:relative;">
-      <article class="blog-post">
-        <h3><a href="artigo-marina-infra.html">Marina Beira-Mar Norte: Infraestrutura e Mobilidade</a></h3>
-        <p>Como a nova marina e obras de mobilidade vão transformar Florianópolis e valorizar imóveis.</p>
-      </article>
-      
-      <article class="blog-post">
-        <h3><a href="artigo-novo-wellness-imoveis-alto-padrao-luxo-floripa.html"> A Revolução do Wellness Real Estate </a></h3>
-        <p>O Novo Luxo é Viver: A Revolução do Wellness Real Estate e o Fenômeno Florianópolis.</p>
-      </article>
-      <article class="blog-post">
-        <h3><a href="artigo-marina-mercadoimobiliario.html">Marina e o Mercado Imobiliário</a></h3>
-        <p>O impacto da Marina Beira-Mar Norte no mercado imobiliário de alto padrão.</p>
-      </article>
-      <article class="blog-post">
-        <h3><a href="artigo-airbnb.html">Como Lucrar com Airbnb em Florianópolis</a></h3>
-        <p>Descubra dicas para maximizar seus rendimentos alugando imóveis na ilha da magia.</p>
-      </article>
-      <article class="blog-post">
-        <h3><a href="artigo-cfl-campeche.html">CFL Lança Empreendimento no Campeche</a></h3>
-        <p>Conheça o novo projeto da CFL com vista para o mar e alto padrão.</p>
-      </article>
-      <article class="blog-post">
-        <h3><a href="artigo-floripa-mercado-imobiliario.html">Mercado Imobiliário de Florianópolis</a></h3>
-        <p>Análise completa do mercado imobiliário na capital catarinense.</p>
-      </article>
-      <button class="blog-arrow blog-arrow-right" aria-label="Próximos artigos" style="position:absolute;right:-28px;top:50%;transform:translateY(-50%);background:#fff;border:none;box-shadow:0 2px 8px rgba(34,34,34,0.10);border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="14" cy="14" r="14" fill="#fff"/>
-          <path d="M11 9l5 5-5 5" stroke="#8B8B97" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
+  </div>
+</section>
+
+<!-- ========== BLOG ========== -->
+<section class="blog-section" id="blog">
+  <h2>Blog <span>Imobiliário</span></h2>
+  <div class="blog-posts">
+    <article class="blog-post">
+      <h3><a href="artigo-marina-infra.html">Marina Beira-Mar Norte: Infraestrutura e Mobilidade</a></h3>
+      <p>Como a nova marina e obras de mobilidade vão transformar Florianópolis e valorizar imóveis.</p>
+    </article>
+    <article class="blog-post">
+      <h3><a href="artigo-marina-mercadoimobiliario.html">Marina e o Mercado Imobiliário</a></h3>
+      <p>O impacto da Marina Beira-Mar Norte no mercado imobiliário de alto padrão.</p>
+    </article>
+    <article class="blog-post">
+      <h3><a href="artigo-airbnb.html">Como Lucrar com Airbnb em Florianópolis</a></h3>
+      <p>Descubra dicas para maximizar seus rendimentos alugando imóveis na Ilha da Magia.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ========== WHATSAPP FLUTUANTE ========== -->
+<a href="https://wa.me/5548999600601?text=Olá! Vim pelo site e gostaria de mais informações sobre os imóveis" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <span>
+    <!-- ⚠️ COLOQUE O CAMINHO DA SUA IMAGEM ABAIXO -->
+    <img src="img/imagens/icone-whatsapp.png" alt="WhatsApp - Imóveis em Floripa FC">
+    <span></span>
+  </span>
+</a>
+
+<!-- ========== RODAPÉ ========== -->
+<footer class="main-footer" id="contato">
+  <div class="footer-grid">
+    <div class="footer-column">
+      <h3>Sobre Nós</h3>
+      <p>Imóveis de alto padrão em Florianópolis e Grande Florianópolis. Mais de 10 anos de experiência no mercado imobiliário ajudando você a encontrar o imóvel dos sonhos.</p>
     </div>
-    <script>
-      // Carrossel de 3 em 3 artigos
-      (function(){
-        const posts = Array.from(document.querySelectorAll('.blog-posts .blog-post'));
-        const arrow = document.querySelector('.blog-arrow-right');
-        let idx = 0;
-        function show(idx) {
-          posts.forEach((el,i)=>{
-            el.style.display = (i >= idx && i < idx+3) ? 'flex' : 'none';
-          });
-        }
-        function updateArrow() {
-          if (arrow) arrow.style.display = (posts.length > 3) ? 'flex' : 'none';
-        }
-        if(posts.length > 0 && arrow) {
-          show(posts.length-3 < 0 ? 0 : posts.length-3);
-          updateArrow();
-          arrow.addEventListener('click',()=>{
-            idx += 3;
-            if(idx >= posts.length) idx = 0;
-            show(idx);
-          });
-        }
-      })();
-    </script>
-  </section>
-  
-  <footer class="main-footer">
-    <div class="footer-grid">
-      <div class="footer-column">
-        <img src="img/imagens/logo-Imóveis-em-Floripa.png" alt="Imoveis em Floripa FC" class="footer-logo" style="margin-bottom:-8px;margin-top:-14px;">
-        <p>Imóveis de alto padrão em Florianópolis e Grande Florianópolis. Mais de 10 anos de experiência no mercado imobiliário.</p>
-        <!-- Social icons removidos desta coluna -->
+    <div class="footer-column">
+      <h3>Navegação</h3>
+      <a href="#inicio">Início</a>
+      <a href="#imoveis">Comprar Imóvel</a>
+      <a href="#lancamentos">Lançamentos</a>
+      <a href="#blog">Blog</a>
+    </div>
+    <div class="footer-column">
+      <h3>Contato</h3>
+      <div class="footer-contact-row">
+        <span class="icon-bg">✉️</span>
+        <a href="mailto:imoveisemfloripa.fc@gmail.com">imoveisemfloripa.fc@gmail.com</a>
       </div>
-      <div class="footer-column">
-        <h3>Navegação</h3>
-        <a href="index.html">Início</a>
-        <a href="index.html">Comprar Imóvel</a>
-        <a href="#alugar">Alugar Imóvel</a>
-        <a href="#lancamentos">Lançamentos</a>
-        <a href="blog.html">Blog</a>
- 
-      
+      <div class="footer-contact-row">
+        <span class="icon-bg">📞</span>
+        <a href="tel:+5548999600601">(48) 99960-0601</a>
       </div>
-      <div class="footer-column">
-        <h3>Contato</h3>
-        <div class="footer-contact-row">
-          <span class="icon-bg">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><path d="M4 7.5V16a1.5 1.5 0 001.5 1.5h13A1.5 1.5 0 0020 16V7.5l-8 5.5-8-5.5z" fill="#fff" stroke="#b08d57" stroke-width="1.2"/><path d="M20 6a1.5 1.5 0 00-1.5-1.5h-13A1.5 1.5 0 004 6l8 5.5L20 6z" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
-          </span>
-          <a href="mailto:flavia.capacia@creci.gov">imoveisemfloripa.fc@gmail.com</a>
-        </div>
-        <div class="footer-contact-row">
-          <span class="icon-bg">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><path d="M17.472 14.339c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.178-.237.355-.917 1.153-1.125 1.39-.207.237-.414.266-.77.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.207-.355-.022-.547.156-.724.16-.159.355-.414.533-.62.178-.207.237-.355.355-.592.118-.237.06-.444-.03-.622-.089-.178-.797-1.924-1.092-2.637-.287-.692-.58-.597-.797-.607-.207-.009-.444-.011-.68-.011-.237 0-.62.089-.944.444-.324.355-1.24 1.211-1.24 2.951 0 1.74 1.267 3.422 1.444 3.659.178.237 2.5 3.82 6.06 5.215.847.292 1.507.466 2.022.597.85.216 1.624.186 2.237.113.682-.08 2.096-.857 2.393-1.687.296-.83.296-1.541.207-1.687-.089-.147-.324-.237-.68-.414z" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
-          </span>
-          <a href="tel:+5548999600601">(48) 99960-0601</a>
-        </div>
-        <div class="footer-contact-row">
-          <span class="icon-bg">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
-          </span>
-          <span>Florianópolis • São José • Palhoça</span>
-        </div>
-        <div class="social-icons" style="margin-top:10px;">
-          <a href="https://www.facebook.com/imoveisemfloripa.fc" target="_blank" aria-label="Facebook">
-            <span class="icon-bg">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><path d="M20.5 16h-3v8h-3v-8h-2v-3h2v-2c0-2.1 1.2-3.5 3.7-3.5l2.3.01V13h-1.7c-.5 0-.8.3-.8.8V13h2.5l-.3 3z" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
-            </span>
-          </a>
-          <a href="https://www.instagram.com/imoveisemfloripa.fc/" target="_blank" aria-label="Instagram">
-            <span class="icon-bg">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><rect x="10" y="10" width="12" height="12" rx="4" fill="#fff" stroke="#b08d57" stroke-width="1.2"/><circle cx="16" cy="16" r="3" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.2"/><circle cx="21" cy="11" r="1" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
-            </span>
-          </a>
-          <a href="https://www.linkedin.com/in/imoveisemfloripa.fc" target="_blank" aria-label="LinkedIn">
-            <span class="icon-bg">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><rect x="10" y="13" width="2.5" height="7" fill="#fff" stroke="#b08d57" stroke-width="1.2"/><rect x="19.5" y="16" width="2.5" height="4" fill="#fff" stroke="#b08d57" stroke-width="1.2"/><rect x="10" y="10" width="2.5" height="2.5" fill="#fff" stroke="#b08d57" stroke-width="1.2"/><rect x="14" y="16" width="2.5" height="4" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
-            </span>
-          </a>
-          <a href="https://www.youtube.com/@imoveisemfloripa.fc" target="_blank" aria-label="YouTube">
-            <span class="icon-bg">
-              <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#f5ecd9" stroke="#b08d57" stroke-width="1.5"/><polygon points="13,12 22,16 13,20" fill="#fff" stroke="#b08d57" stroke-width="1.2"/></svg>
-            </span>
-          </a>
-        </div>
+      <div class="footer-contact-row">
+        <span class="icon-bg">📍</span>
+        <span>Florianópolis • São José • Palhoça</span>
       </div>
-      <div class="footer-column">
-        <h3>Horário de Atendimento</h3>
-        <p>Segunda a Sexta: 9h às 18h</p>
-        <p>Sábado: 9h às 14h</p>
-        <p>Domingo: Fechado</p>
-        <p style="margin-top: 18px;"><strong>Atendimento via WhatsApp 24h</strong></p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/imoveisemfloripa.fc" target="_blank" aria-label="Facebook"><span class="icon-bg">f</span></a>
+        <a href="https://www.instagram.com/imoveisemfloripa.fc/" target="_blank" aria-label="Instagram"><span class="icon-bg">📷</span></a>
+        <a href="https://www.linkedin.com/in/imoveisemfloripa.fc" target="_blank" aria-label="LinkedIn"><span class="icon-bg">in</span></a>
+        <a href="https://www.youtube.com/@imoveisemfloripa.fc" target="_blank" aria-label="YouTube"><span class="icon-bg">▶</span></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Imoveis em Floripa FC- Todos os direitos reservados • CRECI</p>
-      <p>Desenvolvido com 💛 por Capacia Group</p>
+    <div class="footer-column">
+      <h3>Atendimento</h3>
+      <p>Segunda a Sexta: 9h às 18h</p>
+      <p>Sábado: 9h às 14h</p>
+      <p>Domingo: Fechado</p>
+      <p style="margin-top: 18px;"><strong>Atendimento via WhatsApp 24h</strong></p>
     </div>
-  </footer>
-            
-// rota para captar imóveis de sites externos//
-<!-- Script: integração com API do CRM -->
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Imóveis em Floripa FC — Todos os direitos reservados • CRECI/SC</p>
+    <p>Desenvolvido com 💛 por Capacia Group</p>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
 <script>
-  const API_URL = "";
+  // Cabeçalho efeito rolagem
+  const header = document.getElementById('mainHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 100);
+  });
 
-  function formatarPrecoBRL(valor) {
-    if (!valor) return "";
-    return String(valor); // já vem formatado da API
+  // Slider da capa
+  const slides = document.querySelectorAll('.slide');
+  const indicators = document.querySelectorAll('.indicator');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    indicators.forEach((ind, i) => ind.classList.toggle('active', i === index));
   }
 
-  function escaparHtml(str) {
-    return String(str ?? "")
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#039;");
-  }
+  indicators.forEach((ind, i) => {
+    ind.addEventListener('click', () => {
+      currentSlide = i;
+      showSlide(currentSlide);
+    });
+  });
 
-  async function carregarImoveis() {
-    const statusEl = document.querySelector('#imoveis-status');
-    const listaEl = document.querySelector('#lista-imoveis');
-    const lancamentosEl = document.querySelector('#lista-lancamentos');
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 6000);
 
-    if (!statusEl || !listaEl) return;
+  // Dados de exemplo de imóveis
+  const properties = [
+    { id: 'v001', title: 'Apartamento Beira-Mar Norte', type: 'Apartamento', location: 'Beira-Mar Norte, Florianópolis', price: 12500000, bedrooms: 4, suites: 4, area: 420, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80', tag: 'Exclusivo' },
+    { id: 'v002', title: 'Casa em Jurerê Internacional', type: 'Casa', location: 'Jurerê, Florianópolis', price: 8200000, bedrooms: 5, suites: 3, area: 380, image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80', tag: 'Destaque' },
+    { id: 'v003', title: 'Apartamento Centro Floripa', type: 'Apartamento', location: 'Centro, Florianópolis', price: 980000, bedrooms: 2, suites: 1, area: 72, image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80', tag: 'Ótimo Preço' },
+  ];
 
-    const isLancamento = (imovel) => {
-      const texto = [
-        imovel?.titulo,
-        imovel?.titulo_anuncio,
-        imovel?.categoria,
-        imovel?.tipo,
-        imovel?.situacao,
-        imovel?.descricao
-      ].filter(Boolean).join(' ').toLowerCase();
-
-      return texto.includes('lançamento')
-        || texto.includes('lancamento')
-        || texto.includes('na planta')
-        || texto.includes('em construção')
-        || texto.includes('em construcao');
-    };
-
-    const buildInfos = (imovel) => {
-      const bairro = escaparHtml(imovel?.bairro || imovel?.local || "");
-      const metragem = imovel?.metragem || imovel?.area || "";
-      const suites = imovel?.suites || "";
-      const dormitorios = imovel?.dormitorios || imovel?.quartos || "";
-      const vagas = imovel?.vagas || "";
-
-      const infoTexto = [];
-      if (bairro) infoTexto.push(bairro);
-      if (metragem) infoTexto.push(`${metragem}m²`);
-
-      if (suites) {
-        infoTexto.push(`${suites} suíte${suites > 1 ? 's' : ''}`);
-      } else if (dormitorios) {
-        infoTexto.push(`${dormitorios} dormitório${dormitorios > 1 ? 's' : ''}`);
-      }
-
-      if (vagas) infoTexto.push(`${vagas} vaga${vagas > 1 ? 's' : ''}`);
-      return infoTexto.join(" • ");
-    };
-
-    const buildPublicUrl = (imovel) => {
-      let url = "#";
-      if (imovel?.urlPublicada) {
-        try { url = new URL(imovel.urlPublicada).pathname; }
-        catch (e) { url = imovel.urlPublicada.startsWith('/') ? imovel.urlPublicada : `/${imovel.urlPublicada}`; }
-      } else if (imovel?.arquivoPublicado) {
-        url = `/${imovel.arquivoPublicado}`;
-      }
-
-      if (url.startsWith('/static-site/public/')) {
-        url = `/${url.replace('/static-site/public/', '')}`;
-      }
-      return url;
-    };
-
-    const normalizePath = (url = '') => {
-      try {
-        return new URL(url, window.location.origin).pathname;
-      } catch {
-        return String(url || '').trim();
-      }
-    };
-
-    const getCardImageUrl = (imovel) => {
-      const fotos = Array.isArray(imovel?.fotos)
-        ? imovel.fotos
-        : String(imovel?.fotos || '')
-            .split(/[\n,;]+/)
-            .map((item) => item.trim())
-            .filter(Boolean);
-
-      const primeiraFoto = fotos.find((foto) => typeof foto === 'string' && foto.trim());
-      if (!primeiraFoto) {
-        return '';
-      }
-
-      if (/^https?:\/\//i.test(primeiraFoto)) {
-        return primeiraFoto;
-      }
-
-      if (primeiraFoto.startsWith('/')) {
-        return `${API_URL}${primeiraFoto}`;
-      }
-
-      return `/${primeiraFoto.replace(/^\.\//, '')}`;
-    };
-
-    const normalizeBusinessLabel = (negocio = 'Venda') => {
-      return /loca[cç][aã]o/i.test(String(negocio || 'Venda').trim())
-        ? 'para locação'
-        : 'à venda';
-    };
-
-    const normalizePropertyTypeLabel = (value = '') => {
-      const normalized = String(value || '').trim();
-      const lower = normalized.toLowerCase();
-
-      if (!normalized) return 'Imóvel';
-      if (/lan[cç]amento/.test(lower)) return 'Lançamento';
-      if (/\bstudios\b/.test(lower)) return 'Studios';
-      if (/\b(studio|st[uú]dio|loft|kitnet)\b/.test(lower)) return 'Studio';
-      if (/\b(cobertura)\b/.test(lower)) return 'Cobertura';
-      if (/\b(duplex)\b/.test(lower)) return 'Duplex';
-      if (/\b(casa)\b/.test(lower)) return 'Casa';
-      if (/\b(terreno|lote)\b/.test(lower)) return 'Terreno';
-      if (/\b(apartamento|apto)\b/.test(lower)) return 'Apartamento';
-
-      return normalized;
-    };
-
-    const buildPublicCardTitle = (imovel) => {
-      const rawTitle = String(imovel?.titulo || imovel?.titulo_anuncio || '').trim();
-      const tipo = normalizePropertyTypeLabel(imovel?.tipo || imovel?.categoria || rawTitle);
-      const negocio = normalizeBusinessLabel(imovel?.negocio || 'Venda');
-      const fallbackTitle = tipo === 'Lançamento' ? 'Lançamento' : `${tipo} ${negocio}`;
-
-      if (!rawTitle) {
-        return fallbackTitle;
-      }
-
-      const cleanedTitle = rawTitle.replace(/\s+/g, ' ').trim();
-      const normalizedTitle = cleanedTitle.toLowerCase();
-      const malformedGeneric = [
-        /^im[oó]vel$/i,
-        /^lan[cç]amento$/i,
-        /^(apartamento|casa|cobertura|terreno|studio|studios|duplex)(\s+(a|à|para))?\s+(venda|loca[cç][aã]o)\b/i,
-        /^(apartamento|casa|cobertura|terreno|studio|studios|duplex)\b$/i,
-      ].some((pattern) => pattern.test(cleanedTitle));
-
-      if (malformedGeneric) {
-        return fallbackTitle;
-      }
-
-      if (tipo === 'Lançamento' && /lan[cç]amento/i.test(normalizedTitle)) {
-        return 'Lançamento';
-      }
-
-      return cleanedTitle;
-    };
-
-    try {
-      statusEl.textContent = "Carregando imóveis…";
-      listaEl.innerHTML = "";
-
-      const response = await fetch(`${API_URL}/api/imoveis/publicos`);
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-      const imoveis = await response.json();
-      if (!Array.isArray(imoveis) || imoveis.length === 0) {
-        statusEl.textContent = "Nenhum imóvel disponível no momento.";
-        return;
-      }
-
-      const uniqueByUrl = new Map();
-      imoveis.forEach((imovel) => {
-        const key = normalizePath(buildPublicUrl(imovel));
-        if (key && key !== '/' && key !== '#') {
-          if (!uniqueByUrl.has(key)) uniqueByUrl.set(key, imovel);
-          return;
-        }
-        const fallbackKey = `id:${imovel?.id || ''}|arquivo:${imovel?.arquivoPublicado || ''}`;
-        if (!uniqueByUrl.has(fallbackKey)) uniqueByUrl.set(fallbackKey, imovel);
-      });
-
-      const deduped = Array.from(uniqueByUrl.values());
-      const lancamentos = deduped.filter(isLancamento);
-      const imoveisComuns = deduped.filter((imovel) => !isLancamento(imovel));
-      const lancamentoUrls = new Set(
-        Array.from(lancamentosEl?.querySelectorAll('a') || []).map((a) => normalizePath(a.getAttribute('href') || ''))
-      );
-
-      statusEl.textContent = `${imoveisComuns.length} imóvel(is) disponível(is) em Outros Imóveis.`;
-
-      if (lancamentosEl) {
-        if (lancamentos.length > 0) {
-          lancamentos.forEach(imovel => {
-            const titulo = escaparHtml(buildPublicCardTitle(imovel));
-            const imagem = getCardImageUrl(imovel);
-
-            const url = buildPublicUrl(imovel);
-            const infos = buildInfos(imovel);
-
-            const cardLancamento = `
-              <div class="imovel">
-                <a href="${url}">
-                  ${imagem ? `<img src="${imagem}" alt="${titulo}">` : ''}
-                  <h3>${titulo}</h3>
-                  <p>${infos}</p>
-                
-                </a>
-              </div>
-            `;
-
-            const jaExiste = Array.from(lancamentosEl.querySelectorAll('a')).some((a) => {
-              const href = a.getAttribute('href') || '';
-              return href === url;
-            });
-
-            if (!jaExiste) {
-              lancamentosEl.insertAdjacentHTML('beforeend', cardLancamento);
-              lancamentoUrls.add(normalizePath(url));
-            }
-          });
-        }
-      }
-
-      imoveisComuns.forEach(imovel => {
-        const titulo = escaparHtml(buildPublicCardTitle(imovel));
-        const preco = formatarPrecoBRL(imovel?.valor || imovel?.valor_venda);
-        const imagem = getCardImageUrl(imovel);
-
-        // Prioriza a URL publicada pelo CRM antes do fallback local.
-        let url = "#";
-        if (imovel?.urlPublicada) {
-          try { url = new URL(imovel.urlPublicada).pathname; } 
-          catch(e) { url = imovel.urlPublicada.startsWith('/') ? imovel.urlPublicada : `/${imovel.urlPublicada}`; }
-        } else if (imovel?.arquivoPublicado) {
-          url = `/${imovel.arquivoPublicado}`;
-        }
-        if (url.startsWith('/static-site/public/')) {
-          url = `/${url.replace('/static-site/public/', '')}`;
-        }
-        if (lancamentoUrls.has(normalizePath(url))) {
-          return;
-        }
-
-        // Monta informações como "Bairro • Metragem • Suítes/Dormitórios"
-        const infos = buildInfos(imovel);
-
-        const card = `
-          <div class="imovel imovel-card">
-            <a href="${url}">
-              ${imagem ? `<img src="${imagem}" alt="${titulo}">` : ''}
-              <h3>${titulo}</h3>
-              <p>${infos}</p>
-            </a>
-          </div>
-        `;
-
-        listaEl.innerHTML += card;
-      });
-    } catch (erro) {
-      statusEl.textContent = "Erro ao carregar imóveis.";
-      console.error(erro);
-    }
-  }
-
-  carregarImoveis();
- 
-</script>
-  <script src="script.js"></script>
-</body>
-</html>
+  // Renderizar imóveis
+  const grid = document.getElementById('propertiesGrid');
+  function renderProperties(list) {
+    grid.innerHTML = '';
+    list.forEach(prop => {
+      grid.innerHTML += `
+        <article class="property-card" data-city="Florianópolis" data-neighborhood="${prop.location.split(',')[0]}" data-rooms="${prop.bedrooms}" data-price="${prop.price}">
+          <span class="property-tag">${prop.tag}</span>
+          <img src="${prop.image}" alt="${prop.title}" class="property-image">
+          <div class="property-details">
+            <span class="property-type">${prop.type}</span>
+            <h3 class="property-title">${prop.title}</h3>
+            <p class="property-location">📍 ${prop.location}</p>
+            <div class="property-features">
+              <span class="feature-item">🛏️ ${prop.bedrooms} Quartos</span>
+              <span class="feature-item">🛁 ${prop.suites} Suítes</span>
+              <span class="feature-item">
